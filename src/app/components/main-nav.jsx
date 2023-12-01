@@ -40,7 +40,7 @@ import { FaWallet } from "react-icons/fa6";
 // }
 import { useEffect, useState } from "react";
 
-export default () => {
+export default function MainNav() {
     const [state, setState] = useState(false);
 
     // Replace javascript:void(0) paths with your paths
@@ -139,4 +139,4 @@ export default () => {
             </div>
         </nav>
     );
-};
+}
