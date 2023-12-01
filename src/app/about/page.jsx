@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../assets/logo-hq.png";
+import logo from "../../assets/logo-HQ.png";
 import { teamData } from "@/data/team-data";
 import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa6";
