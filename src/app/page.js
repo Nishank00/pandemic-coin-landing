@@ -35,7 +35,6 @@ export default function Home() {
     ];
     return (
         <main>
-            <MainNav />
             <div className="p-10 md:p-16">
                 <HeroSection />
                 <Image

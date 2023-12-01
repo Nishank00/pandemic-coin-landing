@@ -84,7 +84,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="pt-10 bg-zinc-900">
+        <footer className="pt-10 mt-auto mb-0 bg-zinc-900">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="justify-between items-center gap-12 md:flex">
                     <div className="flex-1 max-w-lg">

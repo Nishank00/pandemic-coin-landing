@@ -3,51 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/logo.png";
 import { FaWallet } from "react-icons/fa6";
-// export default function MainNav() {
-//     const links = [
-//         {
-//             name: "Home",
-//             route: "/",
-//         },
-//         {
-//             name: "Roadmap",
-//             route: "/roadmap",
-//         },
-//         {
-//             name: "About",
-//             route: "/about",
-//         },
-//     ];
-//     return (
-//         <div className="flex pc items-center bg-zinc-900/60 backdrop-blur-xl w-full justify-between p-4">
-//             <Image className="w-16 ml-3 object-contain" src={logo} alt="logo" />
-//             <div className="flex gap-16  items-center text-slate-500">
-//                 {links.map((link) => (
-//                     <Link
-//                         className="hover:text-slate-300 anim"
-//                         href={link.route}
-//                         key={link.name}
-//                     >
-//                         {link.name}
-//                     </Link>
-//                 ))}
-//                 <Link className="text-white mr-8" href={"#wallet"}>
-//                     <FaWallet />
-//                 </Link>
-//             </div>
-//         </div>
-//     );
-// }
+
 import { useEffect, useState } from "react";
 
 export default function MainNav() {
     const [state, setState] = useState(false);
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Home", path: "/" },
         { title: "Roadmap", path: "#roadmap" },
-        { title: "About us", path: "#about" },
+        { title: "About us", path: "/about" },
     ];
 
     useEffect(() => {
@@ -67,13 +32,13 @@ export default function MainNav() {
         >
             <div className="gap-x-14 items-center  mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                         <Image
                             className="w-16 ml-3 object-contain"
                             src={logo}
                             alt="logo"
                         />
-                    </a>
+                    </Link>
                     <div className="md:hidden">
                         <button
                             className="menu-btn  hover:text-gray-800"
@@ -123,9 +88,9 @@ export default function MainNav() {
                                     key={idx}
                                     className=" text-slate-400 hover:text-white anim"
                                 >
-                                    <a href={item.path} className="block">
+                                    <Link href={item.path} className="block">
                                         {item.title}
-                                    </a>
+                                    </Link>
                                 </li>
                             );
                         })}
