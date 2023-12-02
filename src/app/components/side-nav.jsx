@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { RiMenu2Line } from "react-icons/ri";
 import { useState } from "react";
+
 export default function SideNav() {
     const [isMenuOpen, setIsMenuOpen] = useState(true);
     return (

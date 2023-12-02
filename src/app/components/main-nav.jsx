@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/logo.png";
@@ -11,7 +12,7 @@ export default function MainNav() {
 
     const navigation = [
         { title: "Home", path: "/" },
-        { title: "Roadmap", path: "#roadmap" },
+        { title: "Roadmap", path: "/live" },
         { title: "About us", path: "/about" },
     ];
 
@@ -24,16 +25,15 @@ export default function MainNav() {
 
     return (
         <nav
-            className={`bg-zinc-900 text-white md:text-sm ${
-                state
-                    ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
-                    : ""
-            }`}
+            className={`bg-zinc-900 text-white md:text-sm ${state
+                ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
+                : ""
+                }`}
         >
-            <div className="gap-x-14 items-center  mx-auto px-4 md:flex md:px-8">
+            <div className="gap-x-14 items-center mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
-                    <Link href="javascript:void(0)">
-                        <Image
+                    <Link href="/">
+                        <Image 
                             className="w-16 ml-3 object-contain"
                             src={logo}
                             alt="logo"
@@ -77,9 +77,8 @@ export default function MainNav() {
                     </div>
                 </div>
                 <div
-                    className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
-                        state ? "block" : "hidden"
-                    } `}
+                    className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"
+                        } `}
                 >
                     <ul className="justify-center items-center space-y-6 md:flex md:space-x-12 md:space-y-0">
                         {navigation.map((item, idx) => {

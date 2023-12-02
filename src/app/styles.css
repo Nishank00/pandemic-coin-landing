@@ -1,0 +1,57 @@
+/* / hero bg */
+#hero {
+  background-image: url(../assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#eventBg {
+  background-image: url(../assets/events-bg.png) !important;
+  background-size: cover;
+}
+
+.swiper {
+  width: 100%;
+  min-height: 320px;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+#eventBg .swiper-slide #circle,
+#eventBg .swiper-slide button,
+#eventBg .swiper-slide #event-desc {
+  opacity: 0%;
+}
+
+#eventBg .swiper-slide-active #circle,
+#eventBg .swiper-slide-active button,
+#eventBg .swiper-slide-active #event-desc {
+  opacity: 100%;
+  transition: all 0.3s ease;
+}
+
+#eventBg {
+  background-image: url("/events-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#testimonials .swiper-slide {
+  transition: all .3s ease;
+}
+
+#testimonials .swiper-slide-active {
+  scale: 100%;
+}

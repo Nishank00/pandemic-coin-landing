@@ -1,28 +1,23 @@
-import { Archivo } from "next/font/google";
-import "./globals.css";
+import Head from "next/head";
 import SideNav from "./components/side-nav";
 import Footer from "./components/footer";
 import MainNav from "./components/main-nav";
-const arc = Archivo({ subsets: ["latin"] });
 
-export const metadata = {
-    title: "Pandemic Coin",
-    description: "Pandemic Coin",
+const RootLayout = ({ children }) => {
+  return (
+    <html>
+      <body className="flex h-screen font-archivo">
+        <section className="md:w-16">
+          <SideNav />
+        </section>
+        <section className="relative w-[90%] flex-grow flex-col">
+          <MainNav />
+          <div className="bg-[#252525]">{children}</div>
+          <Footer />
+        </section>
+      </body>
+    </html>
+  );
 };
 
-export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-            <body className={`${arc.className} flex h-screen`}>
-                <section className="md:w-16">
-                    <SideNav />
-                </section>
-                <section className="relative w-full flex flex-col ">
-                    <MainNav />
-                    {children}
-                    <Footer />
-                </section>
-            </body>
-        </html>
-    );
-}
+export default RootLayout;
