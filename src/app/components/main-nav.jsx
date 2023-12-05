@@ -8,7 +8,7 @@ import { FaWallet } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 export default function MainNav() {
-    const [state, setState] = useState(false);
+    const [state, setState] = useState(false); 
 
     const navigation = [
         { title: "Home", path: "/" },
@@ -33,7 +33,7 @@ export default function MainNav() {
             <div className="gap-x-14 items-center mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
                     <Link href="/">
-                        <Image 
+                        <Image
                             className="w-16 ml-3 object-contain"
                             src={logo}
                             alt="logo"
