@@ -7,12 +7,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 
-const TestimonialCard = ({ imageUrl, description }) => (
-    <div className="p-4">
-        <div className="h-full mx-auto overflow-hidden">
+const NewCard = ({ imageUrl, description }) => (
+    <div className="p-4 rounded-lg relative">
+        <div className="h-full mx-auto rounded-[20px] overflow-hidden">
             <img className="h-[400px] w-full object-cover object-center" src={imageUrl} alt="blog" />
-            <div className="py-6">
+            <div className="p-6 absolute bottom-2 bg-[#1A1A23CC]">
                 <p className="leading-relaxed mb-3">{description}</p>
                 <button className="text-white bg-[#FB2525] px-4 text-sm font-medium py-1">Learn More
                 </button>
@@ -21,8 +22,8 @@ const TestimonialCard = ({ imageUrl, description }) => (
     </div>
 );
 
-const Testimonials = () => {
-    const testimonials = [
+const NewsGallery = () => {
+    const NewsGallery = [
         { imageUrl: 'https://dummyimage.com/720x400', description: 'Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.  Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons' },
         { imageUrl: 'https://dummyimage.com/721x401', description: 'Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.  Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons' },
         { imageUrl: 'https://dummyimage.com/722x402', description: 'Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.  Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons' },
@@ -35,24 +36,31 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="text-gray-400 body-font">
+        <section className="text-gray-400 body-font" id='news-gallery'>
             <div className="container px-5 py-24 mx-auto">
                 <div className="w-fit mx-auto my-16 text-center">
-                    <h1 className="text-3xl md:text-5xl text-center">Personal stories</h1>
+                    <h1 className="text-3xl md:text-5xl text-center">News Gallery</h1>
                     <div className="border-b mt-3 mb-6 border-slate-700  w-full" />
-                    <p className="mt-6 text-sm tracking-[10px]">TESTIMONIALS</p>
+                    <p className="mt-6 text-sm tracking-[10px]">WEBINARS</p>
                 </div>
-                <div className="flex flex-wrap" id='testimonials'>
+                <div className="flex flex-wrap" id='NewsGallery'>
                     <Swiper
                         centeredSlides={true}
                         slidesPerView={2}
+                        initialSlide={2}
+                        loop={true}
                         spaceBetween={30}
                         pagination={false}
                         className="mySwiper gap-4"
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        modules={[Autoplay]}
                     >
-                        {testimonials.map((testimonial, index) => (
+                        {NewsGallery.map((testimonial, index) => (
                             <SwiperSlide key={index}>
-                                <TestimonialCard key={index} {...testimonial} />
+                                <NewCard key={index} {...testimonial} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -62,4 +70,4 @@ const Testimonials = () => {
     );
 };
 
-export default Testimonials;
+export default NewsGallery;

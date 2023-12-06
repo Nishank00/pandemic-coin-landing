@@ -1,9 +1,33 @@
 /* / hero bg */
-#hero {
-  background-image: url(../assets/bg.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+#nav-link {
+  position: relative;
+}
+
+#nav-link::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+#nav-link.active::after {
+  width: 50%; /* Adjust to 100% for full width on active page */
+}
+
+#nav-link:hover::after {
+  width: 50%;
+}
+
+#hero .even-slide {
+  min-width: 65%;
+  max-width: 70%;
+}
+
+#hero .odd-slide {
+  min-width: 35%;
+  max-width: 30%;
 }
 
 #eventBg {
@@ -42,6 +66,15 @@
   transition: all 0.3s ease;
 }
 
+#NewsGallery .swiper-slide {
+  scale: 100%;
+  transition: all .3s ease;
+}
+
+#NewsGallery .swiper-slide-active {
+  scale: 105%;
+}
+
 #eventBg {
   background-image: url("/events-bg.png");
   background-size: cover;
@@ -49,7 +82,7 @@
 }
 
 #testimonials .swiper-slide {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 #testimonials .swiper-slide-active {

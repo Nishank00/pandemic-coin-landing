@@ -8,18 +8,18 @@ import webBg from '../../assets/web-bg.png'
 
 const Deepdive = () => {
     return (
-        <section class="relative text-gray-400 body-font">
-            <div class="container relative mx-auto flex pr-10 py-24 md:flex-row flex-col items-center z-10">
-                <div class=" w-2/3 flex flex-col px-16 py-32 bg-black min-h-[30rem] md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="text-3xl md:text-[42px] mb-4 font-medium text-white">Dive into a New Dimension:
-                        <br class="hidden lg:inline-block" /> Explore Our Cutting-edge
-                        <br class="hidden lg:inline-block" />
+        <section className="relative text-gray-400 body-font">
+            <div className="container relative mx-auto flex pr-10 py-24 md:flex-row flex-col items-center z-10">
+                <div className=" w-2/3 flex flex-col px-16 py-32 bg-black min-h-[30rem] md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 className="text-3xl md:text-[42px] mb-4 font-medium text-white">Dive into a New Dimension:
+                        <br className="hidden lg:inline-block" /> Explore Our Cutting-edge
+                        <br className="hidden lg:inline-block" />
                         AR/VR Experience
                     </h1>
-                    <button class="inline-flex text-[#FB2525] font-semibold text-lg mt-6">Show me</button>
+                    <button className="inline-flex text-[#FB2525] font-semibold text-lg mt-6">Show me</button>
                 </div>
                 <div className='flex-grow relative z-10 max-w-[600px]'>
-                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720" />
+                    <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720" />
                 </div>
                 <Image
                     className="absolute top-20 left-[34%] z-0 max-w-[135px]"

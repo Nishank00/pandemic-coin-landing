@@ -4,16 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/logo.png";
 import { FaWallet } from "react-icons/fa6";
-
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
 
 export default function MainNav() {
-    const [state, setState] = useState(false); 
+    const [state, setState] = useState(false);
+    const pathname = usePathname();
 
     const navigation = [
         { title: "Home", path: "/" },
-        { title: "Roadmap", path: "/live" },
-        { title: "About us", path: "/about" },
+        { title: "About Us", path: "/about" },
+        { title: "AI", path: "/ai" },
+        { title: "Media", path: "/media" },
+        { title: "Communities", path: "/communities" },
+        { title: "Contact Us", path: "/contact" },
     ];
 
     useEffect(() => {
@@ -25,7 +30,7 @@ export default function MainNav() {
 
     return (
         <nav
-            className={`bg-zinc-900 text-white md:text-sm ${state
+            className={`bg-[#1A1B25] text-white md:text-sm ${state
                 ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
                 : ""
                 }`}
@@ -77,7 +82,7 @@ export default function MainNav() {
                     </div>
                 </div>
                 <div
-                    className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"
+                    className={`flex items-center justify-end w-full mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"
                         } `}
                 >
                     <ul className="justify-center items-center space-y-6 md:flex md:space-x-12 md:space-y-0">
@@ -85,7 +90,9 @@ export default function MainNav() {
                             return (
                                 <li
                                     key={idx}
-                                    className=" text-slate-400 hover:text-white anim"
+                                    className={`text-slate-400 hover:text-white anim ${pathname === item.path ? "active" : ""
+                                        }`}
+                                    id="nav-link"
                                 >
                                     <Link href={item.path} className="block">
                                         {item.title}
@@ -94,11 +101,6 @@ export default function MainNav() {
                             );
                         })}
                     </ul>
-                    <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-                        <Link className="text-white mr-8" href={"#wallet"}>
-                            <FaWallet />
-                        </Link>
-                    </div>
                 </div>
             </div>
         </nav>

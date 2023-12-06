@@ -7,12 +7,12 @@ const RootLayout = ({ children }) => {
   return (
     <html>
       <body className="flex h-screen font-archivo">
-        <section className="md:w-16">
+        {/* <section className="md:w-16">
           <SideNav />
-        </section>
-        <section className="relative w-[90%] flex-grow flex-col">
+        </section> */}
+        <section className="relative flex-grow flex-col">
           <MainNav />
-          <div className="bg-[#252525]">{children}</div>
+          <div className="bg-[#1A1B25]">{children}</div>
           <Footer />
         </section>
       </body>
