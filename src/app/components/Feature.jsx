@@ -47,11 +47,11 @@ const Feature = () => {
 
     return (
         <section className="body-font">
-            <div className="container px-[0%] py-24 mx-auto">
-                <div className="flex flex-col text-center w-full mb-12">
+            <div className="container relative px-[0%] py-44 mx-auto">
+                <div className="flex flex-col relative z-10 text-center w-full mb-16">
                     <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">Our Key Features</h1>
                 </div>
-                <div className="flex flex-wrap -m-4">
+                <div className="flex flex-wrap -m-4 relative z-10">
                     <Marquee>
                         {features.map((feature, index) => (
                             <div key={index} className={`p-4 w-[420px] flex`}>
@@ -67,6 +67,8 @@ const Feature = () => {
                         ))}
                     </Marquee>
                 </div>
+                <div className="bg-gradient-to-tr from-[#FF071750] to-[#342CB250] absolute w-[900px] blur-[120px] z-0 rounded-full h-[900px] -top-[50%] -right-[30%]"></div>
+                <div className="bg-gradient-to-tr from-[#FF071740] to-[#342CB240] absolute w-[500px] blur-[120px] z-0 rounded-full h-[500px] -bottom-[60%] -left-[10%]"></div>
             </div>
         </section>
     );

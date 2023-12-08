@@ -68,11 +68,15 @@
 
 #NewsGallery .swiper-slide {
   scale: 100%;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 #NewsGallery .swiper-slide-active {
   scale: 105%;
+}
+
+canvas:hover {
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
 }
 
 #eventBg {
@@ -81,10 +85,50 @@
   background-position: center;
 }
 
+#shelters {
+  position: relative;
+}
+
+#shelters .swiper-slide,
 #testimonials .swiper-slide {
   transition: all 0.3s ease;
 }
 
-#testimonials .swiper-slide-active {
+#shelters .swiper-slide {
   scale: 100%;
+}
+
+#shelters .swiper-slide #desc {
+  display: none;
+}
+
+#shelters .swiper-slide-active {
+  scale: 110%;
+}
+
+#shelters .swiper-slide-active #desc {
+  display: block;
+}
+
+#shelters #shelter-nav {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+}
+
+.prev,
+.next {
+  border: 1px solid #ccc;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.prev svg,
+.next svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -4,7 +4,8 @@ import Image from 'next/image';
 
 const Community = () => {
     return ( 
-        <div className="my-20 py-32 overflow-hidden md:overflow-visible mx-auto md:px-16 relative">
+        <div className="py-44 overflow-hidden mx-auto md:px-16 relative">
+            <div className="absolute top-[-20%] left-[-20%] bg-[#FF07174D] w-[1000px] h-[500px] opacity-50 blur-[120px] rounded-full"></div>
             <div className="md:w-1/2">
                 <h1 className="text-3xl md:text-5xl">COMMUNITY</h1>
                 <p className="mt-3 md:w-4/6 text-2xl">

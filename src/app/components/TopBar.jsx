@@ -2,10 +2,9 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 
 const TopBar = () => {
-    return ( 
+    return (
         <div className='border-t-2 border-b-2'>
             <Marquee
-                loop={true}
                 className="flex items-center justify-center">
                 <div className='px-4'>After COVID break, Centre approves fourth phase roll-out of GIAN scheme</div>
                 <div className='p-4 text-[30px] text-[#DE1012]'>***</div>

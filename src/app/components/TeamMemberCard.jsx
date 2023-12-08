@@ -4,7 +4,7 @@ import { FaLink, FaLinkedinIn } from "react-icons/fa6";
 import Image from "next/image";
 
 const TeamMemberCard = ({ img, name, role, desc, link }) => (
-    <div className="bg-zinc-900 rounded-xl">
+    <div className="bg-zinc-900 rounded-[30px] overflow-hidden">
         <Image src={img} className="w-full" alt="team" />
         <div className="p-6 px-8">
             <div>
