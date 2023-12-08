@@ -1,6 +1,6 @@
 import React from 'react';
 import Advisor from './Advisor';
-import { teamData } from '@/data/team-data';
+import { teamData } from '../../data/team-data';
 
 const Advisors = () => {
     return (

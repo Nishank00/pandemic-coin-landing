@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { teamData } from "@/data/team-data";
+import { teamData } from "../../data/team-data";
 import TeamMemberCard from "../components/TeamMemberCard";
 import Advisors from "../components/Advisors";
 import logo from '../../assets/logo-HQ.png'

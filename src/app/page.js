@@ -21,7 +21,7 @@ import Build from "./components/Build";
 import CTA from "./components/CTA";
 import Tokenomics from "./components/Tokenomics";
 import TeamMemberCard from "./components/TeamMemberCard";
-import { teamData } from "@/data/team-data";
+import { teamData } from "../data/team-data";
 import logo from "../assets/logo-HQ.png";
 import Advisors from "./components/Advisors";
 import Shelters from "./components/Shelters";
