@@ -73,3 +73,4 @@ export const teamData = [
         img: asset,
     },
 ];
+ 
