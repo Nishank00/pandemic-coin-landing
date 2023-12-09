@@ -2,7 +2,7 @@ import Image from "next/image";
 import Webinars from "./components/Webinars";
 import Feature from "./components/Feature";
 import Community from "./components/Community";
-import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials"; 
 import Hero from "./components/Hero";
 import WhoWeAre from "./components/WhoWeAre";
 import NewsGallery from "./components/NewsGallery";
@@ -12,13 +12,39 @@ import Build from "./components/Build";
 import CTA from "./components/CTA";
 import Tokenomics from "./components/Tokenomics";
 import TeamMemberCard from "./components/TeamMemberCard";
-import teamData from "./data/team-data";
 import Advisors from "./components/Advisors";
 import Shelters from "./components/Shelters";
 import MainNav from "./components/main-nav";
 import Footer from "./components/footer";
 
 export default function Home() {
+  const teamData = [
+    {
+      name: "Ahsan Usman",
+      role: "Co-Founder & COO",
+      desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
+      link: "https://sample.com",
+      linkedin: "https://sample.com",
+      img: "/assets/bg.png",
+    },
+    {
+      name: "Asad Zeeshan",
+      role: "Co-Founder & CEO / CMO",
+      desc: "He is a distinguished professional with a comprehensive skill set",
+      link: "https://sample.com",
+      linkedin: "https://sample.com",
+      img: "/assets/bg.png",
+    },
+    {
+      name: "Abhayraj Gohil",
+      role: "Cofounder & CTO",
+      desc: "He is a distinguished professional with a comprehensive skill set",
+      link: "https://sample.com",
+      linkedin: "https://sample.com",
+      img: "/assets/bg.png",
+    },
+  ];
+
   return (
     <main className="relative overflow-x-hidden bg-[#1A1B25]">
       <MainNav />

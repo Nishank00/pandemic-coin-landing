@@ -2,9 +2,34 @@ import Image from "next/image";
 import TeamMemberCard from "../components/TeamMemberCard";
 import Advisors from "../components/Advisors";
 import Partners from "../components/Partners";
-import teamData from "../data/team-data";
 
 export default function About() {
+    const teamData = [
+        {
+            name: "Ahsan Usman",
+            role: "Co-Founder & COO",
+            desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        },
+        {
+            name: "Asad Zeeshan",
+            role: "Co-Founder & CEO / CMO",
+            desc: "He is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        },
+        {
+            name: "Abhayraj Gohil",
+            role: "Cofounder & CTO",
+            desc: "He is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        }]
+
     return (
         <div>
             <h1 className="text-3xl md:text-5xl serif text-[#FB2525] mt-16 text-center w-1/2 mx-auto">

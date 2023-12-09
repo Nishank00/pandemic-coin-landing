@@ -1,8 +1,34 @@
 import React from 'react';
 import Advisor from './Advisor';
-import teamData from "../data/team-data";
 
 const Advisors = () => {
+
+    const teamData = [
+        {
+            name: "Ahsan Usman",
+            role: "Co-Founder & COO",
+            desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        },
+        {
+            name: "Asad Zeeshan",
+            role: "Co-Founder & CEO / CMO",
+            desc: "He is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        },
+        {
+            name: "Abhayraj Gohil",
+            role: "Cofounder & CTO",
+            desc: "He is a distinguished professional with a comprehensive skill set",
+            link: "https://sample.com",
+            linkedin: "https://sample.com",
+            img: '/assets/bg.png',
+        }]
+
     return (
         <section className="text-gray-400 relative body-font">
             <div className="bg-[#342CB250] absolute w-[200px] blur-[120px] rounded-full h-[200px] top-[5%] -left-[5%] z-0"></div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from "next/link";
 import { FaLink, FaLinkedinIn } from "react-icons/fa6";
 import Image from "next/image";
+import Link from 'next/link';
 
 const TeamMemberCard = ({ img, name, role, desc, link }) => (
     <div className="bg-zinc-900 rounded-[30px] overflow-hidden">
@@ -14,10 +14,10 @@ const TeamMemberCard = ({ img, name, role, desc, link }) => (
             <p className="mt-4">{desc}</p>
             <div className="flex gap-3 mt-6">
                 <Link className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
-                    <FaLink />
+                    <a><FaLink /></a>
                 </Link>
                 <Link className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
-                    <FaLinkedinIn />
+                    <a><FaLinkedinIn /></a>
                 </Link>
             </div>
         </div>

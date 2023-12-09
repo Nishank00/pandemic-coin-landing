@@ -57,7 +57,7 @@ function Donut({ width, height, data }) {
                 gradient.append("stop").attr("offset", "100%").attr("stop-color", color.end);
             }
         });
-    }, []);
+    }, [colors]);
 
     const pie = d3.pie()
         .value((d) => d.value)
@@ -176,4 +176,3 @@ function Donut({ width, height, data }) {
 }
 
 export default Donut;
- 
