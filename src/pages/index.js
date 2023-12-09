@@ -12,7 +12,7 @@ import Build from "./components/Build";
 import CTA from "./components/CTA";
 import Tokenomics from "./components/Tokenomics";
 import TeamMemberCard from "./components/TeamMemberCard";
-import { teamData } from "./data/team-data";
+import teamData from "./data/team-data";
 import Advisors from "./components/Advisors";
 import Shelters from "./components/Shelters";
 import MainNav from "./components/main-nav";
@@ -66,7 +66,7 @@ export default function Home() {
       <Build />
       <div className="bg-[#342CB233] absolute w-[600px] blur-[120px] z-0 rounded-full h-[600px] bottom-[0%] -right-[25%]"></div>
       <CTA />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

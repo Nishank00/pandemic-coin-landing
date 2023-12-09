@@ -1,4 +1,4 @@
-export const teamData = [
+const teamData = [
     {
         name: "Ahsan Usman",
         role: "Co-Founder & COO",
@@ -71,3 +71,6 @@ export const teamData = [
         img: '/assets/bg.png',
     },
 ];
+
+
+export default teamData;

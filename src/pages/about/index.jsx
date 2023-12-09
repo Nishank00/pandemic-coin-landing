@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { teamData } from "../data/team-data";
 import TeamMemberCard from "../components/TeamMemberCard";
 import Advisors from "../components/Advisors";
 import Partners from "../components/Partners";
+import teamData from "../data/team-data";
 
 export default function About() {
     return (
