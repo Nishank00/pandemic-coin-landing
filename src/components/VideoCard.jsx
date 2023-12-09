@@ -3,7 +3,7 @@ import React from 'react'
 
 const VideoCard = () => {
     return (
-        <div class="pb  -4 sm:mb-0 bg-[#231E1E] mb-6">
+        <div class="pb-4 sm:mb-0 bg-[#231E1E] mb-6">
             <div class="rounded-lg h-48 overflow-hidden">
                 <Image alt="content" width={240} height={120} class="object-cover object-center h-full w-full" src="https://dummyimage.com/240x120" />
             </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import TeamMemberCard from "../components/TeamMemberCard";
-import Advisors from "../components/Advisors";
-import Partners from "../components/Partners";
+import TeamMemberCard from "../../components/TeamMemberCard";
+import Advisors from "../../components/Advisors";
+import Partners from "../../components/Partners";
 
 export default function About() {
     const teamData = [

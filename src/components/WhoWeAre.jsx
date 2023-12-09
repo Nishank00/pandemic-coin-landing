@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 
 const WhoWeAre = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
         setIsOpen(false)
@@ -15,7 +15,7 @@ const WhoWeAre = () => {
     }
 
     return (
-        <section className='container relative z-10 px-10 py-24'>
+        <section className='container relative z-10 px-10 py-20'>
             <div className='flex items-center justify-center z-10 flex-col'>
                 <div className="w-fit mx-auto my-16 text-center">
                     <h1 className="text-3xl md:text-5xl text-center">Who We Are</h1>
@@ -36,7 +36,7 @@ const WhoWeAre = () => {
                             onClick={openModal}
                             className="rounded-md text-white bg-[#FB2525] px-8 py-3 text-[15px] my-6 font-medium hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
                         >
-                            Open dialog
+                            Invest More
                         </button>
                     </div>
 

@@ -1,21 +1,21 @@
 import Image from "next/image";
-import Webinars from "./components/Webinars";
-import Feature from "./components/Feature";
-import Community from "./components/Community";
-import Testimonials from "./components/Testimonials"; 
-import Hero from "./components/Hero";
-import WhoWeAre from "./components/WhoWeAre";
-import NewsGallery from "./components/NewsGallery";
+import Webinars from "../components/Webinars";
+import Feature from "../components/Feature";
+import Community from "../components/Community";
+import Testimonials from "../components/Testimonials";
+import Hero from "../components/Hero";
+import WhoWeAre from "../components/WhoWeAre";
+import NewsGallery from "../components/NewsGallery";
 import "chart.js/auto";
-import Roadmap from "./components/Roadmap";
-import Build from "./components/Build";
-import CTA from "./components/CTA";
-import Tokenomics from "./components/Tokenomics";
-import TeamMemberCard from "./components/TeamMemberCard";
-import Advisors from "./components/Advisors";
-import Shelters from "./components/Shelters";
-import MainNav from "./components/main-nav";
-import Footer from "./components/footer";
+import Roadmap from "../components/Roadmap";
+import Build from "../components/Build";
+import CTA from "../components/CTA";
+import Tokenomics from "../components/Tokenomics";
+import TeamMemberCard from "../components/TeamMemberCard";
+import Advisors from "../components/Advisors";
+import Shelters from "../components/Shelters";
+import MainNav from "../components/main-nav";
+import Footer from "../components/footer";
 
 export default function Home() {
   const teamData = [
@@ -23,24 +23,24 @@ export default function Home() {
       name: "Ahsan Usman",
       role: "Co-Founder & COO",
       desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
-      link: "https://sample.com",
-      linkedin: "https://sample.com",
+      link: "/",
+      linkedin: "/",
       img: "/assets/bg.png",
     },
     {
       name: "Asad Zeeshan",
       role: "Co-Founder & CEO / CMO",
       desc: "He is a distinguished professional with a comprehensive skill set",
-      link: "https://sample.com",
-      linkedin: "https://sample.com",
+      link: "/",
+      linkedin: "/",
       img: "/assets/bg.png",
     },
     {
       name: "Abhayraj Gohil",
       role: "Cofounder & CTO",
       desc: "He is a distinguished professional with a comprehensive skill set",
-      link: "https://sample.com",
-      linkedin: "https://sample.com",
+      link: "/",
+      linkedin: "/",
       img: "/assets/bg.png",
     },
   ];
@@ -70,7 +70,7 @@ export default function Home() {
             height={300}
             src="/assets/logo-HQ.png"
             quality={100}
-            alt="logo"
+            alt="Pandemic Coin Logo"
           />
           <div className="my-4">
             <h1 className="text-2xl">Founder</h1>

@@ -8,7 +8,7 @@ const Feature = () => {
             number: '#01',
             title: 'COMMUNITY SHELTER',
             description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-            imageUrl: 'https://dummyimage.com/720x600',
+            imageUrl: '/assets/feature-image1.png',
             backgroundColor: 'bg-[#3A3A3A]',
             color: 'text-[#342CB2]',
         },
@@ -16,7 +16,7 @@ const Feature = () => {
             number: '#02',
             title: 'PDFV',
             description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-            imageUrl: 'https://dummyimage.com/720x600',
+            imageUrl: '/assets/feature-image2.png',
             backgroundColor: 'bg-gradient-to-b from-[#140E7B17] to-[#140E7B17]',
             color: 'text-[#342CB2]',
         },
@@ -24,7 +24,7 @@ const Feature = () => {
             number: '#03',
             title: 'INVESTMENT AND TRADING',
             description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-            imageUrl: 'https://dummyimage.com/720x600',
+            imageUrl: '/assets/feature-image3.png',
             backgroundColor: 'bg-[#3A3A3A]',
             color: 'text-[#342CB2]'
         },
@@ -32,17 +32,9 @@ const Feature = () => {
             number: '#04',
             title: 'SECURE AND TRADE',
             description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-            imageUrl: 'https://dummyimage.com/720x600',
+            imageUrl: '/assets/feature-image4.png',
             backgroundColor: 'bg-gradient-to-b from-[#140E7B17] to-[#140E7B17]',
             color: 'text-[#342CB2]',
-        },
-        {
-            number: '#05',
-            title: 'PEN APP',
-            description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-            imageUrl: 'https://dummyimage.com/720x600',
-            backgroundColor: 'bg-[#3A3A3A]',
-            color: 'text-[#342CB2]'
         },
     ];
 

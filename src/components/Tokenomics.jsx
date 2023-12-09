@@ -1,5 +1,7 @@
 import React from 'react'
 import Donut from './Donut'
+import './donut-chart.module.css';
+
 
 const Tokenomics = () => {
     const data = [

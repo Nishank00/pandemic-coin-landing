@@ -1,67 +1,21 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-import './Webinar.module.css'
-
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
+import './Webinar.module.css';
+
 const Webinar = () => {
-    const events = [
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming Events',
-            title: 'Shooting Stars',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming',
-            title: 'Word of Mouth',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming',
-            title: 'The 400 Blows',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming',
-            title: 'Neptune',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming',
-            title: 'Holden Caulfield',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-        {
-            imageUrl: 'https://dummyimage.com/600x360',
-            subtitle: 'Upcoming',
-            title: 'Alper Kamu',
-            dayOfEvent: "New Year Eve - 8pm",
-            typeOfEvent: "black & white events",
-            location: "park wolf club"
-        },
-    ];
+    const getRandomSeed = () => Math.floor(Math.random() * 1000);
+
+    const events = Array.from({ length: 6 }, (_, index) => ({
+        imageUrl: `https://picsum.photos/seed/event${getRandomSeed()}/600/360`,
+        subtitle: 'Upcoming Events',
+        title: 'Event Title',
+        dayOfEvent: "Event Date - Time",
+        typeOfEvent: "Event Type",
+        location: "Event Location"
+    }));
 
     const handleSlideChange = (swiper) => {
         const slides = swiper.slides;
@@ -99,9 +53,7 @@ const Webinar = () => {
                     on={{ slideChange: handleSlideChange }}
                 >
                     {events.map((event, index) => (
-                        <SwiperSlide
-                            key={index}
-                        >
+                        <SwiperSlide key={index}>
                             <div className="flex relative" id="event-card">
                                 <div className="absolute inset-0 w-full h-full object-cover object-center transition-all">
                                     <Image width={600} height={360} alt="gallery" src={event.imageUrl} />

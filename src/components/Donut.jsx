@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import './donut-chart.module.css';
 
 const MARGIN_X = 150;
@@ -8,24 +8,24 @@ const INFLEXION_PADDING = 20;
 
 const colors = [
     {
-        start: "rgba(252, 79, 90, 1)", // Translucent red
-        end: "rgba(252, 79, 90, 0.9)", // Transparent red
+        start: "rgba(252, 79, 90, 1)",
+        end: "rgba(252, 79, 90, 0.9)",
     },
     {
-        start: "rgba(252, 79, 90, 0.8)", // Translucent red
-        end: "rgba(252, 79, 90, 0.75)", // Transparent red
+        start: "rgba(252, 79, 90, 0.8)",
+        end: "rgba(252, 79, 90, 0.75)",
     },
     {
-        start: "rgba(52, 44, 178, 1)", // Translucent blue
-        end: "rgba(52, 44, 178, .8)", // Transparent blue
+        start: "rgba(52, 44, 178, 1)",
+        end: "rgba(52, 44, 178, .8)",
     },
     {
-        start: "rgba(52, 44, 178, 0.8)", // Translucent blue
-        end: "rgba(52, 44, 178, 0.8)", // Transparent blue
+        start: "rgba(52, 44, 178, 0.8)",
+        end: "rgba(52, 44, 178, 0.8)",
     },
     {
-        start: "rgba(52, 44, 178, .8)", // Translucent blue
-        end: "rgba(52, 44, 178, 1)", // Transparent blue
+        start: "rgba(52, 44, 178, .8)",
+        end: "rgba(52, 44, 178, 1)",
     }
 ];
 
@@ -37,6 +37,14 @@ function Donut({ width, height, data }) {
 
     const radius = Math.min(width - 2 * MARGIN_X, height - 2 * MARGIN_Y) / 2;
     const innerRadius = radius / 1.5;
+
+    const handleMouseOver = useCallback((index) => {
+        setHoveredSlice(index);
+    }, []);
+
+    const handleMouseOut = useCallback(() => {
+        setHoveredSlice(null);
+    }, []);
 
     useEffect(() => {
         // Create <defs> element only once
@@ -57,31 +65,24 @@ function Donut({ width, height, data }) {
                 gradient.append("stop").attr("offset", "100%").attr("stop-color", color.end);
             }
         });
-    }, [colors]);
-
+    }, []);
+ 
     const pie = d3.pie()
-        .value((d) => d.value)
-        (data);
+        .value((d) => (typeof d === 'object' && d !== null && 'value' in d) ? d.value : 0);
+
+    const pieData = pie(data);
 
     const arcGenerator = d3.arc();
 
-    const handleMouseOver = (index) => {
-        setHoveredSlice(index);
-    };
-
-    const handleMouseOut = () => {
-        setHoveredSlice(null);
-    };
-
-    const shapes = pie.map((grp, i) => {
+    const shapes = pieData.map((grp, i) => {
         const sliceInfo = {
             innerRadius,
             outerRadius: radius,
             startAngle: grp.startAngle,
             endAngle: grp.endAngle,
         };
+        const { startAngle, endAngle } = sliceInfo;
         const centroid = arcGenerator.centroid(sliceInfo);
-        const slicePath = arcGenerator(sliceInfo);
 
         const gradientId = `gradient-${i}`;
         const gradient = createGradient(gradientId, colors[i].start, colors[i].end);
@@ -89,8 +90,8 @@ function Donut({ width, height, data }) {
         const inflexionInfo = {
             innerRadius: radius + INFLEXION_PADDING,
             outerRadius: radius + INFLEXION_PADDING,
-            startAngle: grp.startAngle,
-            endAngle: grp.endAngle,
+            startAngle,
+            endAngle,
         };
         const inflexionPoint = arcGenerator.centroid(inflexionInfo);
 
@@ -111,8 +112,7 @@ function Donut({ width, height, data }) {
                     fill={`url(#${gradientId})`}
                     className={`${hoveredSlice === i ? 'hovered' : ''}`}
                 />
-                <circle cx={centroid[0]} cy={centroid[1]} fill="white"
-                    r={4} />
+                <circle cx={centroid[0]} cy={centroid[1]} fill="white" r={4} />
                 <line
                     x1={centroid[0]}
                     y1={centroid[1]}
@@ -151,8 +151,8 @@ function Donut({ width, height, data }) {
         gradient
             .attr("x1", "0%")
             .attr("y1", "0%")
-            .attr("x2", "0%") // Adjusted for a vertical gradient
-            .attr("y2", "100%"); // Adjusted for a vertical gradient
+            .attr("x2", "0%")
+            .attr("y2", "100%");
 
         gradient.append("stop").attr("offset", "0%").attr("stop-color", startColor);
         gradient.append("stop").attr("offset", "100%").attr("stop-color", endColor);
@@ -167,7 +167,6 @@ function Donut({ width, height, data }) {
                 transform={`translate(${width / 2}, ${height / 2})`}
                 className="container"
                 ref={ref}
-                id="linearGradient"
             >
                 {shapes}
             </g>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Community = () => {
     return (
-        <div className="py-44 overflow-hidden mx-auto md:px-16 relative">
+        <div className="pt-24 pb-0 overflow-hidden mx-auto md:px-16 relative">
             <div className="absolute top-[-20%] left-[-20%] bg-[#FF07174D] w-[1000px] h-[500px] opacity-50 blur-[120px] rounded-full"></div>
             <div className="flex item-center justify-center">
                 <div className="w-1/2 my-20">

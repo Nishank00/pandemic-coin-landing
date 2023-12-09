@@ -13,12 +13,12 @@ const TeamMemberCard = ({ img, name, role, desc, link }) => (
             </div>
             <p className="mt-4">{desc}</p>
             <div className="flex gap-3 mt-6">
-                <Link className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
-                    <a><FaLink /></a>
-                </Link>
-                <Link className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
-                    <a><FaLinkedinIn /></a>
-                </Link>
+                <a className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
+                    <FaLink />
+                </a>
+                <a className="bg-zinc-800 flex w-12 h-12 rounded-full justify-center items-center" href={link}>
+                    <FaLinkedinIn />
+                </a>
             </div>
         </div>
     </div>
