@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,11 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import Image from 'next/image';
 
 const TestimonialCard = ({ imageUrl, description }) => (
     <div className="p-4">
         <div className="h-full mx-auto overflow-hidden">
-            <img className="h-[400px] w-full object-cover object-center" src={imageUrl} alt="blog" />
+            <Image width={720} height={400} className="h-[400px] w-full object-cover object-center" src={imageUrl} alt="blog" />
             <div className="py-6">
                 <p className="leading-relaxed mb-3">{description}</p>
                 <button className="text-white bg-[#FB2525] px-4 text-sm font-medium py-1">Learn More
@@ -45,6 +44,7 @@ const Testimonials = () => {
                 <div className="flex flex-wrap" id='testimonials'>
                     <Swiper
                         centeredSlides={true}
+                        initialSlide={3}
                         slidesPerView={2}
                         spaceBetween={30}
                         pagination={false}

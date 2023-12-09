@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,14 +6,15 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 const NewCard = ({ imageUrl, description }) => (
-    <div className="p-4 rounded-lg relative">
-        <div className="h-full mx-auto rounded-[20px] overflow-hidden">
-            <img className="h-[400px] w-full object-cover object-center" src={imageUrl} alt="blog" />
-            <div className="p-6 absolute bottom-2 bg-[#1A1A23CC]">
+    <div className="p-4 rounded-lg relative bg-transparent">
+        <div className="h-full mx-auto rounded-[10px]">
+            <Image width={720} height={400} className="h-[400px] w-full object-cover object-center" src={imageUrl} alt="blog" />
+            <div className="p-6 mx-4 absolute bottom-2 left-0 bg-[#1A1A23CC] rounded-xl">
                 <p className="leading-relaxed mb-3">{description}</p>
-                <button className="text-white bg-[#FB2525] px-4 text-sm font-medium py-1">Learn More
+                <button className="text-white bg-[#FB2525] px-4 mb-4 text-sm font-medium py-1">Learn More
                 </button>
             </div>
         </div>

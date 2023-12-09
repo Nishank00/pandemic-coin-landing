@@ -1,16 +1,7 @@
-"use client";
-
-import MainNav from "./components/main-nav";
-import asset1 from "../assets/asset1.png";
-import asset2 from "../assets/asset2.png";
-import bg from "../assets/bg.png";
 import Image from "next/image";
 import Webinars from "./components/Webinars";
-import "./globals.css";
-import "./styles.css";
 import Feature from "./components/Feature";
 import Community from "./components/Community";
-import Deepdive from "./components/Deepdive";
 import Testimonials from "./components/Testimonials";
 import Hero from "./components/Hero";
 import WhoWeAre from "./components/WhoWeAre";
@@ -21,14 +12,16 @@ import Build from "./components/Build";
 import CTA from "./components/CTA";
 import Tokenomics from "./components/Tokenomics";
 import TeamMemberCard from "./components/TeamMemberCard";
-import { teamData } from "@/data/team-data";
-import logo from "../assets/logo-HQ.png";
+import { teamData } from "./data/team-data";
 import Advisors from "./components/Advisors";
 import Shelters from "./components/Shelters";
+import MainNav from "./components/main-nav";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
+    <main className="relative overflow-x-hidden bg-[#1A1B25]">
+      <MainNav />
       <Hero />
       <div className="bg-[#342CB24D] absolute w-[600px] blur-[120px] z-0 rounded-full h-[600px] -left-[25%]"></div>
       <WhoWeAre />
@@ -48,7 +41,8 @@ export default function Home() {
           <Image
             className="mx-auto bg-white rounded-2xl "
             width={300}
-            src={logo}
+            height={300}
+            src="/assets/logo-HQ.png"
             quality={100}
             alt="logo"
           />
@@ -67,11 +61,12 @@ export default function Home() {
       <Shelters />
       <Webinars />
       <Community />
-      <Deepdive />
+      {/* <Deepdive /> */}
       <Testimonials />
       <Build />
       <div className="bg-[#342CB233] absolute w-[600px] blur-[120px] z-0 rounded-full h-[600px] bottom-[0%] -right-[25%]"></div>
       <CTA />
+      <Footer/>
     </main>
   );
 }

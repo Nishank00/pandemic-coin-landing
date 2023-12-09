@@ -1,5 +1,3 @@
-import asset from "../assets/bg.png";
-
 export const teamData = [
     {
         name: "Ahsan Usman",
@@ -7,7 +5,7 @@ export const teamData = [
         desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Asad Zeeshan",
@@ -15,7 +13,7 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Abhayraj Gohil",
@@ -23,14 +21,14 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     }, {
         name: "Ahsan Usman",
         role: "Co-Founder & COO",
         desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Asad Zeeshan",
@@ -38,7 +36,7 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Abhayraj Gohil",
@@ -46,7 +44,7 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Abhayraj Gohil",
@@ -54,7 +52,7 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Abhayraj Gohil",
@@ -62,7 +60,7 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
     {
         name: "Abhayraj Gohil",
@@ -70,6 +68,6 @@ export const teamData = [
         desc: "He is a distinguished professional with a comprehensive skill set",
         link: "https://sample.com",
         linkedin: "https://sample.com",
-        img: asset,
+        img: '/assets/bg.png',
     },
 ];

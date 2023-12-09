@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { FaPlay } from 'react-icons/fa6'
-import whogr from "../../assets/whogr.png";
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 
@@ -17,14 +16,13 @@ const WhoWeAre = () => {
 
     return (
         <section className='container relative z-10 px-10 py-24'>
-            <div className='flex items-center justify-center relative z-10 flex-col'>
+            <div className='flex items-center justify-center z-10 flex-col'>
                 <div className="w-fit mx-auto my-16 text-center">
                     <h1 className="text-3xl md:text-5xl text-center">Who We Are</h1>
                     <div className="border-b mt-3 mb-6 border-slate-700  w-full" />
                     <p className="mt-6 text-sm tracking-[10px]">OUR STORY</p>
                 </div>
                 <div className="rounded-[30px] relative w-5/6 mx-auto h-80 overflow-hidden">
-                    <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1200x500" />
                     <div className="w-full h-full absolute top-0 left-0 bg-gray-800 opacity-50">
                         <div className="absolute top-[50%] left-[50%] w-[60px] h-[60px] translate-x-[-50%] rounded-full translate-y-[-50%] z-10 flex items-center justify-center text-center bg-[#fff]">
                             <FaPlay className='text-[#111] text-[32px] flex items-center justify-center text-center' />
@@ -98,7 +96,7 @@ const WhoWeAre = () => {
                     </Transition>
                 </>
             </div>
-            <Image className="absolute right-0 bottom-0 w-[500px] z-0" src={whogr} />
+            {/* <Image width={500} height={500} className="absolute right-0 bottom-0 -z-10" src="/assets/whogr.png" /> */}
         </section>
     )
 }

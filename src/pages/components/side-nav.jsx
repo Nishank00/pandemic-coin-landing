@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { RiMenu2Line } from "react-icons/ri";
 import { useState } from "react";

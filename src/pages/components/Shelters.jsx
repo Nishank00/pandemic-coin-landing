@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
@@ -9,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Navigation } from 'swiper/modules';
+import Image from 'next/image';
 
 const Shelters = () => {
     const shelters = [
@@ -47,7 +46,7 @@ const Shelters = () => {
                             <SwiperSlide key={index}>
                                 <div className="p-4">
                                     <div className="h-full mx-auto shadow-2xl rounded-3xl overflow-hidden">
-                                        <img className="h-[400px] w-full object-cover object-center" src={testimonial.imageUrl} alt="blog" />
+                                        <Image width={720} height={400} className="h-[400px] w-full object-cover object-center" src={testimonial.imageUrl} alt="blog" />
                                     </div>
                                 </div>
                                 <div className="py-6 w-full" id='desc'>
