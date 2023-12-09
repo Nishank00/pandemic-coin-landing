@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,6 +9,7 @@ import 'swiper/css/pagination';
 import './Webinar.module.css'
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 const Webinar = () => {
     const events = [
@@ -104,7 +103,7 @@ const Webinar = () => {
                             key={index}
                         >
                             <div className="flex relative" id="event-card">
-                                <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center transition-all" src={event.imageUrl} />
+                                <Image width={600} height={360} alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center transition-all" src={event.imageUrl} />
                                 <div className="px-8 py-10 relative z-10 w-full flex items-center justify-center flex-col bg-[#fff] text-[#6C6C6C]" id='event-desc'>
                                     <h2 className="tracking-widest text-sm title-font font-medium text-[#121212] mb-4">{event.subtitle}</h2>
                                     <h1 className="title-font text-lg font-medium mb-3 text-[#1761B0]">{event.title}</h1>

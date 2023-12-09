@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Build = () => {
@@ -9,10 +10,10 @@ const Build = () => {
                 </div>
                 <div className="flex flex-wrap -m-4 text-center">
                     <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
-                        <img src="https://dummyimage.com/720x720" className='rounded-3xl' alt="" />
+                        <Image width={1000} height={1000} src="https://dummyimage.com/720x720" className='rounded-3xl' alt="" />
                     </div>
                     <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
-                        <img src="https://dummyimage.com/720x720" className='rounded-3xl' alt="" />
+                        <Image width={1000} height={1000} src="https://dummyimage.com/720x720" className='rounded-3xl' alt="" />
                     </div>
                 </div>
             </div>

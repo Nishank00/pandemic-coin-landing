@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoCard from '../components/VideoCard';
+import Image from 'next/image';
 
 const VideoList = () => {
     // Dummy data for the list of videos
@@ -18,13 +19,13 @@ const VideoList = () => {
             <ul className=' space-y-2'>
                 {videoList.map(video => (
                     <li key={video.id}>
-                        <div class="h-full flex bg-[#231E1E] p-3 sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                            <img alt="team" class="flex-shrink-0 w-24 h-24 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/200x200" />
-                            <div class="flex-grow pl-4">
-                                <p class="title-font font-medium text-lg text-white">Holden Caulfield</p>
+                        <div className="h-full flex bg-[#231E1E] p-3 sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                            <Image alt="team" width={300} height={300} className="flex-shrink-0 w-24 h-24 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/200x200" />
+                            <div className="flex-grow pl-4">
+                                <p className="title-font font-medium text-lg text-white">Holden Caulfield</p>
                                 <p className='text-sm pr-3'>DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-                                <span class="inline-flex">
-                                    <a class="text-[#1761B0]">
+                                <span className="inline-flex">
+                                    <a className="text-[#1761B0]">
                                         Watch Now
                                     </a>
                                 </span>

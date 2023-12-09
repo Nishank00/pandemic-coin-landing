@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee'
 
@@ -61,7 +62,7 @@ const Feature = () => {
                                         <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3">{feature.title}</h1>
                                         <p className="leading-relaxed mb-3 text-gray-500">{feature.description}</p>
                                     </div>
-                                    {/* <img className="w-full object-cover object-center" src={feature.imageUrl} alt="blog" /> */}
+                                    <Image width={720} height={600} className="w-full object-cover object-center" src={feature.imageUrl} alt="blog" />
                                 </div>
                             </div>
                         ))}

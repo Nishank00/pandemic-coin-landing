@@ -1,5 +1,4 @@
 import React from 'react'
-import partner from '../../assets/partner1.png'
 import Image from 'next/image'
 
 const Partners = () => {
@@ -12,17 +11,17 @@ const Partners = () => {
                 <div className="grid grid-cols-3 gap-4 m-4 my-12">
                     <div className="h-full flex items-center justify-center border-gray-800 border overflow-hidden rounded-lg">
                         <div className="flex items-center justify-center flex-col">
-                            <Image src={partner} className="w-full" />
+                            <Image src="/assets/partner1.png" alt="partners" width={400} height={150} className="w-full" />
                         </div>
                     </div>
                     <div className="h-full flex items-center justify-center border-gray-800 border overflow-hidden rounded-lg">
                         <div className="flex items-center justify-center flex-col">
-                            <Image src={partner} className="w-full" />
+                            <Image src="/assets/partner1.png" alt="partners" width={400} height={150} className="w-full" />
                         </div>
                     </div>
                     <div className="h-full flex items-center justify-center border-gray-800 border overflow-hidden rounded-lg">
                         <div className="flex items-center justify-center flex-col">
-                            <Image src={partner} className="w-full" />
+                            <Image src="/assets/partner1.png" alt="partners" width={400} height={150} className="w-full" />
                         </div>
                     </div>
                 </div>

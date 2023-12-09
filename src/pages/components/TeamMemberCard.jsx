@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TeamMemberCard = ({ img, name, role, desc, link }) => (
     <div className="bg-zinc-900 rounded-[30px] overflow-hidden">
-        <Image src={img} className="w-full" alt="team" />
+        <Image src={img} className="w-full" width={600} height={400} alt="team" />
         <div className="p-6 px-8">
             <div>
                 <h1 className="text-2xl">{name}</h1>

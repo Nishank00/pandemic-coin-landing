@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
-import './donut-chart.css';
+import './donut-chart.module.css';
 
 const MARGIN_X = 150;
 const MARGIN_Y = 50;
@@ -176,3 +176,4 @@ function Donut({ width, height, data }) {
 }
 
 export default Donut;
+ 
