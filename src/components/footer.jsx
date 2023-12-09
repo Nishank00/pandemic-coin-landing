@@ -58,8 +58,8 @@ export default function Footer() {
                     ))}
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                         <p className="font-semibold text-white text-base mb-3">Subscribe</p>
-                        <div className="flex flex-nowrap items-center justify-start ">
-                            <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                        <div className="flex flex-nowrap mb-4 md:mb-0 items-center justify-start ">
+                            <div className="relative w-full md:w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                                 <input type="email" id="footer-field" name="footer-field" placeholder="email address" className="w-full bg-[#FFFFFF] text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                             <button className="flex items-center justify-center text-white bg-[#FB2525] border-0 w-[40px] h-[40px] relative">

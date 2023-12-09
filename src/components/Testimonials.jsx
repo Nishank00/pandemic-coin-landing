@@ -17,16 +17,29 @@ const TestimonialCard = ({ imageUrl, description }) => (
 );
 
 const Testimonials = () => {
-    const getRandomSeed = () => Math.floor(Math.random() * 1000);
 
-    const testimonials = Array.from({ length: 9 }, (_, index) => ({
-        imageUrl: `https://picsum.photos/seed/${getRandomSeed()}/720/400`,
-        description: `Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons`
-    }));
+    const testimonials = [
+        {
+            imageUrl: '/assets/people1.jpg',
+            description: 'Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons'
+        },
+        {
+            imageUrl: '/assets/people2.jpg',
+            description: 'Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons'
+        },
+        {
+            imageUrl: '/assets/people3.jpg',
+            description: 'Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons'
+        },
+        {
+            imageUrl: '/assets/news4.jpg',
+            description: 'Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons'
+        },
+    ];
 
     return (
         <section className="text-gray-400 body-font">
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container px-5 py-10 md:py-24 mx-auto">
                 <div className="w-fit mx-auto my-16 text-center">
                     <h1 className="text-3xl md:text-5xl text-center">Personal stories</h1>
                     <div className="border-b mt-3 mb-6 border-slate-700 w-full" />
@@ -35,11 +48,25 @@ const Testimonials = () => {
                 <div className="flex flex-wrap" id="testimonials">
                     <Swiper
                         centeredSlides={true}
-                        initialSlide={3}
-                        slidesPerView={2}
+                        initialSlide={1}
+                        slidesPerView={1}
                         spaceBetween={30}
                         pagination={false}
                         className="mySwiper gap-4"
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                                spaceBetween: 40,
+                            },
+                            1000: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                        }}
                     >
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index}>

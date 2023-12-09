@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function MainNav() {
-    const [state, setState] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const router = useRouter();
 
     const navigation = [
@@ -20,16 +20,19 @@ export default function MainNav() {
     useEffect(() => {
         document.onclick = (e) => {
             const target = e.target;
-            if (!target.closest(".menu-btn")) setState(false);
+            if (!target.closest(".menu-btn") && !target.closest(".nav-links")) {
+                setMenuOpen(false);
+            }
         };
     }, []);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
-        <nav
-            className={`bg-[#1A1B25] text-white md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""
-                }`}
-        >
-            <div className="gap-x-14 items-center mx-auto px-4 md:flex md:px-8">
+        <nav className={`bg-[#1A1B25] text-white ${menuOpen ? "md:shadow-lg md:rounded-xl md:border md:mx-2 md:mt-0" : ""}`}>
+            <div className="items-center mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
                     <Link href="/">
                         <a>
@@ -42,12 +45,9 @@ export default function MainNav() {
                             />
                         </a>
                     </Link>
-                    <div className="md:hidden">
-                        <button
-                            className="menu-btn hover:text-gray-800"
-                            onClick={() => setState(!state)}
-                        >
-                            {state ? (
+                    <div className="md:hidden transition-all">
+                        <button className="menu-btn transition-all hover:text-gray-100" onClick={toggleMenu}>
+                            {menuOpen ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-6 w-6"
@@ -80,10 +80,10 @@ export default function MainNav() {
                     </div>
                 </div>
                 <div
-                    className={`flex items-center justify-end w-full mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"
-                        } `}
+                    className={`flex items-center justify-end transition-all w-full mt-8 md:mt-0 md:flex ${menuOpen ? "flex" : "hidden"
+                        } nav-links`}
                 >
-                    <ul className="justify-center items-center space-y-6 md:flex md:space-x-12 md:space-y-0">
+                    <ul className="justify-center w-full items-center space-y-6 mb-8 transition-all md:flex md:space-x-12 md:space-y-0">
                         {navigation.map((item, idx) => (
                             <li
                                 key={idx}
@@ -92,7 +92,7 @@ export default function MainNav() {
                                 id="nav-link"
                             >
                                 <Link href={item.path}>
-                                    <a>{item.title}</a>
+                                    <a onClick={toggleMenu}>{item.title}</a>
                                 </Link>
                             </li>
                         ))}

@@ -66,7 +66,7 @@ function Donut({ width, height, data }) {
             }
         });
     }, []);
- 
+
     const pie = d3.pie()
         .value((d) => (typeof d === 'object' && d !== null && 'value' in d) ? d.value : 0);
 

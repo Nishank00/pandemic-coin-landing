@@ -36,7 +36,7 @@ const Advisors = () => {
                 <div className="flex flex-col text-center w-full mb-16">
                     <h1 className="text-5xl font-medium mb-4 text-[#FB2525]">Advisors</h1>
                 </div>
-                <div className="grid grid-cols-3 gap-4 m-4 my-12">
+                <div className="grid md:grid-cols-3 gap-4 m-4 my-12">
                     {teamData.slice(0, 3).map((member, index) => (
                         <Advisor key={index} {...member} />
                     ))}

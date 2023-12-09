@@ -56,7 +56,7 @@ export default function Home() {
       <Tokenomics />
       <Roadmap />
       <div className="relative">
-        <h1 className="text-3xl md:text-5xl serif text-[#FB2525] mt-16 text-center w-1/2 mx-auto">
+        <h1 className="text-3xl md:text-5xl serif text-[#FB2525] mt-16 text-center w-full md:w-1/2 mx-auto">
           We are people who make up white paper_pandemic coin
         </h1>
         <p className="text-center w-4/6 mx-auto mt-8">
@@ -77,7 +77,7 @@ export default function Home() {
             <p className="opacity-60">AZ</p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6 m-6 my-12">
+        <div className="grid md:grid-cols-3 gap-6 m-6 my-12">
           {teamData.slice(0, 3).map((item, index) => (
             <TeamMemberCard key={index} {...item} />
           ))}
