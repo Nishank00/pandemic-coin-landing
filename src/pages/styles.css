@@ -89,6 +89,7 @@ canvas:hover {
 
 #shelters {
   position: relative;
+  min-height: 90vh;
 }
 
 #shelters .swiper-slide,
@@ -157,9 +158,8 @@ canvas:hover {
   } 
 
   .recharts-wrapper {
-    max-width: 500px;
-    max-height: 500px;
-    margin: 1rem;
+    max-width: 360px;
+    max-height: 360px;
   }
 
   .recharts-wrapper  svg {

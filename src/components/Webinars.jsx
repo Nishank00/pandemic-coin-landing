@@ -84,11 +84,11 @@ const Webinar = () => {
                         },
                         768: {
                             slidesPerView: 1,
-                            spaceBetween: 40,
+                            spaceBetween: 20,
                         },
                         1000: {
-                            slidesPerView: 4,
-                            spaceBetween: 50,
+                            slidesPerView:2,
+                            spaceBetween: 20,
                         },
                     }}
                     on={{ slideChange: handleSlideChange }}

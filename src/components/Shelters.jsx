@@ -33,7 +33,7 @@ const Shelters = () => {
         <section className="text-gray-400 body-font">
             <div className="container px-5 pb-24 mx-auto">
                 <div className="w-fit mx-auto mb-2 md:-mb-20 text-center">
-                    <h1 className=" text-[40px] md:text-[120px] text-[#201E41] text-center tracking-widest uppercase">Pandemic shelters</h1>
+                    <h1 className=" text-[40px] leading-[140px] md:text-[120px] text-[#201E41] text-center tracking-widest uppercase">Pandemic shelters</h1>
                 </div>
                 <div className="flex flex-wrap" id='shelters'>
                     <Swiper
@@ -66,11 +66,11 @@ const Shelters = () => {
                         {shelters.map((testimonial, index) => (
                             <SwiperSlide key={index}>
                                 <div className="p-4">
-                                    <div className="h-full mx-auto shadow-2xl rounded-3xl overflow-hidden">
-                                        <Image width={720} height={400} className="h-[400px] w-full object-cover object-center" src={testimonial.imageUrl} alt="blog" />
+                                    <div className="h-[200px] md:max-h-[400px] mx-auto shadow-2xl rounded-3xl overflow-hidden">
+                                        <Image width={1000} height={800} className=" w-full h-full object-cover object-center" src={testimonial.imageUrl} alt="blog" />
                                     </div>
                                 </div>
-                                <div className="py-6 w-full" id='desc'>
+                                <div className="py-6 px-4 md:px-0 md:mx-0" id='desc'>
                                     <p className="leading-relaxed mb-3">{testimonial.description}</p>
                                 </div>
                             </SwiperSlide>

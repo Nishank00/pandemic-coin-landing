@@ -46,7 +46,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative overflow-x-hidden bg-[#1A1B25]">
+    <main className="relative overflow-x-hidden">
       <MainNav />
       <Hero />
       <div className="bg-[#342CB24D] absolute w-[600px] blur-[120px] z-0 rounded-full h-[600px] -left-[25%]"></div>

@@ -28,7 +28,7 @@ const Tokenomics = () => {
                 <div className="border-b mt-3 mb-6 border-slate-700 w-full" />
                 <p className="mt-6 text-sm font-medium tracking-[10px] uppercase">We are social</p>
             </div>
-            <div className='z-50 py-4 md:py-28 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border border-[#7E7E7E]'>
+            <div className='z-50 py-4 max-w-[320px] flex items-center justify-center md:max-w-[100%] md:py-28 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border border-[#7E7E7E]'>
                 {/* <Donut
                     id="linearGradient"
                     data={data}

@@ -63,7 +63,7 @@ const Testimonials = () => {
                                 spaceBetween: 40,
                             },
                             1000: {
-                                slidesPerView: 3,
+                                slidesPerView: 2,
                                 spaceBetween: 50,
                             },
                         }}

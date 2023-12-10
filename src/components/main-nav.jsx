@@ -83,7 +83,7 @@ export default function MainNav() {
                     className={`flex items-center justify-end transition-all w-full mt-8 md:mt-0 md:flex ${menuOpen ? "flex" : "hidden"
                         } nav-links`}
                 >
-                    <ul className="justify-center w-full items-center space-y-6 mb-8 transition-all md:flex md:space-x-12 md:space-y-0">
+                    <ul className="justify-center md:justify-end w-full items-center space-y-6 mb-8 transition-all md:flex md:space-x-12 md:space-y-0">
                         {navigation.map((item, idx) => (
                             <li
                                 key={idx}
