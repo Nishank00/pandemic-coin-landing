@@ -33,30 +33,28 @@ export default function About() {
         }]
 
     return (
-        <div>
-            <Layout>
-                <h1 className="text-3xl md:text-5xl serif text-[#FB2525] mt-16 text-center px-6 w-full md:w-1/2 mx-auto">
-                    We are people who make up white paper_pandemic coin
-                </h1>
-                <p className="text-center w-full px-6 md:w-4/6 mx-auto mt-8">
-                    Embrace the serenity beneath the surface, where the whispers of nature harmonize with the heartbeat of your underground haven
-                </p>
-                <div className="flex items-center justify-center text-center flex-col mt-8">
-                    <Image className="mx-auto bg-white" width={300} height={300} src="/assets/logo-HQ.png" quality={100} alt="logo" />
-                    <div className="my-4">
-                        <h1 className="text-2xl">Founder</h1>
-                        <p className="opacity-60">AZ</p>
-                    </div>
+        <Layout>
+            <h1 className="text-3xl md:text-5xl serif text-[#FB2525] mt-16 text-center px-6 w-full md:w-1/2 mx-auto">
+                We are people who make up white paper_pandemic coin
+            </h1>
+            <p className="text-center w-full px-6 md:w-4/6 mx-auto mt-8">
+                Embrace the serenity beneath the surface, where the whispers of nature harmonize with the heartbeat of your underground haven
+            </p>
+            <div className="flex items-center justify-center text-center flex-col mt-8">
+                <Image className="mx-auto bg-white" width={300} height={300} src="/assets/logo-HQ.png" quality={100} alt="logo" />
+                <div className="my-4">
+                    <h1 className="text-2xl">Founder</h1>
+                    <p className="opacity-60">AZ</p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-6 m-6 my-12">
-                    {teamData.map((item, index) => (
-                        <TeamMemberCard key={index} {...item} />
-                    ))}
-                </div>
-                <Advisors />
-                <Partners />
-            </Layout>
-        </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 m-6 my-12">
+                {teamData.map((item, index) => (
+                    <TeamMemberCard key={index} {...item} />
+                ))}
+            </div>
+            <Advisors />
+            <Partners />
+        </Layout>
     );
 }
 

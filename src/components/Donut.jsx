@@ -135,7 +135,7 @@ function Donut({ width, height, data }) {
                     textAnchor={textAnchor}
                     dominantBaseline="middle"
                     fontSize={14}
-                    fill="white"
+                    fill="#fff"
                     id="text"
                 >
                     {label}

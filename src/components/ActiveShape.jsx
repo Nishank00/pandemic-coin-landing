@@ -48,7 +48,7 @@ const ActiveShape = (props) => {
                 cy={cy}
                 startAngle={startAngle}
                 endAngle={endAngle}
-                innerRadius={outerRadius + 6}
+                innerRadius={innerRadius - 6}
                 outerRadius={outerRadius + 10}
                 fill={fill}
             />
@@ -62,8 +62,8 @@ const ActiveShape = (props) => {
                 x={ex + (cos >= 0 ? 1 : -1) * 12}
                 y={ey}
                 textAnchor={textAnchor}
-                fill="#333"
-            >{`PV ${value}`}</text>
+                fill="#fff"
+            >{`${value}`}</text>
             <text
                 x={ex + (cos >= 0 ? 1 : -1) * 12}
                 y={ey}

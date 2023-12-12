@@ -43,11 +43,11 @@ const Feature = () => {
             <div className="container relative px-[0%] pt-16 pb-24 mx-auto">
                 <div className="flex flex-col relative z-10 text-center w-full mb-16">
                     <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">Our Key Features</h1>
-                </div> 
+                </div>
                 <div className="flex flex-wrap -m-4 relative z-10">
                     <Marquee>
                         {features.map((feature, index) => (
-                            <div key={index} className={`p-4 w-[360px] md:w-[420px] flex`}>
+                            <div key={index} className={`p-4 w-[360px] md:w-[420px] md:max-h-[600px] flex`}>
                                 <div className={`overflow-hidden flex-1 rounded-[20px] border border-[#7e7e7e] ${feature.backgroundColor}`}>
                                     <div className="p-6 py-12 text-center w-full">
                                         <p className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}>{feature.number}</p>

@@ -1,33 +1,18 @@
 import React from 'react';
 import Advisor from './Advisor';
+import Marquee from 'react-fast-marquee';
 
 const Advisors = () => {
-
     const teamData = [
-        {
-            name: "Ahsan Usman",
-            role: "Co-Founder & COO",
-            desc: "Ahsan Usman is a distinguished professional with a comprehensive skill set",
-            link: "https://sample.com",
-            linkedin: "https://sample.com",
-            img: '/assets/bg.png',
-        },
-        {
-            name: "Asad Zeeshan",
-            role: "Co-Founder & CEO / CMO",
-            desc: "He is a distinguished professional with a comprehensive skill set",
-            link: "https://sample.com",
-            linkedin: "https://sample.com",
-            img: '/assets/bg.png',
-        },
-        {
-            name: "Abhayraj Gohil",
-            role: "Cofounder & CTO",
-            desc: "He is a distinguished professional with a comprehensive skill set",
-            link: "https://sample.com",
-            linkedin: "https://sample.com",
-            img: '/assets/bg.png',
-        }]
+        { title: "Lions business media" },
+        { title: "Wolfpack crypto media" },
+        { title: "crypto scanner" },
+        { title: "Ethereum" },
+        { title: "Swytch web3 technologies " },
+        { title: "Simply web3 technologies" },
+        { title: "Rebellion NFT" },
+        { title: "Web3 events" },
+    ];
 
     return (
         <section className="text-gray-400 relative body-font">
@@ -36,10 +21,12 @@ const Advisors = () => {
                 <div className="flex flex-col text-center w-full mb-16">
                     <h1 className="text-5xl font-medium mb-4 text-[#FB2525]">Advisors</h1>
                 </div>
-                <div className="grid md:grid-cols-3 gap-4 m-4 my-12">
-                    {teamData.slice(0, 3).map((member, index) => (
-                        <Advisor key={index} {...member} />
-                    ))}
+                <div>
+                    <Marquee>
+                        {teamData.map((member, index) => (
+                            <Advisor key={index} {...member} />
+                        ))}
+                    </Marquee>
                 </div>
             </div>
         </section>

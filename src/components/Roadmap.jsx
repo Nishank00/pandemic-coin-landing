@@ -50,10 +50,10 @@ const Roadmap = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex-shrink-0 w-0 h-0 md:w-10 md:h-10 rounded-full bg-[#342CB2] inline-flex items-center justify-center text-white relative z-10">
+                                <div className="flex-shrink-0 w-0 h-0 md:w-4 md:h-4 rounded-full bg-[#342CB2] inline-flex items-center justify-center text-white relative z-10">
                                 </div>
-                                <div className="h-full w-0 md:w-10 mt-4 absolute flex items-center justify-center">
-                                    <div className="h-full w-[1px] bg-[#505050] pointer-events-none"></div>
+                                <div className="h-full w-0 md:w-4 mt-4 absolute flex items-center justify-center">
+                                    <div className="h-full w-[1px] border border-dashed border-[#505050] border-spacing-20 pointer-events-none"></div>
                                 </div>
                             </div>
                             <div className="flex relative items-center justify-center mb-5 md:mb-0 md:justify-start w-[200px] md:w-[500px]">
@@ -67,10 +67,10 @@ const Roadmap = () => {
                                 <div className="w-0 md:w-60 transition-all border-0 md:border right-0 border-[#505050]"></div>
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex-shrink-0 w-0 h-0 md:w-10 md:h-10 rounded-full bg-[#342CB2] inline-flex items-center justify-center text-white relative z-10">
+                                <div className="flex-shrink-0 w-0 h-0 md:w-4 md:h-4 rounded-full bg-[#707070] inline-flex items-center justify-center text-white relative z-10">
                                 </div>
-                                <div className="h-full w-0 md:w-10 mt-4 absolute flex items-center justify-center">
-                                    <div className="h-full w-[1px] bg-[#505050] pointer-events-none"></div>
+                                <div className="h-full w-0 md:w-4 mt-4 absolute flex items-center justify-center">
+                                    <div className="h-full w-[1px] border border-dashed border-[#505050] border-spacing-20 pointer-events-none"></div>
                                 </div>
                             </div>
                             <div className="flex-grow px-0 md:px-12 w-[320px] md:w-[500px]">
@@ -96,11 +96,11 @@ const Roadmap = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex-shrink-0 w-0 h-0 md:w-10 md:h-10 rounded-full bg-[#342CB2] inline-flex items-center justify-center text-white relative z-10">
+                                <div className="flex-shrink-0 w-0 h-0 md:w-4 md:h-4 rounded-full bg-[#707070] inline-flex items-center justify-center text-white relative z-10">
                                 </div>
-                                <div className="h-full w-0 md:w-10 mt-4 absolute flex items-center justify-center">
-                                    <div className="h-full w-[1px] bg-[#505050] pointer-events-none"></div>
-                                </div>
+                                {/* <div className="h-full w-0 md:w-4 mt-4 absolute flex items-center justify-center">
+                                    <div className="h-full w-[1px] border border-dashed border-[#505050] border-spacing-20 pointer-events-none"></div>
+                                </div> */}
                             </div>
                             <div className="flex relative items-center justify-center mb-5 md:mb-0 md:justify-start w-[200px] md:w-[500px]">
                                 <div className="w-0 md:w-60 transition-all border-0 md:border right-0 border-[#505050]"></div>

@@ -20,7 +20,7 @@ const WhoWeAre = () => {
                 <div className="w-fit mx-auto my-16 text-center">
                     <h1 className="text-3xl md:text-5xl text-center">Who We Are</h1>
                     <div className="border-b mt-3 mb-6 border-slate-700  w-full" />
-                    <p className="mt-6 text-sm tracking-[10px]">OUR STORY</p>
+                    <p className="mt-6 text-sm tracking-[10px]">Our introduction video</p>
                 </div>
                 <div className="rounded-[30px] relative w-5/6 mx-auto h-80 overflow-hidden">
                     <Image alt="" layout="fill" className='object-cover' src='/assets/whowe.webp' />

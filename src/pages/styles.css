@@ -1,4 +1,8 @@
 /* / hero bg */
+#hero .swiper {
+  padding: 10px 0px !important;
+}
+
 #nav-link {
   position: relative;
 }
@@ -55,6 +59,18 @@
   width: 100%;
 }
 
+.timer-value {
+  font-family: "Inter", sans-serif;
+}
+
+#eventBg .swiper-slide {
+  scale: 90%;
+}
+
+#eventBg .swiper-slide-active {
+  scale: 110%;
+}
+
 #eventBg .swiper-slide #circle,
 #eventBg .swiper-slide button,
 #eventBg .swiper-slide #event-desc {
@@ -69,7 +85,7 @@
 }
 
 #NewsGallery .swiper-slide {
-  scale: 100%;
+  scale: 90%;
   transition: all 0.3s ease;
 }
 
@@ -120,6 +136,33 @@ canvas:hover {
   z-index: 500;
 }
 
+#shelters .swiper-pagination {
+  position: absolute;
+  left: 0% !important;
+  width: 100%;
+  max-width: 33.33%;
+}
+
+#shelters .swiper-pagination-bullet {
+  margin-right: 0%;
+  height: 2px;
+  border-radius: 0px;
+  float: right;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+#shelters .swiper-pagination-bullet-active {
+  height: 4px;
+  color: #fff;
+  background: #de1012;
+  transition: all 0.3s ease;
+}
+
 .prev,
 .next {
   border: 1px solid #ccc;
@@ -135,7 +178,7 @@ canvas:hover {
   color: blue;
   border-color: blue;
 }
- 
+
 .prev svg,
 .next svg {
   position: absolute;
@@ -150,19 +193,17 @@ canvas:hover {
   filter: blur(5px);
 }
 
-
-
 @media screen and (max-width: 800px) {
   #hero {
     padding: 1rem;
-  } 
+  }
 
   .recharts-wrapper {
     max-width: 360px;
     max-height: 360px;
   }
 
-  .recharts-wrapper  svg {
+  .recharts-wrapper svg {
     max-width: 100%;
   }
 
