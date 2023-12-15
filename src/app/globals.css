@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .anim {
+        @apply transition-all duration-[300ms] ease-in-out;
+    }
+    .anim-slo {
+        @apply transition-all duration-[800ms] ease-in-out;
+    }
+
+    .pri-btn {
+        @apply px-6 bg-pdc-red uppercase tracking-widest text-sm font-medium p-3 hover:brightness-[0.9] hover:drop-shadow-lg brightness-110 rounded-md anim;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Caudex", serif;
+}
+
+p,
+a,
+span {
+    font-family: "Archivo", sans-serif;
+}
+
+body {
+    color: #fff;
+    background-color: #090a0f;
+}
+
+.serif {
+    font-family: "Caudex", serif;
+}
+
+.animate-spin {
+    animation: spin 6s linear infinite;
+}
+
+/*---------------HP Classics---------------*/
+
+/*centering absolute stuff*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.centerh {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.centerv {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.centerrr {
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Selection controls*/
+
+::-moz-selection {
+    color: rgb(40, 8, 8);
+    background: rgba(255, 255, 255);
+}
+
+::selection {
+    color: rgb(40, 8, 8);
+    background: rgba(255, 255, 255);
+}
+
+.noselect {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+/*media hacks*/
+
+.pc {
+    visibility: visible;
+    display: flex;
+}
+
+.mob {
+    visibility: hidden;
+    display: none;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*z-index hacks*/
+
+.toppp {
+    z-index: 9999;
+}
+
+.topppp {
+    z-index: 99999;
+}
+.toppppp {
+    z-index: 9999999;
+}
+
+.bottt {
+    z-index: -9999;
+}
+
+/*others*/
+
+abbr[title] {
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .mob {
+        visibility: visible;
+        display: flex;
+    }
+    .pc {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+/*---------------HP Classics---------------*/
