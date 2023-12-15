@@ -14,16 +14,16 @@ const CountDown = () => {
 
     const slideComponents = [
         { title: "🔥 Token sale open in :", component: <Timer />, detail: null },
-        { title: "Total offering", component: null, detail: '130,000,0000' },
-        { title: "Presale Price", component: null, detail: '$12' },
-        { title: "Purchase Limit", component: null, detail: '10,000' },
-        { title: "Generation Event", component: null, detail: 'TBA' },
+        { title: "Total offering", component: null, detail: '500FBX' },
+        { title: "Presale Price", component: null, detail: '-' },
+        { title: "Purchase Limit", component: null, detail: '-' },
+        { title: "Generation Event", component: null, detail: 'Q1 2023' },
         { title: "More details", component: null, detail: 'Tokenomics' }
     ];
 
     return (
         <section className="text-gray-600 body-font">
-            <div className="container px-12 mx-auto">
+            <div className="container px-[140px] mx-auto ">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -31,23 +31,25 @@ const CountDown = () => {
                         duration: 0.5,
                         ease: "easeInOut",
                     }}
-                    className="relative px-12 py-16 bg-black rounded-[20px]">
-                    <div className={`grid grid-cols-1 md:grid-cols-4 gap-8`}>
-                        {[1, 2, 3, 4, 5, 6].slice((currentSlide - 1) * 4, currentSlide * 4).map((index) => (
+                    className="relative p-[70px_68px]  bg-black rounded-[20px]">
+                    <div className={`grid grid-cols-1 md:grid-cols-5 gap-[100px]`}>
+                        {[1, 2, 3, 4, 5, 6].slice((currentSlide - 1) * 5, currentSlide * 5).map((index, i) =>
+                        (
                             <div key={index} className="rounded-[20px] transition-all flex flex-col items-start">
-                                <p className={`text-sm font-semibold`}>{slideComponents[index - 1].title}</p>
-                                <div className="mt-4">
+                                <p className={`text-[14px] ${i === 0 ? "text-[#FFF]" : "text-[#7B7E98]"}  font-medium leading-[139.5%] whitespace-nowrap font_cat`}>{slideComponents[index - 1].title}</p>
+                                <div className="mt-4 ">
                                     {slideComponents[index - 1].component && (
                                         // Render the component if it exists
                                         slideComponents[index - 1].component
                                     )}
                                     {slideComponents[index - 1].detail && (
                                         // Render the detail if it exists
-                                        <p className='leading-relaxed text-[20px] text-white font-bold'>{slideComponents[index - 1].detail}</p>
+                                        <p className='leading-relaxed font_cat text-[20px] text-white font-bold'>{slideComponents[index - 1].detail}</p>
                                     )}
                                 </div>
                             </div>
-                        ))}
+                        )
+                        )}
                     </div>
                     {currentSlide === 1 ? (
                         <button

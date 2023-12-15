@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,12 +9,12 @@
     .anim {
         @apply transition-all duration-[300ms] ease-in-out;
     }
-    .anim-slo {
+    .anim-slo { 
         @apply transition-all duration-[800ms] ease-in-out;
     }
 
     .pri-btn {
-        @apply px-6 bg-pdc-red uppercase tracking-widest text-sm font-medium p-3 hover:brightness-[0.9] hover:drop-shadow-lg brightness-110 rounded-md anim;
+        @apply md:rounded-[10px] rounded-[6px] bg-[#BB1A37] text-[#FFF] text-[16px] not-italic font-semibold leading-[139.5%] tracking-widest px-[8px] md:px-[40px] py-[12px] md:py-[17px] uppercase hover:brightness-[0.9] hover:drop-shadow-lg anim;
     }
 }
 
@@ -22,13 +24,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Caudex", serif;
+    /* font-family: "Caudex", serif; */
+    font-family: 'Noto Serif Display', serif;
 }
 
 p,
 a,
 span {
     font-family: "Archivo", sans-serif;
+}
+
+.font_cat{
+    font-family: 'Catamaran', sans-serif;
 }
 
 body {
@@ -152,3 +159,7 @@ abbr[title] {
 }
 
 /*---------------HP Classics---------------*/
+
+.b1{
+    border: 1px solid red;
+}

@@ -2,18 +2,21 @@ import Image from "next/image";
 
 //imgs
 import logo from "../../../assets/logo-big.png";
-import bg from "../../../assets/landing-bg.png";
+import bg from "../../../assets/hero_bg.svg";
+import bg1 from "../../../assets/landing-bg.png";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
 
 export default function HeroSection() {
+    const isMobile = useMediaQuery("(max-width:768px)");
     return (
-        <div>
+        <div className="relative">
             <Image
-                src={bg}
+                src={isMobile ? bg1 : bg}
                 alt="Pandemic Coin bg"
                 width="auto"
                 height="auto"
-                className="absolute opacity-20 h-screen object-cover w-screen bottt top-0 left-0"
+                className={`absolute ${isMobile ? "opacity-20 h-screen" : ""}  object-cover w-screen bottt bottom-0 top-[-100px] left-0`}
             />
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -22,18 +25,18 @@ export default function HeroSection() {
                     duration: 0.5,
                     ease: "easeInOut",
                 }}
-                className="text-center py-24">
+                className="text-center p-[130px_0_140px]">
                 <Image
                     src={logo}
                     alt="Pandemic Coin Logo"
-                    className="mx-auto w-36 drop-shadow-2xl mt-8"
+                    className="mx-auto w-[150px] md:w-[223px] drop-shadow-2xl "
                 />
                 <motion.h1
-                    className="text-4xl mt-6 lg:text-6xl">The Pandemic Coin</motion.h1>
+                    className="text-[#FFF] md:text-[76px] text-[36px] mt-[10px] font-normal leading-[139.5%] capitalize">The Pandemic Coin</motion.h1>
                 <motion.button
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="pri-btn mt-6 block transition-all mx-auto w-fit text-white"
+                    className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
                 >
                     Invest now
                 </motion.button>
