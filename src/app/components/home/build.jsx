@@ -14,7 +14,7 @@ const Build = () => {
                             Invest in Cathy&quot;s Vision for Secure Shelters and Make a Lasting Impact!
                         </h2>
                     </h1> */}
-                    <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">
+                    <h1 className="text-3xl md:text-5xl tracking-[-3.36px] font-medium title-font mb-4 text-white">
                         Invest
                     </h1>
                 </div>

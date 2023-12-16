@@ -139,10 +139,11 @@ canvas:hover {
 }
 
 #shelters .swiper-pagination {
-  position: absolute;
-  left: 0% !important;
-  width: 100%;
   max-width: 33.33%;
+}
+#shelters  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  right: 80px !important;
+  left: auto !important;
 }
 
 #shelters .swiper-pagination-bullet {
@@ -163,6 +164,7 @@ canvas:hover {
   color: #fff;
   background: #de1012;
   transition: all 0.3s ease;
+  margin-top: 0px;
 }
 
 .prev,

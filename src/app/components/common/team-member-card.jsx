@@ -22,7 +22,7 @@ const TeamCardVariants = {
 const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
     return (
         <motion.div
-            className="rounded-xl relative z-30"
+            className="rounded-[20px] relative z-30"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             variants={TeamCardVariants}
@@ -32,7 +32,9 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
         >
             <Image
                 src={img}
-                className="w-full rounded-[30px]"
+                className="mx-auto bg-pdc-d-gray h-[273px] rounded-[20px]"
+                width={324}
+                height={273}
                 alt={name}
                 style={{
                     borderRadius: "30px",
@@ -40,24 +42,24 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     transformOrigin: "center",
                 }}
             />
-            <div className="py-6 px-2">
+            <div className="p-2">
                 <div className="">
                     <motion.h1
-                        className="text-2xl mb-2"
+                        className="font_cat text-[20px] text-[#7B7E98] not-italic font-normal leading-[normal] tracking-[0.8px] mb-1"
                         style={{ opacity: 1, transition: "opacity 0.2s ease-in-out" }}
                         animate={{ opacity: 0.7 }}
                         whileHover={{ opacity: 1 }}
                     >
                         {name}
                     </motion.h1>
-                    <motion.p className="opacity-60 mb-4" style={{ opacity: 1 }} whileHover={{ opacity: 0.7 }}>
+                    <motion.p className="text-[23px]" style={{ opacity: 1 }} whileHover={{ opacity: 0.7 }}>
                         {role}
                     </motion.p>
                 </div>
-                <motion.p className="mt-4" style={{ opacity: 1 }} whileHover={{ opacity: 0.8 }}>
+                {/* <motion.p className="mt-4" style={{ opacity: 1 }} whileHover={{ opacity: 0.8 }}>
                     {desc}
-                </motion.p>
-                <div className="flex gap-3 mt-6">
+                </motion.p> */}
+                {/* <div className="flex gap-3 mt-6">
                     <Link
                         className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
                         href={link}
@@ -70,7 +72,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     >
                         <FaLinkedinIn />
                     </Link>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     );

@@ -74,7 +74,7 @@ const Shelters = () => {
     return (
         <section className=" body-font">
             <div className="container px-5 pb-24 mx-auto">
-                <DynamicTitle title="Pandemic Shelters" />
+                <DynamicTitle title="Pandemic shelters images"  className="tracking-[-3.36px]"/>
                 <div className="flex flex-wrap z-0" id="shelters">
                     <Swiper
                         centeredSlides={true}
@@ -107,8 +107,8 @@ const Shelters = () => {
                     >
                         {shelters.map((shelter, index) => (
                             <SwiperSlide key={index}>
-                                <div className="grid grid-cols-3 gap-4 w-10/12 mx-auto">
-                                    <div className="">
+                                <div className="grid grid-cols-3 gap-4 w-10/12  mx-auto overflow-hidden ">
+                                    <div className="h-full w-full">
                                         <div className="text-sm h-[80px] mb-2">
                                             {shelter.description}
                                         </div>
@@ -121,14 +121,14 @@ const Shelters = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden relative">
+                                    <div className="overflow-hidden h-full w-full relative">
                                         <Image
                                             className="w-full h-full object-cover"
                                             src={shelter.imageUrl}
                                             alt={shelter.description}
                                         />
                                     </div>
-                                    <div>
+                                    <div className="h-full w-full">
                                         <div className="overflow-hidden">
                                             <Image
                                                 width={400}
