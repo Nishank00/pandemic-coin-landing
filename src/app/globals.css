@@ -55,9 +55,9 @@ body {
 
 /*centering absolute stuff*/
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .centerh {
     left: 50%;
@@ -162,4 +162,8 @@ abbr[title] {
 
 .b1{
     border: 1px solid red;
+}
+.clock_img{
+    height: 20px;
+    width: 20px !important;
 }

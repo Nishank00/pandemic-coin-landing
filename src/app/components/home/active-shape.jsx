@@ -45,8 +45,8 @@ const ActiveShape = (props) => {
                 exit="hidden"
                 x={cx}
                 y={cy - 20}
-                dy={5}
-                fontSize={32}
+                dy={20}
+                fontSize={21}
                 fontWeight={500}
                 textAnchor="middle"
                 fill={"#342CB2"}
@@ -56,8 +56,8 @@ const ActiveShape = (props) => {
             <text
                 x={cx}
                 y={cy + 20}
-                dy={10}
-                fontSize={20}
+                dy={0}
+                fontSize={10}
                 fontWeight={500}
                 textAnchor="middle"
                 fill={"#fff"}
@@ -71,7 +71,7 @@ const ActiveShape = (props) => {
                 outerRadius={outerRadius}
                 startAngle={startAngle}
                 endAngle={endAngle}
-                fill={fill}
+                fill={"#342CB2 "}
             />
             <Sector
                 cx={cx}
@@ -80,7 +80,8 @@ const ActiveShape = (props) => {
                 endAngle={endAngle}
                 innerRadius={innerRadius - 6}
                 outerRadius={outerRadius + 10}
-                fill={fill}
+                fill={"rgba(255, 255, 255, 0.40)"}
+
             />
             <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} fill="none" />
             <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />

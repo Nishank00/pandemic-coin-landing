@@ -12,16 +12,17 @@ const CustomPieChart = ({ data, activeIndex, onPieEnter }) => {
                 duration: 0.5,
                 ease: "easeInOut",
             }}
+            className=""
         >
-            <PieChart width={1000} height={800}>
+            <PieChart width={1140} height={523}>
                 <Pie
                     activeIndex={activeIndex}
                     activeShape={<ActiveShape />}
                     data={data}
                     cx="50%"
                     cy="50%"
-                    innerRadius={240}
-                    outerRadius={320}
+                    innerRadius={119}
+                    outerRadius={169}
                     dataKey="value"
                     stroke="#1C1D26"
                     onMouseEnter={onPieEnter}
@@ -30,8 +31,9 @@ const CustomPieChart = ({ data, activeIndex, onPieEnter }) => {
                         <Cell
                             key={`cell-${index}`}
                             fill={
-                                index === activeIndex ? "#BB1A37" : "#7B7E98"
+                                index === activeIndex ? "#BB1A37" : "#342CB2"
                             }
+                        
                         />
                     ))}
                 </Pie>

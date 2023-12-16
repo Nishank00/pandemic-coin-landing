@@ -29,7 +29,7 @@ export default function Home() {
       <MiniAboutUs />
       <Partners />
       <Shelters />
-      <Community />
+      <Community /> 
       <Testimonials />
       <Build />
       <Cta />

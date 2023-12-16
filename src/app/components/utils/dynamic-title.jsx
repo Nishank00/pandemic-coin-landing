@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export default function DynamicTitle({ title, description, descColor, dividerWidth }) {
+export default function DynamicTitle({ title, description, descColor,customClass }) {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -28,7 +28,7 @@ export default function DynamicTitle({ title, description, descColor, dividerWid
                 ease: "easeInOut",
             }}
         >
-            <div className="md:w-fit w-full  mx-auto py-10 md:py-16 mt-12 text-center">
+            <div className="md:w-fit w-[90%] mx-auto py-10 md:py-16 mt-12 text-center">
                 <motion.h1 initial="hidden" animate="visible" variants={{
                     hidden: {
                         scale: .8,
@@ -41,8 +41,8 @@ export default function DynamicTitle({ title, description, descColor, dividerWid
                             delay: .4
                         }
                     },
-                }} className="text-[#FFF] text-[30px] md:text-[56px] not-italic font-light leading-[139.5%] capitalize text-center">{title}</motion.h1>
-                <div className={`h-[1px] mt-3 mb-[22px] bg-slate-700 w-[50%] ${dividerWidth ? `md:w-[${dividerWidth}]` : "md:w-[50%]"} mx-auto`} />
+                }} className={`text-[#FFF] text-[30px] md:text-[56px] not-italic font-light leading-[139.5%] capitalize text-center ${customClass ? customClass : ""}`}>{title}</motion.h1>
+                <div className={`h-[1px] mt-3 mb-[22px] bg-slate-700 w-[50%] mx-auto`} />
                 <p className={` ${descColor ? `text-[${descColor}]` : "text-[#FFF]"} text-center text-[14px] not-italic leading-[168%] uppercase tracking-[8px] font_cat`}>
                     {description}
                 </p>

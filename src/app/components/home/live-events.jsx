@@ -14,26 +14,34 @@ import event2 from '../../../assets/event2.png'
 import event3 from '../../../assets/event3.png'
 import event4 from '../../../assets/event4.png'
 import event5 from '../../../assets/event5.jpg'
+import clock from '../../../assets/icons/clock.svg'
+
 import { motion } from "framer-motion"
 
 const NewsCard = ({ imageUrl, description }) => (
-    <div className="p-4 overflow-hidden">
-        <div className="h-full mx-auto relative overflow-hidden rounded-[20px] max-h-[400px] md:max-h-[500px] md:rounded-[20px]">
-            <Image
-                width={720}
-                height={600}
-                className="h-[400px] md:h-[300px] w-full rounded-[20px] overflow-hidden object-cover object-center"
-                src={imageUrl}
-                alt="blog"
-            />
-            <div className="p-6 md:mx-0 md:absolute bottom-0 w-full bg-pdc-d-gray/80 backdrop-blur-lg">
-                <p className="leading-relaxed mb-3">{description}</p>
-                <button className="text-white pri-btn px-4 p-2 text-xs font-medium ">
-                    Learn More
-                </button>
+    // <div className="overflow-hidden">
+    <div className="h-full mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+        <Image
+            width={720}
+            height={600}
+            className=" w-full h-[210px] md:h-full overflow-hidden  object-center"
+            src={imageUrl}
+            alt="blog"
+        />
+        <div className="md:py-2 py-6 px-6 md:mx-0 md:absolute bottom-0 w-full bg-pdc-d-gray/80 backdrop-blur-[5px]">
+            <div className="flex gap-[8px] mb-[6px]" >
+                <Image src={clock} height={20} width={20} className="clock_img" alt='arrow' />
+                <div className="font_cat text-[13.423px] not-italic font-medium leading-[143.5%]">
+                    12-3-2023
+                </div>
             </div>
+            <p className="leading-relaxed md:px-4 px-0 font_cat text-[#E4E4E4]">{description}...&nbsp; <span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">read more</span></p>
+            {/* <button className="text-white pri-btn px-4 p-2 text-xs font-medium ">
+                    Learn More
+                </button> */}
         </div>
     </div>
+    // {/* </div> */}
 );
 
 export default function LiveEvents() {
@@ -41,34 +49,34 @@ export default function LiveEvents() {
         {
             imageUrl: event1,
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         },
         {
             imageUrl: event2,
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         },
         {
             imageUrl: event3,
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         },
         {
             imageUrl: event4,
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         },
         {
             imageUrl: event5,
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         },
     ];
 
     return (
         <section className="text-gray-400 bg-pdc-d-gray body-font" id="news-gallery">
             <div className="container px-5 py-16 md:pb-12 mx-auto">
-                <DynamicTitle title="Live Events" dividerWidth="100%" descColor="#7B7E98" description={"WEBINARS"} />
+                <DynamicTitle title="Live Events" descColor="#7B7E98" description={"WEBINARS"} />
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +90,7 @@ export default function LiveEvents() {
                         slidesPerView={1}
                         initialSlide={2}
                         loop={true}
-                        spaceBetween={30}
+                        spaceBetween={50}
                         pagination={false}
                         breakpoints={{
                             640: {
@@ -99,11 +107,11 @@ export default function LiveEvents() {
                             },
                         }}
                         className="mySwiper gap-4"
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        modules={[Autoplay]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay]}
                     >
                         {NewsGallery.map((testimonial, index) => (
                             <SwiperSlide key={index}>
@@ -112,7 +120,15 @@ export default function LiveEvents() {
                         ))}
                     </Swiper>
                 </motion.div>
+                <motion.button
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
+                >
+                    WATCH MORE
+                </motion.button>
             </div>
+
         </section>
     );
 }

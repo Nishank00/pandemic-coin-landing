@@ -1,20 +1,63 @@
-import React from 'react'
+import React from 'react';
+import twr from "../../../assets/icons/twr.svg";
+import fb from "../../../assets/icons/fb.svg";
+import insta from "../../../assets/icons/insta.svg";
+import maill from "../../../assets/icons/maill.svg";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const CTA = () => {
     return (
         <section className=" text-pdc-l-gray overflow-hidden relative body-font">
             <div className="container px-4 md:mx-auto mt-8">
-                <div className="w-full md:w-4/5 px-4 md:px-20 overflow-hidden relative rounded-t-[320px] py-24 bg-gradient-to-r from-[#111327] to-[#9C9C9C50] flex flex-col items-center mx-auto">
-                    <div className="w-fit mx-auto text-center">
-                        <p className="mt-6 text-xs mb-4 font-medium tracking-[10px] uppercase">We are social</p>
-                        <h1 className="text-3xl font-semibold text-center">
+                <div className="w-full md:w-4/5 px-4 md:px-20 overflow-hidden relative rounded-t-[320px] py-24 bg-gradient-to-r from-[#111327] to-[#9C9C9C50] flex flex-col items-center mx-auto [box-shadow:1px_12px_19px_0px_rgba(0,_0,_0,_0.38)_inset]">
+                    <div className="w-fit mx-auto text-center text-[#FFF]">
+                        <p className="mt-6 text-[13px] mb-4 font-medium tracking-[10px] uppercase">We are social</p>
+                        <h1 className="text-[36px] tracking-[-2.1px] font-[300] text-center">
                             Follow us on social media</h1>
                     </div>
-                    <div className="absolute bg-pdc-red w-[150px] h-[150px] bottom-[15%] right-[-2%] rounded-[45px] rotate-45"></div>
-                    <div className="absolute bg-pdc-blue w-[20px] h-[20px] top-[20%] right-[20%] rounded-[45px] rotate-45"></div>
-                    <div className="absolute bg-pdc-red w-[20px] h-[20px] bottom-[20%] left-[20%] rounded-[45px] rotate-45"></div>
+                    <div className="absolute bg-pdc-red w-[150px] h-[150px] bottom-[15%] -z-10 right-[-2%] rounded-[45px] rotate-45"></div>
+                    <div className="md:top-[264px] md:left-[87px] left-0 top-[370px] absolute w-[207px] h-[207px] rounded-[103.5px] ">
+                        <div className="w-[24px] h-[24px] top-[5px] left-[47px] bg-pdc-red rotate-45 absolute rounded-[45px]" />
+                        <div className="border-[#1f2241] absolute w-[207px] h-[207px] top-0 left-0 rounded-[103.5px] border border-solid" />
+                    </div>
                     <div className="absolute bg-pdc-blue w-[150px] h-[150px] top-[-10%] left-[5%] rounded-[45px] rotate-12"></div>
+                    <div className="top-[-96px] left-[717px] absolute w-[207px] h-[207px] rounded-[103.5px]">
+                        <div className="w-[19px] h-[19px] top-[169px] left-[122px] bg-pdc-blue rotate-[15.00deg] absolute rounded-[37.6px]" />
+                        <div className="border-[#1f2342] absolute w-[207px] h-[207px] top-0 left-0 rounded-[103.5px] border border-solid" />
+                    </div>
+
+                    <div className="flex gap-[14px] mt-[36px] w-fit">
+
+                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                            <Image height={43} width={43} alt="Bi twitter" src={twr} />
+                        </Link>
+
+                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                            <Image height={43} width={43}
+                                alt="Brandico facebook"
+                                src={fb}
+                            />
+                        </Link>
+
+                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                            <Image height={43} width={43}
+                                alt="Mdi instagram"
+                                src={insta}
+                            />
+                        </Link>
+
+                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                            <Image height={43} width={43}
+                                alt="Formkit email"
+                                src={maill}
+                            />
+                        </Link>
+
+                    </div>
                 </div>
+
+
             </div>
         </section>
     )
