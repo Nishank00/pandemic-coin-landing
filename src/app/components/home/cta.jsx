@@ -63,11 +63,11 @@ const CTA = () => {
 
                     <div className="flex gap-[14px] mt-[36px] w-fit">
 
-                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                        <Link href={"https://twitter.com/pandemiccoinpdc?s=21&t=E8wxG4bwvel2P0AcbtRtoQ"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
                             <Image height={43} width={43} alt="Bi twitter" src={twr} />
                         </Link>
 
-                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+                        <Link href={"https://www.facebook.com/pandemiccoinPDC"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
                             <Image height={43} width={43}
                                 alt="Brandico facebook"
                                 src={fb}

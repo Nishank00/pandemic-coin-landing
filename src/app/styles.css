@@ -113,7 +113,8 @@ canvas:hover {
 
 #shelters {
   position: relative;
-  min-height: 90vh;
+  /* min-height: 90vh; */
+  height: 90vh;
 }
 
 #shelters .swiper-slide,
@@ -233,7 +234,8 @@ canvas:hover {
 
   #shelters {
     position: relative;
-    min-height: 110vh;
+    /* min-height: 110vh; */
+    height: fit-content;
   }
 
   #shelters .swiper-horizontal>.swiper-pagination-bullets,
@@ -242,5 +244,9 @@ canvas:hover {
     left: 45% !important;
     transform: translateX(-50%);
     bottom: 70px;
+  }
+
+  #shelters .swiper-slide-active {
+    scale: 100%;
   }
 }

@@ -31,14 +31,18 @@ const Community = () => {
                         dolor sit amet consectetur. orem ipsum dolor sit amet
                         consectetur. Lorem ipsum dolor sit amet consectetur.{" "}
                     </p>
-                    <motion.button
+                    {/* <label  className="btn"> */}
+                    <label
+                        htmlFor="my_modal_7"
                         data-aos="fade-in"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="pri-btn w-fit text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] mt-[47px] block transition-all capitalize p-[14px_24px] h-[53px]"
+                        className="pri-btn cursor-pointer  w-fit text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] mt-[47px] block transition-all capitalize p-[14px_24px] h-[53px]"
                     >
                         Explore Community
-                    </motion.button>
+                    </label>
+                    {/* </label> */}
+
                 </motion.div>
 
                 <Image
@@ -49,6 +53,22 @@ const Community = () => {
                     height={500}
                     data-aos="fade-in"
                 />
+                {/* The button to open modal */}
+
+
+                {/* Put this part before </body> tag */}
+                <input type="checkbox" id="my_modal_7" className="modal-toggle" />
+                <div className="modal" role="dialog">
+                    <div className="modal-box ">
+                        <h1 class="text-6xl lg:text-7xl xl:text-8xl text-indigo-600 tracking-wider font-bold font-serif text-center">Coming Soon...</h1>
+                        {/* <h1 class="text-4xl font-bold uppercase text-indigo-600 transition duration-500">Coming Soon</h1> */}
+                        <h2 class="text-xl text-white  text-center mt-5 transition duration-500">
+                            We are almost there to introduce our new website to the world, in the meantime, you can follow us on social
+                            networks to get the latest updates.
+                        </h2>
+                    </div>
+                    <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
+                </div>
 
             </div>
         </div>

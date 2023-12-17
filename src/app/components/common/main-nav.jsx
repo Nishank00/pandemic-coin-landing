@@ -40,7 +40,7 @@ export default function Nav() {
                 <div className="flex gap-[30px] tracking-wider">
                     {links.map((link, index) => {
                         return (
-                            <div key={link.path} className="relative  pb-[6px]">
+                            <div key={link.path} className="relative group pb-[6px]">
                                 <Link
                                     className=""
                                     href={link.path}
@@ -52,7 +52,7 @@ export default function Nav() {
                                 </Link>
                                 <div
                                     className={` ${pathName === link.path ? "w-1/2" : "w-0"
-                                        } absolute anim bottom-0 h-[3px]  bg-white`}
+                                        } absolute anim bottom-0 h-[3px] group-hover:w-full bg-white`}
                                 />
                             </div>
                         );

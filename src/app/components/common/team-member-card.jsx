@@ -42,7 +42,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     transformOrigin: "center",
                 }}
             />
-            <div className="p-2">
+            <div className="p-2 w-[324px] mx-auto">
                 <div className="">
                     <motion.h1
                         className="font_cat text-[20px] text-[#7B7E98] not-italic font-normal leading-[normal] tracking-[0.8px] mb-1"
@@ -59,7 +59,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                 {/* <motion.p className="mt-4" style={{ opacity: 1 }} whileHover={{ opacity: 0.8 }}>
                     {desc}
                 </motion.p> */}
-                {/* <div className="flex gap-3 mt-6">
+                <div className="flex gap-3 mt-6">
                     <Link
                         className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
                         href={link}
@@ -72,7 +72,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     >
                         <FaLinkedinIn />
                     </Link>
-                </div> */}
+                </div>
             </div>
         </motion.div>
     );

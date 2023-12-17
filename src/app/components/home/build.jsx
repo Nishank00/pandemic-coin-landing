@@ -20,20 +20,24 @@ const Build = () => {
                     </h1>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center ">
-                    <div data-aos="fade-in" className="p-4 py-8 w-full relative rounded-[20px] group overflow-hidden ">
-                        <Tilt className="track-on-window" trackOnWindow={true}><Image width={1000} height={1000} src={shelter1} className=" w-[500px] rounded-full mx-auto h-[500px]  object-cover brightness-50" alt="" /></Tilt>
+                    <div data-aos="fade-in" className="p-4 py-8 w-full relative  rounded-[20px] hover:bg-[#ffffff15] transition duration-300 ease-in-out overflow-hidden ">
+                        <Tilt className="track-on-window" trackOnWindow={true}>
+                            <Image width={1000} height={1000} src={shelter1} className=" w-[500px] rounded-full mx-auto h-[500px]  object-cover brightness-50" alt="" />
+                        </Tilt>
 
-                        <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out  "></div>
+                        {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out  "></div> */}
                         <button className="pri-btn mt-6 block mx-auto w-fit text-white">
                             Aquire shelter directly for $100,000
                         </button>
                     </div>
-                    <div data-aos="fade-in" className="p-4 py-8 w-full relative group rounded-[20px] overflow-hidden">\
-                        <Tilt className="track-on-window" trackOnWindow={true}> <Image width={1000} height={1000} src={logo} className="w-[500px] mx-auto h-[500px] rounded-3xl object-cover brightness-50" alt="" /></Tilt>
+                    <div data-aos="fade-in" className="p-4 py-8 w-full relative  hover:bg-[#ffffff15] transition duration-300 ease-in-out rounded-[20px] overflow-hidden">
+                        <Tilt className="track-on-window" trackOnWindow={true}>
+                            <Image width={1000} height={1000} src={logo} className="w-[500px] mx-auto h-[500px] rounded-3xl object-cover brightness-50" alt="" />
+                        </Tilt>
 
-                        <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out"></div>
+                        {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out"></div> */}
                         <button className="pri-btn mt-6 block mx-auto w-fit text-white">
-                            Buy $10,000 tokens and join the allocation list.
+                            Buy $100,000 tokens and join the allocation list.
                         </button>
                     </div>
                 </div>

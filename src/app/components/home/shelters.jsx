@@ -80,7 +80,7 @@ const Shelters = () => {
         <section className=" body-font">
             <div className="container px-5 pb-24 mx-auto">
                 <DynamicTitle title="Pandemic shelters images" className="tracking-[-3.36px]" />
-                <div  data-aos="fade-in" className="flex flex-wrap z-0" id="shelters">
+                <div data-aos="fade-in" className="flex flex-wrap z-0" id="shelters">
                     <Swiper
                         centeredSlides={true}
                         initialSlide={2}
@@ -112,7 +112,7 @@ const Shelters = () => {
                     >
                         {shelters.map((shelter, index) => (
                             <SwiperSlide key={index}>
-                                <div className="md:grid md:grid-cols-3 flex flex-col gap-4 w-10/12  mx-auto overflow-hidden ">
+                                {/* <div className="md:grid md:grid-cols-3 flex flex-col gap-4 w-10/12  mx-auto overflow-hidden ">
                                     <div className="h-full w-full group">
                                         <div className="text-sm">
                                             {shelter?.title && <div className="mb-2 text-[#949494] font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
@@ -130,13 +130,12 @@ const Shelters = () => {
                                     </div>
                                     <div className="overflow-hidden group md:h-full md:w-full h-[200px] relative">
                                         <Image
-                                        
+
                                             className="h-[200px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-full md:w-full w-[200px]"
                                             src={shelter.imageUrl}
                                             alt={shelter.description}
                                         />
                                     </div>
-                                    {/* <div className=""> */}
                                     <div className="overflow-hidden group md:h-full md:w-full h-[200px] ">
                                         <Image
                                             width={400}
@@ -146,7 +145,22 @@ const Shelters = () => {
                                             alt={shelter.description}
                                         />
                                     </div>
-                                    {/* </div> */}
+                                </div> */}
+
+                                <div className="relative flex flex-col h-[550px]">
+
+                                    <div className="overflow-hidden group md:h-full md:w-full h-[200px] relative">
+                                        <Image
+
+                                            className="h-[200px] object-cover group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-full md:w-full w-[200px]"
+                                            src={shelter.imageUrl}
+                                            alt={shelter.description}
+                                        />
+                                    </div>
+                                    <div className="text-sm mt-[30px] md:rounded-[20px] md:p-[30px] bg-black bg-opacity-50 md:mt-0 md:absolute z-10 md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%]">
+                                        {shelter?.title && <div className="mb-2 text-[#FC4F5A]  font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
+                                        {shelter?.description && <div className="font-[Catamaran]  text-[16.347px] not-italic font-medium leading-[140%] md:text-white text-[#707070]">{shelter?.description}</div>}
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         ))}

@@ -163,6 +163,9 @@ abbr[title] {
 .b1{
     border: 1px solid red;
 }
+.b2{
+    border: 10px solid red;
+}
 .clock_img{
     height: 20px;
     width: 20px !important;

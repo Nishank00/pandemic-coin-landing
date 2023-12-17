@@ -84,17 +84,17 @@ export default function Footer() {
         {
             id: 0,
             image: Linkdin,
-            link: "#"
+            link: "https://www.linkedin.com/company/pandemiccoinpdc/?viewAsMember=true"
         },
         {
             id: 1,
             image: fb,
-            link: "#"
+            link: "https://www.facebook.com/pandemiccoinPDC"
         },
         {
             id: 2,
             image: twr,
-            link: "#"
+            link: "https://twitter.com/pandemiccoinpdc?s=21&t=E8wxG4bwvel2P0AcbtRtoQ"
         }
     ]
 
