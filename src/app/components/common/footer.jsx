@@ -4,7 +4,7 @@ import Link from "next/link";
 import Linkdin from "../../../assets/icons/foo_link.svg";
 import fb from "../../../assets/icons/foo_fb.svg";
 import twr from "../../../assets/icons/foo_twr.svg";
-import Arrow_right from "../../../assets/icons/right_A.svg";
+import Arrow_right from "../../../assets/icons/Right_A.svg";
 import Arrow_up from "../../../assets/icons/up_A.svg";
 
 export default function Footer() {
