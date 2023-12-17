@@ -19,10 +19,10 @@ export default function WhoWeAreSection() {
                     duration: 0.5,
                     ease: "easeInOut",
                 }}
-                className="rounded-[30px] relative md:max-w-[1011px] max-w-full md:h-[400px] mx-auto  overflow-hidden ">
+                className="rounded-[30px] group relative md:max-w-[1011px] max-w-full md:h-[400px] mx-auto  overflow-hidden ">
                 <Image
                     src={whowe}
-                    className="mx-auto object-cover object-center w-full rounded-2xl "
+                    className="mx-auto group-hover:scale-[1.1] transition duration-300 ease-in-out object-cover object-center w-full rounded-2xl "
                     alt="placeholder"
                 />
                 <div className="w-full h-full absolute top-0 left-0 bg-gray-800 opacity-50">

@@ -113,7 +113,7 @@ const Shelters = () => {
                         {shelters.map((shelter, index) => (
                             <SwiperSlide key={index}>
                                 <div className="md:grid md:grid-cols-3 flex flex-col gap-4 w-10/12  mx-auto overflow-hidden ">
-                                    <div className="h-full w-full">
+                                    <div className="h-full w-full group">
                                         <div className="text-sm">
                                             {shelter?.title && <div className="mb-2 text-[#949494] font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
                                             {shelter?.description && <div className="font-[Catamaran]  text-[16.347px] not-italic font-medium leading-[140%] text-[#707070]">{shelter?.description}</div>}
@@ -124,24 +124,24 @@ const Shelters = () => {
                                                 height={440}
                                                 src={shelter.imageUrl}
                                                 alt={shelter.description}
-                                                className="md:h-[400px] md:w-[400px] h-[200px] w-[200px]"
+                                                className="md:h-[400px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:w-[400px] h-[200px] w-[200px]"
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden md:h-full md:w-full h-[200px] relative">
+                                    <div className="overflow-hidden group md:h-full md:w-full h-[200px] relative">
                                         <Image
                                         
-                                            className="h-[200px] md:h-full md:w-full w-[200px]"
+                                            className="h-[200px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-full md:w-full w-[200px]"
                                             src={shelter.imageUrl}
                                             alt={shelter.description}
                                         />
                                     </div>
                                     {/* <div className=""> */}
-                                    <div className="overflow-hidden md:h-full md:w-full h-[200px] ">
+                                    <div className="overflow-hidden group md:h-full md:w-full h-[200px] ">
                                         <Image
                                             width={400}
                                             height={450}
-                                            className=" h-[200px] md:h-[85%] md:w-full w-[200px]"
+                                            className=" h-[200px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-[85%] md:w-full w-[200px]"
                                             src={shelter.imageUrl}
                                             alt={shelter.description}
                                         />
