@@ -38,7 +38,7 @@ const CountDown = () => {
                     start: "top 600",
                     scrub: true,
                     end: "+=500",
-                    markers: true
+                    // markers: true
                 },
             })
             .add("start")
