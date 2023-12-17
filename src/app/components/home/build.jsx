@@ -19,14 +19,14 @@ const Build = () => {
                     </h1>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
-                    <div className="p-4 py-8 w-full relative rounded-[20px] overflow-hidden">
+                    <div  data-aos="fade-in" className="p-4 py-8 w-full relative rounded-[20px] overflow-hidden">
                         <Image width={1000} height={1000} src={shelter1} className=" w-[500px] mx-auto h-[500px] rounded-3xl object-cover brightness-50" alt="" />
                         <div className="absolute top-0 left-0 w-full h-full bg-[#ffffff15]"></div>
                         <button className="pri-btn mt-6 block mx-auto w-fit text-white">
                             Aquire shelter directly for $100,000
                         </button>
                     </div>
-                    <div className="p-4 py-8 w-full relative rounded-[20px] overflow-hidden">
+                    <div  data-aos="fade-in" className="p-4 py-8 w-full relative rounded-[20px] overflow-hidden">
                         <Image width={1000} height={1000} src={logo} className="w-[500px] mx-auto h-[500px] rounded-3xl object-cover brightness-50" alt="" />
                         <div className="absolute top-0 left-0 w-full h-full bg-[#ffffff15]"></div>
                         <button className="pri-btn mt-6 block mx-auto w-fit text-white">

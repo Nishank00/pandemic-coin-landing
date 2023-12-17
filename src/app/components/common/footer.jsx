@@ -119,7 +119,7 @@ export default function Footer() {
     return (
         <footer className="md:pt-10 pt-0 mt-auto mb-0 bg-[#1C1D26] relative">
 
-            <Image src={Arrow_up} height={53} width={53} alt="up_arrow" className="absolute top-[20px] md:h-[53px] md:w-[53px] h-[35px] w-[35px] right-[20px] md:top-[47px] md:right-[47px] cursor-pointer" />
+            <Image  data-aos="fade-in" src={Arrow_up} height={53} width={53} alt="up_arrow" className="absolute top-[20px] md:h-[53px] md:w-[53px] h-[35px] w-[35px] right-[20px] md:top-[47px] md:right-[47px] cursor-pointer" />
 
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 {/* <div className="justify-between items-center gap-12 md:flex">
@@ -160,7 +160,7 @@ export default function Footer() {
                 </div> */}
                 <div className="flex-1 mt-16 grid grid-cols-3 justify-between sm:flex">
                     {footerNavs.map((item, idx) => (
-                        <ul className="flex flex-col text-center md:text-start  gap-[6px] text-gray-300" key={idx}>
+                        <ul  data-aos="fade-in" className="flex flex-col text-center md:text-start  gap-[6px] text-gray-300" key={idx}>
                             <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] sm:pb-2">
                                 {item.label}
                             </h4>
@@ -177,7 +177,7 @@ export default function Footer() {
                         </ul>
                     ))}
 
-                    <div className="md:mt-[-32px] hidden md:block mt-0 w-[338px] h-[258px] p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
+                    <div  data-aos="fade-in" className="md:mt-[-32px] hidden md:block mt-0 w-[338px] h-[258px] p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
                         <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] sm:pb-2">
                             Subscribe
                         </h4>
@@ -200,7 +200,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className=" md:hidden mt-10 mx-auto block w-full h-fit p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
+                <div  data-aos="fade-in" className=" md:hidden mt-10 mx-auto block w-full h-fit p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
                     <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] pb-2">
                         Subscribe
                     </h4>
@@ -308,7 +308,7 @@ export default function Footer() {
                         </a>
                     </div> */}
 
-                    <ul className="flex gap-[40px] mx-auto  justify-center">
+                    <ul  data-aos="fade-in" className="flex gap-[40px] mx-auto  justify-center">
                         {
                             FooLink && FooLink.map((ele, index) => {
                                 return (
@@ -323,7 +323,7 @@ export default function Footer() {
                             })
                         }
                     </ul>
-                    <ul className="flex gap-[15px]  justify-center mt-[20px] md:mt-0">
+                    <ul  data-aos="fade-in" className="flex gap-[15px]  justify-center mt-[20px] md:mt-0">
                         {FooSocials && FooSocials.map((item, index) => {
                             return (
                                 <>

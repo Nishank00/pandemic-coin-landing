@@ -20,7 +20,7 @@ import { motion } from "framer-motion"
 
 const NewsCard = ({ imageUrl, description }) => (
     // <div className="overflow-hidden">
-    <div className="h-full mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+    <div  data-aos="fade-in" className="h-full mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
         <Image
             width={720}
             height={600}

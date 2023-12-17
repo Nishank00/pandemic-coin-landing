@@ -1,13 +1,20 @@
 "use client";
-
-import React, { useState } from 'react';
+import gsap from "gsap";
+import React, { useLayoutEffect, useState } from "react";
+import { ScrollTrigger as Scrolltrigger } from "gsap/dist/ScrollTrigger";
 import { FaArrowRightLong, FaArrowLeftLong } from 'react-icons/fa6';
 import Timer from './timer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Arrow from "../../../assets/icons/arrow_2.svg";
+import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
 
 const CountDown = () => {
+    gsap.registerPlugin(Scrolltrigger);
+    gsap.defaults({ ease: "none" });
+
+    const isMobile = useMediaQuery("(max-width:768px)");
+
     const [currentSlide, setCurrentSlide] = useState(1);
 
     const handleButtonClick = () => {
@@ -23,18 +30,40 @@ const CountDown = () => {
         { title: "More details", component: null, detail: 'Tokenomics' }
     ];
 
+    useLayoutEffect(() => {
+        gsap
+            .timeline({
+                scrollTrigger: {
+                    trigger: "#countdown_id",
+                    start: "top 600",
+                    scrub: true,
+                    end: "+=500",
+                    markers: true
+                },
+            })
+            .add("start")
+            .to(
+                "#count_box_id",
+                {
+                    transform: "scale(1)",
+                },
+                "start"
+            );
+    }, []);
+
     return (
-        <section className="text-gray-600 body-font ">
+        <section id="countdown_id" className="text-gray-600 body-font ">
             <div className="container px-[20px] md:px-[140px] mx-auto">
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                        duration: 0.5,
-                        ease: "easeInOut",
-                    }}
-                    className="relative p-[30px] md:p-[70px_68px]  bg-black rounded-[20px] max-w-full md:max-w-[1184px] mx-auto ">
-                    <div className={`flex gap-[20px] md:gap-[100px] flex-col md:flex-row`}>
+                    // initial={{ opacity: 0, y: 50 }}
+                    // whileInView={{ opacity: 1, y: 0 }}
+                    // transition={{
+                    //     duration: 0.5,
+                    //     ease: "easeInOut",
+                    // }}
+                    id="count_box_id"
+                    className="relative p-[30px] scale-[0.8]  md:p-[70px_68px]  bg-black rounded-[20px] max-w-full md:max-w-[1184px] mx-auto ">
+                    <div  data-aos="fade-in" className={`flex gap-[20px] md:gap-[100px] flex-col md:flex-row`}>
                         {[1, 2, 3, 4, 5, 6].slice((currentSlide - 1) * 5, currentSlide * 5).map((index, i) =>
                         (
                             <div key={index} className="rounded-[20px] transition-all flex flex-col items-start ">
@@ -59,7 +88,7 @@ const CountDown = () => {
                             onClick={handleButtonClick}
                         >
                             {/* <FaArrowRightLong /> */}
-                            <Image src={Arrow} height={20} width={62} alt='arrow'/>
+                            <Image src={Arrow} height={20} width={62} alt='arrow' />
 
                         </button>
                     ) : (

@@ -80,7 +80,7 @@ const Shelters = () => {
         <section className=" body-font">
             <div className="container px-5 pb-24 mx-auto">
                 <DynamicTitle title="Pandemic shelters images" className="tracking-[-3.36px]" />
-                <div className="flex flex-wrap z-0" id="shelters">
+                <div  data-aos="fade-in" className="flex flex-wrap z-0" id="shelters">
                     <Swiper
                         centeredSlides={true}
                         initialSlide={2}

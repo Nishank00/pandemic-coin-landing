@@ -28,7 +28,7 @@ export default function DynamicTitle({ title, description, descColor,customClass
                 ease: "easeInOut",
             }}
         >
-            <div className="md:w-fit w-[90%] mx-auto py-10 md:py-16 mt-12 text-center">
+            <div data-aos="fade-in" className="md:w-fit w-[90%] mx-auto py-10 md:py-16 mt-12 text-center">
                 <motion.h1 initial="hidden" animate="visible" variants={{
                     hidden: {
                         scale: .8,

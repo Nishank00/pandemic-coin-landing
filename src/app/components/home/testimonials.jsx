@@ -33,7 +33,7 @@ const TestimonialCard = ({ imageUrl, description }) => (
         exit={slideVariants.exit}
         className=""
     >
-        <div className="mx-auto ">
+        <div  data-aos="fade-in" className="mx-auto">
             <motion.div {...imageTextVariants}>
                 <Image
                     className="rounded-[30px] h-[400px] w-[531px]  mb-4"

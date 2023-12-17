@@ -22,16 +22,17 @@ const Community = () => {
                         ease: "easeInOut",
                     }}
                     className="w-full relative z-10 md:w-1/2 md:py-40 pt-32 pb-20 md:pt-0 md:pb-0">
-                    <h1 className="mt-3 md:w-5/6 text-[#7B7D98] text-[28px] not-italic font-semibold leading-[139.5%] capitalize">
+                    <h1 data-aos="fade-in" className="mt-3 md:w-5/6 text-[#7B7D98] text-[28px] not-italic font-semibold leading-[139.5%] capitalize">
                         Community Chronicles: Unveiling the Heartbeat of Our
                         Shared Journey
                     </h1>
-                    <p className="w-5/6 mt-6 text-[#D4D4D4]">
+                    <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
                         Lorem ipsum dolor sit amet consectetur. Lorem ipsum
                         dolor sit amet consectetur. orem ipsum dolor sit amet
                         consectetur. Lorem ipsum dolor sit amet consectetur.{" "}
                     </p>
                     <motion.button
+                        data-aos="fade-in"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         className="pri-btn w-fit text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] mt-[47px] block transition-all capitalize p-[14px_24px] h-[53px]"
@@ -39,13 +40,16 @@ const Community = () => {
                         Explore Community
                     </motion.button>
                 </motion.div>
+
                 <Image
-                    className="w-full md:w-1/2"
+                    className="w-full md:w-1/2 "
                     src={asset1}
                     alt="image"
                     width={500}
                     height={500}
+                    data-aos="fade-in"
                 />
+
             </div>
         </div>
     );

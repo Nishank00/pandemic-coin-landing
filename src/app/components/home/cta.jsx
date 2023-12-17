@@ -9,8 +9,8 @@ import Link from 'next/link';
 const CTA = () => {
     return (
         <section className=" text-pdc-l-gray overflow-hidden relative body-font">
-            <div className="container px-4 md:mx-auto mt-8">
-                <div className="w-full md:w-4/5 px-4 md:px-20 overflow-hidden relative rounded-t-[320px] py-24 bg-gradient-to-r from-[#111327] to-[#9C9C9C50] flex flex-col items-center mx-auto [box-shadow:1px_12px_19px_0px_rgba(0,_0,_0,_0.38)_inset]">
+            <div className="container px-4 md:mx-auto mt-8 ">
+                <div  data-aos="fade-in" className="w-full  md:w-4/5 px-4 md:px-20 overflow-hidden relative rounded-t-[320px] py-24 bg-gradient-to-r from-[#111327] to-[#9C9C9C50] flex flex-col items-center mx-auto [box-shadow:1px_12px_19px_0px_rgba(0,_0,_0,_0.38)_inset]">
                     <div className="w-fit mx-auto text-center text-[#FFF]">
                         <p className="mt-6 text-[13px] mb-4 font-medium tracking-[10px] uppercase">We are social</p>
                         <h1 className="text-[36px] tracking-[-2.1px] font-[300] text-center">

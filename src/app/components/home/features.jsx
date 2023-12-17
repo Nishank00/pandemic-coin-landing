@@ -69,7 +69,7 @@ const Feature = () => {
                     className="flex flex-wrap -m-4 relative z-10 ">
                     <Marquee>
                         {features.map((feature, index) => (
-                            <div key={index} className={`p-4 w-[360px] md:w-[420px] md:max-h-[600px] max-h-[600px] flex`}>
+                            <div  data-aos="fade-in" key={index} className={`p-4 w-[360px] md:w-[420px] md:max-h-[600px] max-h-[600px] flex`}>
                                 <div className={`overflow-hidden flex-1 rounded-[20px] border-[0.873px] border-[solid] border-[#342CB2] border-opacity-50 ${feature.backgroundColor}`}>
                                     <div className="p-6 py-12 text-center w-full">
                                         <p className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}>{feature.number}</p>

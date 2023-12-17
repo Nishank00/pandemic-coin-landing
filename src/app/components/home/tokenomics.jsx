@@ -30,9 +30,10 @@ const Tokenomics = () => {
     );
 
     return (
-        <div className="flex relative items-center px-4 pb-14 h-full w-screen overflow-x-clip justify-center flex-col text-center">
+        <div  data-aos="fade-in" className="flex relative items-center px-4 pb-14 h-full w-screen overflow-x-clip justify-center flex-col text-center">
             <DynamicTitle title="Tokenomics" descColor={"#7B7E98"} description="DISTRIBUTION" />
             <motion.div
+           
                 initial="hidden" animate="visible" variants={{
                     hidden: {
                         scale: .8,
@@ -46,6 +47,7 @@ const Tokenomics = () => {
                         }
                     },
                 }}
+                
                 className="z-50 py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50">
                 {/* <Donut
                     id="linearGradient"
@@ -58,6 +60,7 @@ const Tokenomics = () => {
                     data={data}
                     activeIndex={activeIndex}
                     onPieEnter={onPieEnter}
+                
                 />
             </motion.div>
             <div className="absolute w-[450px] h-[450px] transition-all bottom-[-2%] right-[-5%] border-2 rounded-full border-[#615E9A] p-4  animate-spin">

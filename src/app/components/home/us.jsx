@@ -8,7 +8,7 @@ export default function MiniAboutUs() {
     return (
         <div className="relative">
             <DynamicTitle title="Our Team" description="WHO WE ARE" />
-            <div className="flex items-center justify-center text-center flex-col">
+            <div  data-aos="fade-in" className="flex items-center justify-center text-center flex-col">
                 <Image
                     className="mx-auto bg-pdc-d-gray h-[273px] rounded-[20px]"
                     width={324}
@@ -22,7 +22,7 @@ export default function MiniAboutUs() {
                     <p className="text-[23px]">AZ</p>
                 </div>
             </div>
-            <div className="flex md:flex-row flex-col md:gap-[60px] gap-[30px] m-6 justify-center">
+            <div  data-aos="fade-in" className="flex md:flex-row flex-col md:gap-[60px] gap-[30px] m-6 justify-center">
                 {teamData.slice(0, 3).map((item, index) => (
                     <TeamMemberCard key={index} {...item} />
                 ))}
