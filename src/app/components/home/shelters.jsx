@@ -21,23 +21,28 @@ import shelter5 from "../../../assets/shelter5.png"
 const shelters = [
     {
         imageUrl: shelter1,
-        description: "Shelter 1",
+        title: "Shelter 1",
+        description: "Sed ut perspiciatis unde dim omnis iste sun voluptatem accus em ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem",
     },
     {
         imageUrl: shelter2,
-        description: "Shelter 2",
+        title: "Shelter 2",
+        description: "Sed ut perspiciatis unde dim omnis iste sun voluptatem accus em ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem",
     },
     {
         imageUrl: shelter3,
-        description: "Shelter 3",
+        title: "Shelter 3",
+        description: "Sed ut perspiciatis unde dim omnis iste sun voluptatem accus em ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem",
     },
     {
         imageUrl: shelter4,
-        description: "Shelter 4",
+        title: "Shelter 4",
+        description: "Sed ut perspiciatis unde dim omnis iste sun voluptatem accus em ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem",
     },
     {
         imageUrl: shelter5,
-        description: "Shelter 5",
+        title: "Shelter 5",
+        description: "Sed ut perspiciatis unde dim omnis iste sun voluptatem accus em ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem",
     },
 ];
 
@@ -74,7 +79,7 @@ const Shelters = () => {
     return (
         <section className=" body-font">
             <div className="container px-5 pb-24 mx-auto">
-                <DynamicTitle title="Pandemic shelters images"  className="tracking-[-3.36px]"/>
+                <DynamicTitle title="Pandemic shelters images" className="tracking-[-3.36px]" />
                 <div className="flex flex-wrap z-0" id="shelters">
                     <Swiper
                         centeredSlides={true}
@@ -107,10 +112,11 @@ const Shelters = () => {
                     >
                         {shelters.map((shelter, index) => (
                             <SwiperSlide key={index}>
-                                <div className="grid grid-cols-3 gap-4 w-10/12  mx-auto overflow-hidden ">
+                                <div className="md:grid md:grid-cols-3 flex flex-col gap-4 w-10/12  mx-auto overflow-hidden ">
                                     <div className="h-full w-full">
-                                        <div className="text-sm h-[80px] mb-2">
-                                            {shelter.description}
+                                        <div className="text-sm">
+                                            {shelter?.title && <div className="mb-2 text-[#949494] font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
+                                            {shelter?.description && <div className="font-[Catamaran]  text-[16.347px] not-italic font-medium leading-[140%] text-[#707070]">{shelter?.description}</div>}
                                         </div>
                                         <div className="pt-4">
                                             <Image
@@ -118,31 +124,34 @@ const Shelters = () => {
                                                 height={440}
                                                 src={shelter.imageUrl}
                                                 alt={shelter.description}
+                                                className="md:h-[400px] md:w-[400px] h-[200px] w-[200px]"
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden h-full w-full relative">
+                                    <div className="overflow-hidden md:h-full md:w-full h-[200px] relative">
                                         <Image
-                                            className="w-full h-full object-cover"
+                                        
+                                            className="h-[200px] md:h-full md:w-full w-[200px]"
                                             src={shelter.imageUrl}
                                             alt={shelter.description}
                                         />
                                     </div>
-                                    <div className="h-full w-full">
-                                        <div className="overflow-hidden">
-                                            <Image
-                                                width={400}
-                                                height={450}
-                                                src={shelter.imageUrl}
-                                                alt={shelter.description}
-                                            />
-                                        </div>
+                                    {/* <div className=""> */}
+                                    <div className="overflow-hidden md:h-full md:w-full h-[200px] ">
+                                        <Image
+                                            width={400}
+                                            height={450}
+                                            className=" h-[200px] md:h-[85%] md:w-full w-[200px]"
+                                            src={shelter.imageUrl}
+                                            alt={shelter.description}
+                                        />
                                     </div>
+                                    {/* </div> */}
                                 </div>
                             </SwiperSlide>
                         ))}
-                        <div>
-                            <div className="flex items-center justify-end space-x-4 z-[500] absolute bottom-[4.5%] right-[4.5%]">
+                        <div className="">
+                            <div className="flex items-center justify-center md:justify-end space-x-4 z-[500] relative md:absolute md:bottom-[4.5%] right-[4.5%]">
                                 <div className="prev z-50">
                                     <FaChevronLeft />
                                 </div>

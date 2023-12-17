@@ -19,7 +19,8 @@
 }
 
 #nav-link.active::after {
-  width: 50%; /* Adjust to 100% for full width on active page */
+  width: 50%;
+  /* Adjust to 100% for full width on active page */
 }
 
 #nav-link:hover::after {
@@ -96,7 +97,8 @@
 }
 
 canvas:hover {
-  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  backdrop-filter: blur(10px);
+  /* Adjust the blur value as needed */
 }
 
 #eventBg {
@@ -141,7 +143,9 @@ canvas:hover {
 #shelters .swiper-pagination {
   max-width: 33.33%;
 }
-#shelters  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+
+#shelters .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   right: 80px !important;
   left: auto !important;
 }
@@ -218,8 +222,21 @@ canvas:hover {
   #NewsGallery .swiper-slide {
     scale: 90%;
   }
-  
+
   #NewsGallery .swiper-slide-active {
     scale: 100%;
+  }
+
+  #shelters {
+    position: relative;
+    min-height: 110vh;
+  }
+
+  #shelters .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    right: auto !important;
+    left: 45% !important;
+    transform: translateX(-50%);
+    bottom: 70px;
   }
 }
