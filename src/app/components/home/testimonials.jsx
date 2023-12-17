@@ -31,25 +31,27 @@ const TestimonialCard = ({ imageUrl, description }) => (
         initial={slideVariants.enter}
         animate={slideVariants.update}
         exit={slideVariants.exit}
-        className="p-4"
+        className=""
     >
-        <div className="mx-auto">
+        <div className="mx-auto ">
             <motion.div {...imageTextVariants}>
                 <Image
-                    className="rounded-[30px] w-full object-cover object-center mb-4"
+                    className="rounded-[30px] h-[400px] w-[531px]  mb-4"
                     src={imageUrl}
                     alt="testimonials"
+                    width={400}
+                    height={440}
                 />
             </motion.div>
             <motion.p {...imageTextVariants} delay={0.25}>
-                {description}
+                {description}...&nbsp;<span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">Read</span>
             </motion.p>
             <motion.button
                 whileHover={{ scale: 1.1 }} // Adjust hover scale
                 whileTap={{ scale: 1 }} // Adjust tap scale
-                className="pri-btn mt-6 block transition-all mx-auto w-fit text-white"
+                className="pri-btn text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] md:mt-[30px] mt-[20px] capitalize"
             >
-                Invest now
+                Explore all the stories
             </motion.button>
         </div>
     </motion.div>
@@ -82,8 +84,8 @@ const Testimonials = () => {
     return (
         <section className="text-gray-400 body-font min-h-[80vh]" id="testimonials">
             <div className="container px-5 py-12 md:py-24 mx-auto">
-                <DynamicTitle title="Testimonials" description="" />
-                <div className="flex flex-wrap">
+                <DynamicTitle title="Personal Stories" description="testimonials" />
+                <div className="flex flex-wrap p-0" id="TestMon">
                     <Swiper
                         centeredSlides={true}
                         initialSlide={1}

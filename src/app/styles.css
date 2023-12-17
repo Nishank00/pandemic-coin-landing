@@ -92,6 +92,10 @@
   transition: all 0.3s ease;
 }
 
+#TestMon .swiper {
+  padding-top: 0 !important;
+}
+
 #NewsGallery .swiper-slide-active {
   scale: 105%;
 }

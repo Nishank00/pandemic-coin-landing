@@ -6,7 +6,7 @@ import shelter1 from "../../../assets/shelter1.jpg"
 const Build = () => {
     return (
         <section className="text-gray-400 body-font">
-            <div className="container px-10 py-10 md:py-32 mx-auto  ">
+            <div className="container px-10 py-10 md:py-0 mx-auto  ">
                 <div className="flex flex-col text-center w-full mb-12">
                     {/* <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">
                         Building a Brighter Future:
@@ -14,7 +14,7 @@ const Build = () => {
                             Invest in Cathy&quot;s Vision for Secure Shelters and Make a Lasting Impact!
                         </h2>
                     </h1> */}
-                    <h1 className="text-3xl md:text-5xl tracking-[-3.36px] font-medium title-font mb-4 text-white">
+                    <h1 className="text-center text-[56px] not-italic  leading-[139.5%] capitalize tracking-[-3.36px] font-medium title-font mb-4 text-white">
                         Invest
                     </h1>
                 </div>

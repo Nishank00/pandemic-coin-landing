@@ -1,68 +1,58 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import Linkdin from "../../../assets/icons/foo_link.svg";
+import fb from "../../../assets/icons/foo_fb.svg";
+import twr from "../../../assets/icons/foo_twr.svg";
+import Arrow_right from "../../../assets/icons/right_A.svg";
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
+    // const currentYear = new Date().getFullYear();
     const footerNavs = [
         {
-            label: "Resources",
+            label: "Product",
             items: [
                 {
                     href: "#!",
-                    name: "contact",
+                    name: "Employee database",
                 },
                 {
                     href: "#!",
-                    name: "Support",
+                    name: "Payroll",
                 },
                 {
                     href: "#!",
-                    name: "Documentation",
+                    name: "Absences",
                 },
                 {
                     href: "#!",
-                    name: "Pricing",
+                    name: "Time tracking",
+                },
+                {
+                    href: "#!",
+                    name: "Shift planner",
+                },
+                {
+                    href: "#!",
+                    name: "Recruiting",
                 },
             ],
         },
         {
-            label: "About",
+            label: "Information",
             items: [
                 {
                     href: "#!",
-                    name: "Terms",
-                },
-                {
-                    href: "#!",
-                    name: "License",
-                },
-                {
-                    href: "#!",
-                    name: "Privacy",
-                },
-                {
-                    href: "#!",
-                    name: "About US",
-                },
-            ],
-        },
-        {
-            label: "Explore",
-            items: [
-                {
-                    href: "#!",
-                    name: "Showcase",
-                },
-                {
-                    href: "#!",
-                    name: "Roadmap",
-                },
-                {
-                    href: "#!",
-                    name: "Languages",
+                    name: "FAQ",
                 },
                 {
                     href: "#!",
                     name: "Blog",
                 },
+                {
+                    href: "#!",
+                    name: "Support",
+                }
             ],
         },
         {
@@ -70,24 +60,65 @@ export default function Footer() {
             items: [
                 {
                     href: "#!",
-                    name: "Partners",
-                },
-                {
-                    href: "#!",
-                    name: "Team",
+                    name: "About us",
                 },
                 {
                     href: "#!",
                     name: "Careers",
                 },
+                {
+                    href: "#!",
+                    name: "Contact us",
+                },
+                {
+                    href: "#!",
+                    name: "Lift Media",
+                },
             ],
         },
     ];
 
+
+    const FooSocials = [
+        {
+            id: 0,
+            image: Linkdin,
+            link: "#"
+        },
+        {
+            id: 1,
+            image: fb,
+            link: "#"
+        },
+        {
+            id: 2,
+            image: twr,
+            link: "#"
+        }
+    ]
+
+    const FooLink = [
+        {
+            id: 0,
+            title: "Terms",
+            link: "#"
+        },
+        {
+            id: 1,
+            title: "Privacy",
+            link: "#"
+        },
+        {
+            id: 2,
+            title: "Cookies",
+            link: "#"
+        }
+    ]
+
     return (
-        <footer className="pt-10 mt-auto mb-0 bg-pdc-d-gray">
+        <footer className="md:pt-10 pt-0 mt-auto mb-0 bg-[#1C1D26]">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="justify-between items-center gap-12 md:flex">
+                {/* <div className="justify-between items-center gap-12 md:flex">
                     <div className="flex-1 max-w-lg">
                         <h3 className="text-white text-2xl font-bold">
                             Get our beautiful newsletter straight to your inbox.
@@ -122,18 +153,18 @@ export default function Footer() {
                             </button>
                         </form>
                     </div>
-                </div>
-                <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
+                </div> */}
+                <div className="flex-1 mt-16 grid grid-cols-3 justify-between sm:flex">
                     {footerNavs.map((item, idx) => (
-                        <ul className="space-y-4 text-gray-300" key={idx}>
-                            <h4 className="text-gray-200 font-semibold sm:pb-2">
+                        <ul className="flex flex-col text-center md:text-start  gap-[6px] text-gray-300" key={idx}>
+                            <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] sm:pb-2">
                                 {item.label}
                             </h4>
                             {item.items.map((el, idx) => (
-                                <li key={idx}>
+                                <li key={idx} className="">
                                     <a
                                         href={el.href}
-                                        className="duration-150 hover:text-gray-400"
+                                        className="duration-150 text-[#7B7E98]  font_cat text-[16px] not-italic font-normal leading-[normal] hover:text-gray-400"
                                     >
                                         {el.name}
                                     </a>
@@ -141,9 +172,54 @@ export default function Footer() {
                             ))}
                         </ul>
                     ))}
+
+                    <div className="md:mt-[-32px] hidden md:block mt-0 w-[338px] h-[258px] p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
+                        <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] sm:pb-2">
+                            Subscribe
+                        </h4>
+                        <form className="flex mb-[16px]">
+                            <div className="relative">
+                                <input
+                                    type="email"
+                                    required
+                                    placeholder="Email address"
+                                    className="h-[50px] w-[198px] p-[16px] text-gray-500 bg-white outline-none rounded-[6px_0px_0px_6px] border focus:border-[#BB1A37] shadow-sm"
+                                />
+                            </div>
+                            <button className="flex justify-center items-center h-[50px] w-[50px]  text-sm text-center  bg-[#BB1A37] rounded-[0_6px_6px_0] text-white font-semibold uppercase shadow">
+                                <Image src={Arrow_right} height={13} width={15} alt="arrow" />
+                            </button>
+                        </form>
+
+                        <div className="text-[#7B7E98] font_cat md:w-[254px] w-full text-[12px] not-italic font-normal leading-[150%]">
+                            orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur.
+                        </div>
+                    </div>
                 </div>
-                <div className="mt-10 py-10 border-t border-gray-700 items-center justify-between sm:flex">
-                    <p className="text-gray-300">
+                <div className=" md:hidden mt-10 mx-auto block w-full h-fit p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
+                    <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] pb-2">
+                        Subscribe
+                    </h4>
+                    <form className="flex mb-[16px]">
+                        <div className="relative">
+                            <input
+                                type="email"
+                                required
+                                placeholder="Email address"
+                                className="h-[50px] w-[198px] p-[16px] text-gray-500 bg-white outline-none rounded-[6px_0px_0px_6px] border focus:border-[#BB1A37] shadow-sm"
+                            />
+                        </div>
+                        <button className="flex justify-center items-center h-[50px] w-[50px]  text-sm text-center  bg-[#BB1A37] rounded-[0_6px_6px_0] text-white font-semibold uppercase shadow">
+                            <Image src={Arrow_right} height={13} width={15} alt="arrow" />
+                        </button>
+                    </form>
+
+                    <div className="text-[#7B7E98] font_cat md:w-[254px] w-full text-[12px] not-italic font-normal leading-[150%]">
+                        orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur.
+                    </div>
+                </div>
+                <div className="mt-10 py-10 border-t border-gray-700  items-center justify-center md:justify-between sm:flex">
+                    {/* <p className="text-gray-300">
                         © {currentYear} Pandemic Coin
                     </p>
                     <div className="flex items-center gap-x-6 text-gray-400 mt-6">
@@ -226,7 +302,37 @@ export default function Footer() {
                                 </defs>
                             </svg>
                         </a>
-                    </div>
+                    </div> */}
+
+                    <ul className="flex gap-[40px] mx-auto  justify-center">
+                        {
+                            FooLink && FooLink.map((ele, index) => {
+                                return (
+                                    <>
+                                        <li key={ele.id} className="font_cat text-[14px] text-[#fff] not-italic font-normal leading-[normal]">
+                                            <Link href={ele.link}>
+                                                {ele.title}
+                                            </Link>
+                                        </li>
+                                    </>
+                                )
+                            })
+                        }
+                    </ul>
+                    <ul className="flex gap-[15px]  justify-center mt-[20px] md:mt-0">
+                        {FooSocials && FooSocials.map((item, index) => {
+                            return (
+                                <>
+                                    <li key={item.id}>
+                                        <Link href={item.link}>
+                                            <Image src={item.image} height={35} width={35} alt="socials" />
+                                        </Link>
+                                    </li>
+                                </>
+                            )
+                        })}
+
+                    </ul>
                 </div>
             </div>
         </footer>
