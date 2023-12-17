@@ -63,7 +63,7 @@ export default function Nav() {
                 aria-label="open nav bar"
                 whileTap={{ scale: 0.8 }}
                 onClick={() => setOpen(!open)}
-                className="bg-pdc-blue mob w-16 h-16 rounded-full fixed bottom-8 right-8 text-white flex justify-center items-center toppppp drop-shadow-lg hover:drop-shadow-2xl"
+                className="bg-pdc-blue mob w-16 h-16 rounded-full fixed bottom-8 right-8 text-white flex justify-center items-center toppppp drop-shadow-lg hover:drop-shadow-2xl z-[9999999]"
             >
                 <HiOutlineMenuAlt3 size={"26px"} />
             </motion.button>

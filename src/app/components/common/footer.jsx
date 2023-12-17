@@ -5,6 +5,7 @@ import Linkdin from "../../../assets/icons/foo_link.svg";
 import fb from "../../../assets/icons/foo_fb.svg";
 import twr from "../../../assets/icons/foo_twr.svg";
 import Arrow_right from "../../../assets/icons/right_A.svg";
+import Arrow_up from "../../../assets/icons/up_A.svg";
 
 export default function Footer() {
     // const currentYear = new Date().getFullYear();
@@ -116,7 +117,10 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="md:pt-10 pt-0 mt-auto mb-0 bg-[#1C1D26]">
+        <footer className="md:pt-10 pt-0 mt-auto mb-0 bg-[#1C1D26] relative">
+
+            <Image src={Arrow_up} height={53} width={53} alt="up_arrow" className="absolute top-[20px] md:h-[53px] md:w-[53px] h-[35px] w-[35px] right-[20px] md:top-[47px] md:right-[47px] cursor-pointer" />
+
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 {/* <div className="justify-between items-center gap-12 md:flex">
                     <div className="flex-1 max-w-lg">
