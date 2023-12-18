@@ -3,6 +3,7 @@ import React, { useCallback, useState } from "react";
 import CustomPieChart from "./custom-pie-chart";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion } from "framer-motion";
+import HoverEffect from "./MouseShine";
 
 
 const Tokenomics = () => {
@@ -33,37 +34,39 @@ const Tokenomics = () => {
     return (
         <div data-aos="fade-in" className="flex relative items-center px-4 pb-14 h-full w-screen overflow-x-clip justify-center flex-col text-center">
             <DynamicTitle title="Tokenomics" descColor={"#7B7E98"} description="DISTRIBUTION" />
-            <motion.div
+            <HoverEffect>
+                <motion.div
 
-                initial="hidden" animate="visible" variants={{
-                    hidden: {
-                        scale: .8,
-                        opacity: 0
-                    },
-                    visible: {
-                        scale: 1,
-                        opacity: 1,
-                        transition: {
-                            delay: .4
-                        }
-                    },
-                }}
+                    initial="hidden" animate="visible" variants={{
+                        hidden: {
+                            scale: .8,
+                            opacity: 0
+                        },
+                        visible: {
+                            scale: 1,
+                            opacity: 1,
+                            transition: {
+                                delay: .4
+                            }
+                        },
+                    }}
 
-                className="z-50 py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50">
-                {/* <Donut
+                    className="z-50 py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50">
+                    {/* <Donut
                     id="linearGradient"
                     data={data}
                     width={1000}
                     height={650}
                     className="relative max-w-[200px]"
                 /> */}
-                <CustomPieChart
-                    data={data}
-                    activeIndex={activeIndex}
-                    onPieEnter={onPieEnter}
+                    <CustomPieChart
+                        data={data}
+                        activeIndex={activeIndex}
+                        onPieEnter={onPieEnter}
 
-                />
-            </motion.div>
+                    />
+                </motion.div>
+            </HoverEffect>
             <div className="absolute w-[450px] h-[450px] transition-all bottom-[-2%] right-[-5%] border-2 rounded-full border-[#615E9A] p-4  animate-spin">
 
                 <div className="w-[200px] h-[200px] bg-gradient-to-r from-[#342CB2] to-[#FC4F5A] rounded-full m-8"></div>

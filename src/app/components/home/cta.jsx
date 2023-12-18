@@ -31,7 +31,7 @@ const CTA = () => {
             .to(
                 "#who_we_div",
                 {
-                   borderRadius:"340px 340px 0 0"
+                    borderRadius: "340px 340px 0 0"
                 },
                 "start"
             );

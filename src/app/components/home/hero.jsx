@@ -68,7 +68,7 @@ export default function HeroSection() {
                 <motion.h1
 
                     data-aos="fade-in"
-                    className="text-[#FFF] md:text-[76px] text-[36px] mt-[10px] font-normal leading-[139.5%] capitalize">
+                    className="text-[#FFF]  md:text-[76px] text-[36px] mt-[10px] font-normal leading-[139.5%] capitalize">
                     The Pandemic Coin
                 </motion.h1>
                 <motion.button

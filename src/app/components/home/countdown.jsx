@@ -1,6 +1,6 @@
 "use client";
 import gsap from "gsap";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger as Scrolltrigger } from "gsap/dist/ScrollTrigger";
 import { FaArrowRightLong, FaArrowLeftLong } from 'react-icons/fa6';
 import Timer from './timer';
@@ -8,6 +8,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Arrow from "../../../assets/icons/arrow_2.svg";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
+import MouseMoveWrapper from "./MouseShine";
+import HoverEffect from "./MouseShine";
+
 
 const CountDown = () => {
     gsap.registerPlugin(Scrolltrigger);
@@ -51,6 +54,21 @@ const CountDown = () => {
             );
     }, []);
 
+    const buttonRef = useRef(null)
+
+    function mouseMoveEvent(e) {
+        const { x, y } = buttonRef.current.getBoundingClientRect();
+        buttonRef.current.style.setProperty('--x', e.clientX - x);
+        buttonRef.current.style.setProperty('--y', e.clientY - y);
+    }
+
+    useEffect(() => {
+        if (buttonRef) {
+            buttonRef.current.addEventListener('mousemove', mouseMoveEvent)
+        }
+        return () => buttonRef.current.removeEventListener('mousemove', mouseMoveEvent)
+    }, [buttonRef])
+
     return (
         <section id="countdown_id" className="text-gray-600 body-font ">
             <div className="container px-[20px] md:px-[140px] mx-auto">
@@ -61,8 +79,9 @@ const CountDown = () => {
                     //     duration: 0.5,
                     //     ease: "easeInOut",
                     // }}
+                    ref={buttonRef}
                     id="count_box_id"
-                    className="relative p-[30px] scale-[0.8]  md:p-[70px_68px]  bg-black rounded-[20px] max-w-full md:max-w-[1184px] mx-auto ">
+                    className="relative shiny p-[30px] scale-[0.8]  md:p-[70px_68px]  bg-black rounded-[20px] max-w-full md:max-w-[1184px] mx-auto ">
                     <div data-aos="fade-in" className={`flex  gap-[20px] md:gap-[100px] flex-col md:flex-row`}>
                         {[1, 2, 3, 4, 5, 6].slice((currentSlide - 1) * 5, currentSlide * 5).map((index, i) =>
                         (
@@ -100,6 +119,7 @@ const CountDown = () => {
                         </button>
                     )}
                 </motion.div>
+
             </div>
         </section>
     );

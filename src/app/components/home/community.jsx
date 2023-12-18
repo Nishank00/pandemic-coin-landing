@@ -5,9 +5,11 @@ import asset1 from "../../../assets/asset1.png";
 import "./webinar.css";
 import { motion } from "framer-motion";
 import DynamicTitle from "../utils/dynamic-title";
+import HoverEffect from "./MouseShine";
 
 const Community = () => {
     return (
+        <HoverEffect>
         <div className=" pt-4 md:pt-44 pb-0 overflow-hidden mx-auto px-4 md:px-16 relative">
             <div className="absolute top-[-20%] left-[-20%] bg-[#FF07174D] w-[1000px] h-[500px] opacity-50 blur-[120px] rounded-full"></div>
             <div className="absolute left-[50%] top-[-5%] translate-x-[-50%] w-full">
@@ -72,6 +74,7 @@ const Community = () => {
 
             </div>
         </div>
+        </HoverEffect>
     );
 };
 

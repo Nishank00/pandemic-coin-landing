@@ -19,12 +19,13 @@ import clock from '../../../assets/icons/clock.svg'
 import { motion } from "framer-motion"
 
 const NewsCard = ({ imageUrl, description }) => (
-    // <div className="overflow-hidden">
-    <div  data-aos="fade-in" className="h-full group mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+
+    <div data-aos="fade-in" className="h-full group mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+
         <Image
             width={720}
             height={600}
-            className=" w-full group-hover:scale-[1.1] transition duration-300 ease-in-out h-[210px] md:h-full overflow-hidden  object-center"
+            className=" w-full z-10 group-hover:scale-[1.1] transition duration-300 ease-in-out h-[210px] md:h-full overflow-hidden  object-center"
             src={imageUrl}
             alt="blog"
         />
@@ -41,7 +42,7 @@ const NewsCard = ({ imageUrl, description }) => (
                 </button> */}
         </div>
     </div>
-    // {/* </div> */}
+
 );
 
 export default function LiveEvents() {
@@ -107,11 +108,11 @@ export default function LiveEvents() {
                             },
                         }}
                         className="mySwiper gap-4"
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    modules={[Autoplay]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        modules={[Autoplay]}
                     >
                         {NewsGallery.map((testimonial, index) => (
                             <SwiperSlide key={index}>
