@@ -63,11 +63,11 @@ const CountDown = () => {
                     // }}
                     id="count_box_id"
                     className="relative p-[30px] scale-[0.8]  md:p-[70px_68px]  bg-black rounded-[20px] max-w-full md:max-w-[1184px] mx-auto ">
-                    <div  data-aos="fade-in" className={`flex gap-[20px] md:gap-[100px] flex-col md:flex-row`}>
+                    <div data-aos="fade-in" className={`flex  gap-[20px] md:gap-[100px] flex-col md:flex-row`}>
                         {[1, 2, 3, 4, 5, 6].slice((currentSlide - 1) * 5, currentSlide * 5).map((index, i) =>
                         (
-                            <div key={index} className="rounded-[20px] transition-all flex flex-col items-start ">
-                                <p className={`text-[14px] ${i === 0 ? "text-[#FFF]" : "text-[#7B7E98]"}  font-medium leading-[139.5%] whitespace-nowrap font_cat`}>{slideComponents[index - 1].title}</p>
+                            <div key={index} className="rounded-[20px]  transition-all flex flex-col items-start justify-between ">
+                                <p className={`text-[14px]  ${i === 0 ? "text-[#FFF]" : "text-[#7B7E98]"}  font-medium leading-[139.5%] whitespace-nowrap font_cat`}>{slideComponents[index - 1].title}</p>
                                 <div className="mt-4 ">
                                     {slideComponents[index - 1].component && (
                                         // Render the component if it exists
@@ -75,7 +75,7 @@ const CountDown = () => {
                                     )}
                                     {slideComponents[index - 1].detail && (
                                         // Render the detail if it exists
-                                        <p className='leading-relaxed font_cat text-[20px] text-white font-bold'>{slideComponents[index - 1].detail}</p>
+                                        <p className='leading-relaxed flex justify-center items-center text-[20px] h-fit md:h-[60px] text-white font-bold'>{slideComponents[index - 1].detail}</p>
                                     )}
                                 </div>
                             </div>

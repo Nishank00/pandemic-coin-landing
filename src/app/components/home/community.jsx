@@ -60,9 +60,9 @@ const Community = () => {
                 <input type="checkbox" id="my_modal_7" className="modal-toggle" />
                 <div className="modal" role="dialog">
                     <div className="modal-box ">
-                        <h1 class="text-6xl lg:text-7xl xl:text-8xl text-indigo-600 tracking-wider font-bold font-serif text-center">Coming Soon...</h1>
+                        <h1 class="text-[30px] md:text-[40px] text-indigo-600 tracking-wider font-bold font-serif text-center">Coming Soon...</h1>
                         {/* <h1 class="text-4xl font-bold uppercase text-indigo-600 transition duration-500">Coming Soon</h1> */}
-                        <h2 class="text-xl text-white  text-center mt-5 transition duration-500">
+                        <h2 class="text-[14px] md:text-[18px] text-white  text-center mt-5 transition duration-500">
                             We are almost there to introduce our new website to the world, in the meantime, you can follow us on social
                             networks to get the latest updates.
                         </h2>

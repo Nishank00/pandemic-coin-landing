@@ -45,7 +45,7 @@ export default function HeroSection() {
                 alt="Pandemic Coin bg"
                 width="auto"
                 height="auto"
-                className={`absolute  ${isMobile ? "opacity-20 h-screen" : ""}  object-cover w-screen bottt bottom-0 top-[-100px] left-0`}
+                className={`absolute  ${isMobile ? "opacity-20 h-screen" : ""}  object-cover w-screen bottom-0 top-[-100px] left-0`}
 
             />
             <motion.div

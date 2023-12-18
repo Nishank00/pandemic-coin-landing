@@ -43,7 +43,7 @@ const Timer = () => {
     }, []);
 
     return (
-        <div className="flex items-center justify-start space-x-0">
+        <div className="flex items-center justify-start space-x-0 leading-0">
             {timeLeft.isDay ? (
                 <>
                     <div className="flex items-center justify-center timer-item">
