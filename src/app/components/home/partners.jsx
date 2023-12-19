@@ -46,7 +46,7 @@ const Partners = () => {
     return (
         <section className="relative body-font">
             <div className="bg-[#342CB250] absolute w-[200px] blur-[120px] rounded-full h-[200px] top-[5%] -left-[5%] z-0"></div>
-            <div className="container px-5 mx-auto" ref={ref}>
+            <div className="container md:px-5 px-0 mx-auto" ref={ref}>
                 <DynamicTitle title="Our Partners" className="tracking-[-3.36px]" />
                 <motion.div
                     variants={marqueeVariants}

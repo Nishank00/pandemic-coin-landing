@@ -34,9 +34,9 @@ const TestimonialCard = ({ imageUrl, description }) => (
         className=""
     >
         <div  data-aos="fade-in" className="mx-auto group">
-            <motion.div {...imageTextVariants} className="overflow-hidden  h-[400px] mb-5 rounded-[30px] ">
+            <motion.div {...imageTextVariants} className="overflow-hidden h-[300px]  md:h-[400px] mb-5 rounded-[30px] ">
                 <Image
-                    className="rounded-[30px] h-[400px] w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
+                    className="rounded-[30px]  h-[400px] object-cover w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
                     src={imageUrl}
                     alt="testimonials"
                     width={400}
