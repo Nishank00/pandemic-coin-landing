@@ -67,7 +67,7 @@ const Tokenomics = () => {
                     />
                 </motion.div>
             </HoverEffect>
-            <div className="absolute w-[450px] h-[450px] transition-all bottom-[-2%] right-[-5%] border-2 rounded-full border-[#615E9A] p-4  animate-spin">
+            <div className="absolute w-[450px] h-[450px] transition-all bottom-[-2%] right-[-5%] border-2 rounded-full border-[#615E9A] p-4 z-[-1] animate-spin">
 
                 <div className="w-[200px] h-[200px] bg-gradient-to-r from-[#342CB2] to-[#FC4F5A] rounded-full m-8"></div>
 
