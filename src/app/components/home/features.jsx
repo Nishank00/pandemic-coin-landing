@@ -48,9 +48,6 @@ const Feature = () => {
     return (
         <section className="body-font">
             <div className="container relative px-[0%] mx-auto">
-                {/* <div className="flex flex-col relative z-10 text-center w-full mb-16">
-                    <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">Our Key Features</h1>
-                </div> */}
                 <DynamicTitle title="key features" customClass="tracking-[-3.36px]" description="" />
 
                 <motion.div
