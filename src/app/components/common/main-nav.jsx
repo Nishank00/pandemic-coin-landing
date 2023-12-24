@@ -25,7 +25,7 @@ export default function Nav() {
 
     return (
         <>
-            <div className="left-0 pc md:hidden lg:flex w-full topppp p-[18px_62px_0_39px] top-0 items-center bg-[#1C1D26] font-semibold justify-between h-[96px]">
+            <div className="left-0 sticky top-0 pc md:hidden lg:flex w-full topppp p-[0px_62px_0_39px]  items-center bg-[#1C1D26] font-semibold justify-between h-[96px]">
                 <Link href="/">
                     {/* <h1 className="text-white font-bold text-2xl">PDC</h1> */}
                     <Image
@@ -57,17 +57,21 @@ export default function Nav() {
                             </div>
                         );
                     })}
+                    <button className="py-[5px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white">
+                        Buy
+                    </button>
                 </div>
+
             </div>
+
             <motion.button
                 aria-label="open nav bar"
                 whileTap={{ scale: 0.8 }}
                 onClick={() => setOpen(!open)}
-                className="bg-pdc-blue mob w-16 h-16 rounded-full fixed bottom-8 right-8 text-white flex justify-center items-center toppppp drop-shadow-lg hover:drop-shadow-2xl z-[9999999]"
+                className="bg-pdc-blue mob w-16 h-16 rounded-full fixed bottom-8 right-8 text-white flex justify-center items-center drop-shadow-lg hover:drop-shadow-2xl z-[99999999]"
             >
                 <HiOutlineMenuAlt3 size={"26px"} />
             </motion.button>
-
             <div
                 className={`bg-white text-black mob anim-slo fixed w-screen toppppp h-screen flex flex-col gap-3 justify-center items-center ${open
                     ? "translate-x-0 scale-x-100 pointer-events-auto"
@@ -94,6 +98,10 @@ export default function Nav() {
                     <IoLogoWhatsapp size={"22px"} />
                     <span className="mb-1">+91 98956 09285</span>
                 </Link>
+
+                <button className="py-[5px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white">
+                    Buy
+                </button>
 
                 <motion.button
                     aria-label="Close navbar"

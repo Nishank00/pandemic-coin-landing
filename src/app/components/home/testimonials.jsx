@@ -33,7 +33,7 @@ const TestimonialCard = ({ imageUrl, description }) => (
         exit={slideVariants.exit}
         className=""
     >
-        <div  data-aos="fade-in" className="mx-auto group">
+        <div data-aos="fade-in" className="mx-auto group">
             <motion.div {...imageTextVariants} className="overflow-hidden h-[300px]  md:h-[400px] mb-5 rounded-[30px] ">
                 <Image
                     className="rounded-[30px]  h-[400px] object-cover w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
@@ -46,13 +46,17 @@ const TestimonialCard = ({ imageUrl, description }) => (
             <motion.p {...imageTextVariants} delay={0.25}>
                 {description}...&nbsp;<span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">Read</span>
             </motion.p>
-            <motion.button
-                whileHover={{ scale: 1.1 }} // Adjust hover scale
-                whileTap={{ scale: 1 }} // Adjust tap scale
-                className="pri-btn text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] md:mt-[30px] mt-[20px] capitalize"
-            >
-                Explore all the stories
-            </motion.button>
+
+            <div className="w-full flex justify-center items-center">
+                <motion.button
+                    whileHover={{ scale: 1.1 }} // Adjust hover scale
+                    whileTap={{ scale: 1 }} // Adjust tap scale
+                    className="pri-btn text-[#FFF] text-[18px] mx-auto not-italic font-normal leading-[139.5%] md:mt-[30px] mt-[20px] capitalize"
+                >
+                    Explore all the stories
+                </motion.button>
+            </div>
+
         </div>
     </motion.div>
 );

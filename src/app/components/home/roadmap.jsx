@@ -2,7 +2,10 @@ import React, { useRef } from "react";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HoverEffect from "./MouseShine";
-
+import bg from "../../../assets/hero_bg.svg";
+import bg1 from "../../../assets/landing-bg.png";
+import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
+import Image from "next/image";
 
 const RoadmapSection = ({ title, color, items, index, roadmapData }) => (
 
@@ -47,6 +50,7 @@ const RoadmapSection = ({ title, color, items, index, roadmapData }) => (
 );
 
 const Roadmap = () => {
+    const isMobile = useMediaQuery("(max-width:768px)");
     const roadmapData = [
         {
             title: "Q4 2023",
@@ -98,12 +102,29 @@ const Roadmap = () => {
                 description="see what we’re building and follow us as we get to our goal"
             />
             <div className="container px-5  mx-auto flex flex-wrap">
-                <div className="flex items-center md:items-baseline justify-center md:justify-normal flex-wrap w-full md:max-w-5/6 overflow-hidden">
-                    <div className="flex relative items-center justify-center flex-col mx-auto pl-0 md:pl-10 py-6">
+                <div className="flex flex-col relative items-center md:items-baseline justify-center md:justify-normal flex-wrap w-full md:max-w-5/6 overflow-hidden">
+                    {/* <div className="flex relative items-center justify-center flex-col mx-auto pl-0 md:pl-10 py-6">
                         {roadmapData.map((data, index) => (
                             <RoadmapSection key={index} roadmapData={roadmapData} {...data} index={index} />
                         ))}
-                    </div>
+                    </div> */}
+
+                    <Image
+                        id="hero_img_id"
+                        src={isMobile ? bg1 : bg}
+                        alt="Pandemic Coin bg"
+                        width="auto"
+                        height="auto"
+                        className={`${isMobile ? "opacity-20 h-[50vh]" : "h-[80vh]"} md:mx-auto rounded-[25px]  object-cover ${isMobile ? "w-screen" : "w-[1100px]"}  `}
+                    />
+
+                    <button
+                        // className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
+                        className="bg-[#BB1A37] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[15px] font-[18px]  rounded-[8px] mx-auto w-[200px] md:w-[220px] text-white"
+                    >
+                        Roadmap
+                    </button>
+
                 </div>
             </div>
         </section>

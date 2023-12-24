@@ -70,8 +70,8 @@ const CountDown = () => {
     }, [buttonRef])
 
     return (
-        <section id="countdown_id" className="text-gray-600 body-font ">
-            <div className="container px-[20px] md:px-[140px] mx-auto">
+        <section id="countdown_id" className="text-gray-600   body-font md:mt-[-100px]">
+            <div className="container  px-[20px] md:px-[0px] mx-auto">
                 <motion.div
                     // initial={{ opacity: 0, y: 50 }}
                     // whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const CountDown = () => {
                     </div>
                     {currentSlide === 1 ? (
                         <button
-                            className="md:absolute relative top-0 md:top-[45%]  transition-all right-0 md:right-[50px] text-lg mt-4 mr-4"
+                            className="xl:absolute relative top-0 md:top-[55%]  xltop-[45%] transition-all right-0 xl:right-[50px] md:right-[0px] text-lg mt-4 mr-4"
                             onClick={handleButtonClick}
                         >
                             {/* <FaArrowRightLong /> */}
@@ -112,7 +112,7 @@ const CountDown = () => {
                         </button>
                     ) : (
                         <button
-                            className="absolute top-[50%] translate-y-[-120%] transition-all left-0 text-lg mt-4 ml-4"
+                            className="absolute top-[50%]  translate-y-[-120%] transition-all left-0 text-lg mt-4 ml-4"
                             onClick={handleButtonClick}
                         >
                             <FaArrowLeftLong />
