@@ -279,3 +279,16 @@ canvas:hover {
 .shiny:hover::after {
   opacity: 0.4;
 }
+
+
+.arrow-container {
+  animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-15px);
+  }
+}

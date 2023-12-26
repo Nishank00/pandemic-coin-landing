@@ -43,6 +43,11 @@ span {
 body {
     color: #fff;
     background-color: #090a0f;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .serif {
@@ -171,6 +176,12 @@ abbr[title] {
 
 .b2 {
     border: 10px solid red;
+}
+
+.df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock_img {
