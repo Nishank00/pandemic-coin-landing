@@ -15,21 +15,24 @@ import Build from "./components/home/build";
 import Cta from "./components/home/cta";
 import Feature from "./components/home/features";
 import CountDown from "./components/home/countdown";
+import VideoComp from "./components/common/VideoComp/VideoComp";
+
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
+      
       <HeroSection />
       <CountDown />
       <WhoWeAreSection />
       <LiveEvents />
       <Feature />
-      <Tokenomics /> 
+      <Tokenomics />
       <Roadmap />
       <MiniAboutUs />
       <Partners />
       <Shelters />
-      <Community /> 
+      <Community />
       <Testimonials />
       <Build />
       <Cta />

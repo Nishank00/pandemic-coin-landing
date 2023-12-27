@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 
 const VideoComp = (props) => {
     const [playing, setPlaying] = useState(props.autoplay);
-    const [duration, setDuration] = useState(0);
+    // const [duration, setDuration] = useState(0);
     const playerRef = useRef(null);
     const containerRef = useRef(null);
     useEffect(() => {
@@ -31,42 +31,36 @@ const VideoComp = (props) => {
         };
     }, []);
 
-    useEffect(() => {
-        setDuration(playerRef.current?.getDuration() || 0);
-    });
+    // useEffect(() => {
+    //     setDuration(playerRef.current?.getDuration() || 0);
+    // });
 
-    const handlePlay = () => {
-        props.videoDuration
-            ? (props.videoDuration(duration), playerRef.current.seekTo(0))
-            : null,
-            setPlaying(true);
-    };
-    const handlePause = () => setPlaying(false);
+    // const handlePlay = () => {
+    //     props.videoDuration
+    //         ? (props.videoDuration(duration), playerRef.current.seekTo(0))
+    //         : null,
+    //         setPlaying(true);
+    // };
+    // const handlePause = () => setPlaying(false);
     return (
-        <div className="relative max-w-full h-full overflow-hidden" ref={containerRef}>
+        <div className="videoContainer" ref={containerRef}>
             <ReactPlayer
                 ref={playerRef}
-                // url={props?.url}
-                url={teaser}
+                url={props?.url}
                 playing={playing}
                 autoplay={true}
                 width="100%"
                 height="100%"
-                onPlay={handlePlay}
-                onPause={handlePause}
-                onProgress={handleProgress}
+                // onPlay={handlePlay}
+                // onPause={handlePause}
                 muted={props.autoplay ? true : false}
                 loop={props.loop ? true : false}
                 playsinline
-                
             />
 
         </div>
     );
 };
 
-VideoComp.defaultProps = {
-    url: '../../../../assets/video/dummy.mp4',
-};
 
 export default VideoComp;

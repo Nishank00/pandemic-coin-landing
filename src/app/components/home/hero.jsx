@@ -1,5 +1,4 @@
 import Image from "next/image";
-import gsap from "gsap";
 import React from "react";
 import Tilt from "react-parallax-tilt";
 
@@ -7,11 +6,10 @@ import Tilt from "react-parallax-tilt";
 import logo from "../../../assets/logo-big.png";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
-// import VideoComp from "../common/VideoComp/VideoComp";
-// import teaser from "../../../assets/teaser.mp4";
-import bg from "../../../assets/hero_bg.svg";
-import bg1 from "../../../assets/landing-bg.png";
+// import bg from "../../../assets/hero_bg.svg";
+// import bg1 from "../../../assets/landing-bg.png";
 import mouse from "../../../assets/mouse_scroll.svg";
+import VideoComp from "../common/VideoComp/VideoComp";
 
 
 export default function HeroSection() {
@@ -21,22 +19,18 @@ export default function HeroSection() {
     return (
         <>
             <div className="relative" id="banner_id">
-                <Image
+                {/* <Image
                     id="hero_img_id"
                     src={isMobile ? bg1 : bg}
                     alt="Pandemic Coin bg"
                     width="auto"
                     height="auto"
                     className={`  ${isMobile ? "opacity-20 h-screen" : "h-[100vh]"}  object-cover w-screen `}
+                /> */}
 
-                />
-
-                {/* <div className={`  ${isMobile ? "h-screen" : "h-[100vh]"} w-screen `}>
-                    <VideoComp
-                        autoplay="false"
-                    // url={teaser}
-                    />
-                </div> */}
+                <div className={` ${isMobile ? "h-screen" : "h-[100vh]"} w-[100%] object-cover`}>
+                    <VideoComp autoplay="true" loop="true" url={"/video/tunnel.mp4"} />
+                </div>
                 <div className="absolute bottom-[50px] md:bottom-auto left-[50%] md:left-auto translate-x-[-50%] md:translate-x-0 md:top-[70vh] md:right-[50px] flex flex-col justify-center items-center">
                     <Image
                         src={mouse}
