@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import HoverEffect from "./MouseShine";
 import bg from "../../../assets/hero_bg.svg";
 import bg1 from "../../../assets/landing-bg.png";
-import roadmapImage from "../../../assets/roadmap.jpg";
+import roadmapImage from "../../../assets/roadmap_v2.jpg";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
