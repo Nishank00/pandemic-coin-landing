@@ -110,7 +110,7 @@ const Roadmap = () => {
                             <RoadmapSection key={index} roadmapData={roadmapData} {...data} index={index} />
                         ))}
                     </div> */}
-
+                        {/* New changes */}
                     <Image
                         id="hero_img_id"
                         src={isMobile ? roadmapImage : roadmapImage}
