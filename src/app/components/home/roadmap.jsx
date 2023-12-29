@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import HoverEffect from "./MouseShine";
 import bg from "../../../assets/hero_bg.svg";
 import bg1 from "../../../assets/landing-bg.png";
+import roadmapImage from "../../../assets/roadmap.jpg";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
@@ -112,11 +113,11 @@ const Roadmap = () => {
 
                     <Image
                         id="hero_img_id"
-                        src={isMobile ? bg1 : bg}
+                        src={isMobile ? roadmapImage : roadmapImage}
                         alt="Pandemic Coin bg"
                         width="auto"
                         height="auto"
-                        className={`${isMobile ? "opacity-20 h-[50vh]" : "h-[80vh]"} md:mx-auto rounded-[25px]  object-cover ${isMobile ? "w-screen" : "w-[1100px]"}  `}
+                        className={`${isMobile ? "opacity-20 h-[50vh]" : "opacity-20 h-[80vh]"} md:mx-auto rounded-[25px]  object-cover ${isMobile ? "w-screen" : "w-[1100px]"}  `}
                     />
 
                     <Link
