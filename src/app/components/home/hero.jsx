@@ -29,7 +29,7 @@ export default function HeroSection() {
                 /> */}
 
                 <div className={` ${isMobile ? "h-screen" : "h-[100vh]"} w-[100%] object-cover`}>
-                    <VideoComp autoplay="true" loop="true" url={"/video/tunnel.mp4"} />
+                    <VideoComp autoplay="true" loop="true" url={"/video/tunnel_v3.mp4"} />
                 </div>
                 <div className="absolute bottom-[50px] md:bottom-auto left-[50%] md:left-auto translate-x-[-50%] md:translate-x-0 md:top-[70vh] md:right-[50px] flex flex-col justify-center items-center">
                     <Image

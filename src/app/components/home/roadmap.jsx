@@ -6,6 +6,7 @@ import bg from "../../../assets/hero_bg.svg";
 import bg1 from "../../../assets/landing-bg.png";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
 import Image from "next/image";
+import Link from "next/link";
 
 const RoadmapSection = ({ title, color, items, index, roadmapData }) => (
 
@@ -118,12 +119,15 @@ const Roadmap = () => {
                         className={`${isMobile ? "opacity-20 h-[50vh]" : "h-[80vh]"} md:mx-auto rounded-[25px]  object-cover ${isMobile ? "w-screen" : "w-[1100px]"}  `}
                     />
 
-                    <button
-                        // className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
-                        className="bg-[#BB1A37] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[15px] font-[18px]  rounded-[8px] mx-auto w-[200px] md:w-[220px] text-white"
-                    >
-                        Roadmap
-                    </button>
+                    <Link
+                        href={" https://pdc-roadmap.vercel.app/"}
+                        target="_blank">
+                        <button
+                            className="bg-[#BB1A37] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[15px] font-[18px]  rounded-[8px] mx-auto w-[200px] md:w-[220px] text-white"
+                        >
+                            Roadmap
+                        </button>
+                    </Link>
 
                 </div>
             </div>
