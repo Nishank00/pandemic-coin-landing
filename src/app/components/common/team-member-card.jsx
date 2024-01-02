@@ -36,6 +36,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                 width={324}
                 height={273}
                 alt={name}
+                objectFit="contain"
                 style={{
                     borderRadius: "30px",
                     animation: `hover ${TeamCardVariants.hover.animationDuration} ease-in-out`,
@@ -60,14 +61,14 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     {desc}
                 </motion.p> */}
                 <div className="flex gap-3 mt-6">
-                    <Link
+                    {/* <Link
                         className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
                         href={link}
                     >
                         <FaLink />
-                    </Link>
+                    </Link> */}
                     <Link
-                        className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
+                        className="bg-pdc-blue flex w-12 h-12 rounded-md  justify-center items-center"
                         href={linkedin}
                     >
                         <FaLinkedinIn />

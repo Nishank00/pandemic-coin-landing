@@ -60,7 +60,7 @@ const Partners = () => {
                                 variants={advisorVariants}
                                 className="inline-block mx-4"
                             >
-                                <Advisor title={member.title} />
+                                <Advisor member={member} />
                             </motion.div>
                         ))}
                     </Marquee>

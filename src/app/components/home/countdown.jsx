@@ -63,11 +63,16 @@ const CountDown = () => {
     }
 
     useEffect(() => {
-        if (buttonRef) {
-            buttonRef.current.addEventListener('mousemove', mouseMoveEvent)
+        const buttonRefCurrent = buttonRef.current;
+        if (buttonRefCurrent) {
+            buttonRefCurrent.addEventListener('mousemove', mouseMoveEvent);
         }
-        return () => buttonRef.current.removeEventListener('mousemove', mouseMoveEvent)
-    }, [buttonRef])
+        return () => {
+            if (buttonRefCurrent) {
+                buttonRefCurrent.removeEventListener('mousemove', mouseMoveEvent);
+            }
+        };
+    }, [buttonRef]);
 
     return (
         <section id="countdown_id" className="text-gray-600   body-font md:mt-[-100px]">
