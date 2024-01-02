@@ -16,11 +16,11 @@ export default function Nav() {
 
     const links = [
         { title: "Home", path: "/" },
-        { title: "About Us", path: "/about" },
+        { title: "About us", path: "/about" },
         { title: "AI", path: "/ai" },
         { title: "Media", path: "/media" },
         { title: "Communities", path: "/communities" },
-        { title: "Contact Us", path: "/contact" },
+        { title: "Contact us", path: "/contact" },
         { title: "Whitepaper", path: "https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing"}
         
     ];
