@@ -11,31 +11,25 @@ export default function Footer() {
     // const currentYear = new Date().getFullYear();
     const footerNavs = [
         {
-            label: "Product",
+            label: "Quick Links",
             items: [
+                
                 {
                     href: "#!",
-                    name: "Employee database",
+                    name: "AI",
                 },
                 {
                     href: "#!",
-                    name: "Payroll",
+                    name: "Media",
                 },
                 {
                     href: "#!",
-                    name: "Absences",
+                    name: "Communities",
                 },
+                
                 {
                     href: "#!",
-                    name: "Time tracking",
-                },
-                {
-                    href: "#!",
-                    name: "Shift planner",
-                },
-                {
-                    href: "#!",
-                    name: "Recruiting",
+                    name: "Whitepaper",
                 },
             ],
         },
@@ -44,15 +38,15 @@ export default function Footer() {
             items: [
                 {
                     href: "#!",
-                    name: "FAQ",
+                    name: "Terms & Conditions",
                 },
                 {
                     href: "#!",
-                    name: "Blog",
+                    name: "Privacy Policy",
                 },
                 {
                     href: "#!",
-                    name: "Support",
+                    name: "FAQs",
                 }
             ],
         },
@@ -63,18 +57,12 @@ export default function Footer() {
                     href: "#!",
                     name: "About us",
                 },
-                {
-                    href: "#!",
-                    name: "Careers",
-                },
+                
                 {
                     href: "#!",
                     name: "Contact us",
                 },
-                {
-                    href: "#!",
-                    name: "Lift Media",
-                },
+                
             ],
         },
     ];
@@ -177,7 +165,7 @@ export default function Footer() {
                         </ul>
                     ))}
 
-                    <div data-aos="fade-in" className="md:mt-[-32px] hidden md:block mt-0 w-[338px] h-[258px] p-[32px_42px] bg-[rgb(37,37,37,0.2)]">
+                    <div data-aos="fade-in" className="md:mt-[-32px] hidden md:block mt-0 w-[338px] h-[180px] p-[32px_42px] bg-[rgb(37,37,37,0.2)] rounded-[10px]">
                         <h4 className="text-[#FFF] font_cat text-[16px] not-italic font-bold leading-[28px] sm:pb-2">
                             Subscribe
                         </h4>
@@ -196,7 +184,7 @@ export default function Footer() {
                         </form>
 
                         <div className="text-[#7B7E98] font_cat md:w-[254px] w-full text-[12px] not-italic font-normal leading-[150%]">
-                            orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur.
+                        Get the latest in your inbox, subscribe now! ⚡️
                         </div>
                     </div>
                 </div>
@@ -219,7 +207,8 @@ export default function Footer() {
                     </form>
 
                     <div className="text-[#7B7E98] font_cat md:w-[254px] w-full text-[12px] not-italic font-normal leading-[150%]">
-                        orem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur.
+                        {/* Add some profound text for subscribing to newsletter */}
+                        Get the latest in your inbox, subscribe now! ⚡️
                     </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-700  items-center justify-center md:justify-between sm:flex">
@@ -310,20 +299,22 @@ export default function Footer() {
 
                     <ul data-aos="fade-in" className="flex gap-[40px] mx-auto  justify-center">
                         {
-                            FooLink && FooLink.map((ele, index) => {
-                                return (
-                                    <>
-                                        <li key={ele.id} className="font_cat text-[14px] text-[#fff] not-italic font-normal leading-[normal]">
-                                            <Link href={ele.link}>
-                                                {ele.title}
-                                            </Link>
-                                        </li>
-                                    </>
-                                )
-                            })
+                            // FooLink && FooLink.map((ele, index) => {
+                            //     return (
+                            //         <>
+                            //             <li key={ele.id} className="font_cat text-[14px] text-[#fff] not-italic font-normal leading-[normal]">
+                            //                 <Link href={ele.link}>
+                            //                     {ele.title}
+                            //                 </Link>
+                            //             </li>
+                            //         </>
+                            //     )
+                            // })
+                            <p className="text-[14px]">COPYRIGHT © 2024 PANDEMIC COIN. ALL RIGHTS RESERVED.</p>
+
                         }
                     </ul>
-                    <ul data-aos="fade-in" className="flex gap-[15px]  justify-center mt-[20px] md:mt-0">
+                    {/* <ul data-aos="fade-in" className="flex gap-[15px]  justify-center mt-[20px] md:mt-0">
                         {FooSocials && FooSocials.map((item, index) => {
                             return (
                                 <>
@@ -336,7 +327,7 @@ export default function Footer() {
                             )
                         })}
 
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </footer>

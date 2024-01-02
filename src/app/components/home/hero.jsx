@@ -69,10 +69,10 @@ export default function HeroSection() {
                     </motion.h1>
                     <button
                         // className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
-                        className="bg-[#BB1A37] p-[5px] font-[10px] md:mt-[5px] rounded-[8px] mx-auto w-[100px] md:w-[100px] text-white"
+                        className="bg-[#BB1A37] p-[5px] font-[10px] md:mt-[5px] rounded-[8px] mx-auto w-[150px] md:w-[150px] text-white"
                         data-aos="fade-in"
                     >
-                        Invest now
+                        Purchase now
                     </button>
                 </div>
 

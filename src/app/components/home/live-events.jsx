@@ -32,11 +32,11 @@ const NewsCard = ({ imageUrl, description }) => (
         <div className="md:py-2 py-6 px-6 md:mx-0 md:absolute bottom-0 w-full bg-pdc-d-gray/80 backdrop-blur-[5px]">
             <div className="flex gap-[8px] mb-[6px]" >
                 <Image src={clock} height={20} width={20} className="clock_img" alt='arrow' />
-                <div className="font_cat text-[13.423px] not-italic font-medium leading-[143.5%]">
+                <div className=" text-[13.423px] not-italic font-medium leading-[143.5%]">
                     12-3-2023
                 </div>
             </div>
-            <p className="leading-relaxed md:px-4 px-0 font_cat text-[#E4E4E4]">{description}...&nbsp; <span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">read more</span></p>
+            <p className="leading-relaxed md:px-4 px-0  text-[#E4E4E4]">{description}...&nbsp; <span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">read more</span></p>
             {/* <button className="text-white pri-btn px-4 p-2 text-xs font-medium ">
                     Learn More
                 </button> */}
