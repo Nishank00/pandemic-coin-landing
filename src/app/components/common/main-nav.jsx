@@ -20,7 +20,7 @@ export default function Nav() {
         { title: "AI", path: "/ai" },
         { title: "Media", path: "/media" },
         { title: "Communities", path: "/communities" },
-        { title: "Contact Us", path: "/contact" },
+        { title: "Contact Us", path: "/contactus" },
     ];
 
     return (
