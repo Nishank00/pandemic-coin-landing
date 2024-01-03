@@ -33,9 +33,9 @@ export default function MiniAboutUs() {
 
                 className="flex items-center justify-center text-center  w-fit mx-auto flex-col">
                 <Image
-                    className="mx-auto bg-pdc-d-gray h-[273px] rounded-[20px]"
+                    className="mx-auto bg-pdc-d-gray h-[324px] rounded-[20px]"
                     width={324}
-                    height={273}
+                    height={324}
                     src={azImage}
                     quality={100}
                     alt="Pandemic Coin Logo"
@@ -47,7 +47,7 @@ export default function MiniAboutUs() {
                     
                 </div>
             </motion.div>
-            <div data-aos="fade-in" className="flex md:flex-row flex-wrap md:gap-[60px] gap-[30px] m-6 justify-center">
+            <div data-aos="fade-in" className="grid md:grid-cols-3 max-w-[1100px] mx-auto grid-col-1 md:gap-[60px] gap-[30px] m-6 justify-center">
                 {teamData.map((item, index) => (
                     <TeamMemberCard key={index} {...item} />
                 ))}

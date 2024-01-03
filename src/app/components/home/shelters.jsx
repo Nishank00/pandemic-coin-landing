@@ -12,11 +12,11 @@ import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import img from "../../../assets/bg.png";
 import DynamicTitle from "../utils/dynamic-title";
-import shelter1 from "../../../assets/shelter1.jpg"
-import shelter2 from "../../../assets/shelter2.jpg"
-import shelter3 from "../../../assets/shelter3.jpg"
-import shelter4 from "../../../assets/shelter4.jpg"
-import shelter5 from "../../../assets/shelter5.png"
+import shelter1 from "../../../assets/shelter/1.png"
+import shelter2 from "../../../assets/shelter/2.png"
+import shelter3 from "../../../assets/shelter/3.png"
+import shelter4 from "../../../assets/shelter/4.png"
+import shelter5 from "../../../assets/shelter/5.png"
 
 const shelters = [
     {
@@ -159,8 +159,8 @@ const Shelters = () => {
                                     </div>
 
                                     <div className="text-sm mt-[30px] md:rounded-[20px] md:p-[30px] bg-black bg-opacity-50 md:mt-0 md:absolute z-10 md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%]">
-                                        {shelter?.title && <div className="mb-2 text-[#FC4F5A]  font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
-                                        {shelter?.description && <div className="font-[Catamaran]  text-[16.347px] not-italic font-medium leading-[140%] md:text-white text-[#707070]">{shelter?.description}</div>}
+                                        {shelter?.title && <div className="mb-2 text-[#FC4F5A]  font_cat text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
+                                        {shelter?.description && <div className=" text-[16.347px] not-italic font-medium leading-[140%] md:text-white text-[#707070]">{shelter?.description}</div>}
                                     </div>
                                 </div>
                             </SwiperSlide>

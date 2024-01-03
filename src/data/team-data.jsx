@@ -2,9 +2,9 @@ import asset from "../assets/bg.png";
 import asadZeeshan from "../assets/asad_zeeshan.jpeg";
 import ahsanUsman from "../assets/ahsan_usman.jpeg";
 import abhayrajGohil from "../assets/abhayraj_gohil.jpeg";
-import glennDasmarinas from "../assets/glenn_dasmarinas.jpeg";
-import adedolapoOshodi from "../assets/abedolapo_oshodi.jpeg";
-import talhaJaved from "../assets/talha_javed.jpeg";
+import glennDasmarinas from "../assets/glen.jpg";
+import adedolapoOshodi from "../assets/oshodi.JPG";
+import talhaJaved from "../assets/javed.png";
 
 
 

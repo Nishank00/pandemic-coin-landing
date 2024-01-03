@@ -32,9 +32,9 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
         >
             <Image
                 src={img}
-                className="mx-auto bg-pdc-d-gray h-[273px] rounded-[20px]"
+                className="mx-auto bg-pdc-d-gray h-[324px] object-cover object-top rounded-[20px]"
                 width={324}
-                height={273}
+                height={324}
                 alt={name}
                 objectFit="contain"
                 style={{
