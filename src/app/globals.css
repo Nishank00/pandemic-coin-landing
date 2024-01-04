@@ -173,11 +173,20 @@ abbr[title] {
 /*---------------HP Classics---------------*/
 
 .b1 {
-    border: 1px solid red;
+    border: .1px solid red;
 }
 
 .b2 {
     border: 10px solid red;
+}
+
+.b_grey {
+    border: 1px solid hsla(0, 0%, 100%, .3)
+}
+
+.imageSlider img {
+    object-fit: cover;
+    height: 100vh;
 }
 
 .df {
