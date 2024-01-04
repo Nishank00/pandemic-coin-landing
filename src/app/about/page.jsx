@@ -6,8 +6,7 @@ import TeamCard from "../components/common/team-member-card";
 import Partners from "../components/home/partners";
 import Advisors from "../components/about/advisor";
 import JoinUs from "../components/about/join-us";
-import { teamData } from "@/data/team-data";
-import asset from "../../assets/bg.png";
+import { teamData } from "../../data/team-data";
 
 
 export default function About() {

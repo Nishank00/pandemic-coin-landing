@@ -1,4 +1,4 @@
-import { teamData } from "@/data/team-data";
+import { teamData } from "../../../data/team-data";
 import Image from "next/image";
 import TeamMemberCard from "../common/team-member-card";
 import avt from "../../../assets/bg.png";
