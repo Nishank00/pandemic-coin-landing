@@ -29,7 +29,7 @@ export default function HeroSection() {
                 /> */}
 
                 <div className={` ${isMobile ? "h-screen" : "h-[100vh]"} w-[100%] object-cover`}>
-                    <VideoComp autoplay="true" loop="true" url={"/video/tunnel_v3.mp4"} />
+                    <VideoComp autoplay="true" loop="true" url={"/video/tunnel_v4.mp4"} />
                 </div>
                 <div className="absolute bottom-[50px] md:bottom-auto left-[50%] md:left-auto translate-x-[-50%] md:translate-x-0 md:top-[70vh] md:right-[50px] flex flex-col justify-center items-center">
                     <Image
@@ -67,13 +67,38 @@ export default function HeroSection() {
                         className="text-[#FFF]  md:text-[36px] text-[24px] mt-[10px] font-normal leading-[139.5%] capitalize">
                         The Pandemic Coin
                     </motion.h1>
+                    
+
+                    {/* <div className="flex ">
                     <button
                         // className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
-                        className="bg-[#BB1A37] p-[5px] font-[10px] md:mt-[5px] rounded-[8px] mx-auto w-[100px] md:w-[100px] text-white"
+                        className="bg-[#BB1A37] p-[5px] font-[10px] md:mt-[5px] rounded-[8px] mx-auto w-[150px] md:w-[150px] text-white"
                         data-aos="fade-in"
                     >
-                        Invest now
+                        Purchase now
                     </button>
+                    <button
+                        // className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[201px] text-white"
+                        className="bg-[#fff] p-[5px] font-[10px] md:mt-[5px] rounded-[8px] mx-auto w-[150px] md:w-[150px] text-black"
+                        data-aos="fade-in"
+                    >
+                        Whitepaper
+                    </button>
+                    </div> */}
+                    <div className="flex flex-col md:flex-row md:space-x-5">
+  <button
+    className="bg-[#BB1A37] text-white rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[10px] md:mt-0 mt-5 px-4 py-2 font_cat"
+    data-aos="fade-in"
+  >
+    Purchase now
+  </button>
+  <button
+    className="bg-[#fff] text-black rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[10px] md:mt-0 mt-5 px-4 py-2 font_cat"
+    data-aos="fade-in"
+  >
+    Whitepaper
+  </button>
+</div>
                 </div>
 
             </div></>

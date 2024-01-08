@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Advisor from "../common/advisor-card";
 import Marquee from "react-fast-marquee";
-import { partnerData } from "@/data/partners-data";
+import { partnerData } from "../../../data/partners-data";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -60,7 +60,7 @@ const Partners = () => {
                                 variants={advisorVariants}
                                 className="inline-block mx-4"
                             >
-                                <Advisor title={member.title} />
+                                <Advisor member={member} />
                             </motion.div>
                         ))}
                     </Marquee>

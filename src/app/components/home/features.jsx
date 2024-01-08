@@ -73,7 +73,7 @@ const Feature = () => {
                                 <HoverEffect>
                                     <div className="p-6 py-12 text-center w-full">
                                         <p className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}>{feature.number}</p>
-                                        <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3">{feature.title}</h1>
+                                        <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3 font_cat">{feature.title}</h1>
                                         <p className="leading-relaxed mb-3 text-gray-500">{feature.description}</p>
                                     </div>
                                     <Image width={720} height={600} className="w-full object-cover object-center" src={feature.imageUrl} alt="blog" />

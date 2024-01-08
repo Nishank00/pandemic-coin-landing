@@ -6,15 +6,14 @@ import TeamCard from "../components/common/team-member-card";
 import Partners from "../components/home/partners";
 import Advisors from "../components/about/advisor";
 import JoinUs from "../components/about/join-us";
-import { teamData } from "@/data/team-data";
-import asset from "../../assets/bg.png";
+import { teamData } from "../../data/team-data";
 
 
 export default function About() {
     return (
         <div className=" bg-pdc-d-gray overflow-hidden">
             <AboutHead />
-            <div className="flex items-center justify-center text-center flex-col">
+            <div className="flex items-center justify-center text-center mb-[30px] flex-col">
                 <Image
                     className="mx-auto rounded-[30px]"
                     width={300}
@@ -28,7 +27,7 @@ export default function About() {
                     <p className="opacity-60">AZ</p>
                 </div>
             </div>
-            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 mx-6">
+            <div className="relative grid md:grid-cols-3 max-w-[1100px] mx-auto grid-col-1 md:gap-[60px] gap-[30px]">
                 <div className="absolute top-[40%] translate-y-[-55%] left-[-20%] bg-pdc-blue blur-[200px] opacity-90 z-0 md:opacity-100 rounded-full w-[500px] h-[500px]"></div>
                 {teamData.map((item, index) => (
                     <TeamCard key={index} {...item} />
@@ -36,7 +35,11 @@ export default function About() {
             </div>
             <Advisors title="Advisors" />
             <Advisors title="Specialists" />
-            <Partners />
+
+            <div className="pb-[100px]">
+                <Partners />
+            </div>
+
             <JoinUs />
         </div>
     );

@@ -1,11 +1,11 @@
-import { teamData } from "@/data/team-data";
+import { teamData } from "../../../data/team-data";
 import Image from "next/image";
 import TeamMemberCard from "../common/team-member-card";
-import avt from "../../../assets/bg.png";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion } from "framer-motion";
+import azImage from "../../../assets/az_image.png";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
-import { FaLinkedinIn, FaLink } from "react-icons/fa6";
 
 export default function MiniAboutUs() {
     const TeamCardVariants = {
@@ -25,45 +25,46 @@ export default function MiniAboutUs() {
     return (
         <div className="relative">
             <DynamicTitle title="Our Team" description="WHO WE ARE" />
-            <motion.div
-                whileHover={{ y: 5, scale: 0.95, duration: 0.15 }}
-                whileFocus={{ y: 5, scale: 0.95, duration: 0.15 }}
-                whileTap={{ y: 5, scale: 0.95, duration: 0.15 }}
 
-                className="flex items-center justify-center text-center  w-fit mx-auto flex-col">
-                <Image
-                    className="mx-auto bg-pdc-d-gray h-[273px] rounded-[20px]"
-                    width={324}
-                    height={273}
-                    src={avt}
-                    quality={100}
-                    alt="Pandemic Coin Logo"
-                    data-aos="fade-in"
-                />
-                <div data-aos="fade-in" className="my-4">
-                    <h1 className="font_cat text-[20px] text-[#7B7E98] not-italic font-normal leading-[normal] tracking-[0.8px]">Founder</h1>
-                    <p className="text-[23px]">AZ</p>
-                    <div className="flex gap-3 mt-6">
-                        <Link
-                            className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
-                            href={"#"}
-                        >
-                            <FaLink />
-                        </Link>
-                        <Link
-                            className="bg-pdc-blue flex w-12 h-12 rounded-full justify-center items-center"
-                            href={"#"}
-                        >
-                            <FaLinkedinIn />
-                        </Link>
+
+            <div className="df">
+                <div className="flip ">
+                    <div className="front flex items-center justify-center text-center  w-fit mx-auto flex-col">
+                        <Image
+                            className="mx-auto bg-pdc-d-gray h-[324px] rounded-[20px]"
+                            width={324}
+                            height={324}
+                            src={azImage}
+                            quality={100}
+                            alt="Pandemic Coin Logo"
+                            data-aos="fade-in"
+                        />
+                        <div data-aos="fade-in" className="my-4">
+                            <h1 className="font_cat text-[20px] text-[#7B7E98] not-italic font-normal leading-[normal] tracking-[0.8px]">Founder</h1>
+                            <p className="text-[23px]">AZ</p>
+                        </div>
+                    </div>
+                    <div className="back">
+                        <div className="h-full flex flex-col justify-center items-center">
+                            <div className="text-center">
+                                <div className="text-[40px]">AZ</div>
+                                <div className="text-[25px]">Founder</div>
+                            </div>
+                            <p className="text-center mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ullam tempore possimus ea odit nisi pariatur recusandae? Dolorem sequi, eum eveniet et animi sit debitis hic ab pariatur dolores alias!</p>
+                        </div>
                     </div>
                 </div>
-            </motion.div>
-            <div data-aos="fade-in" className="flex md:flex-row flex-col md:gap-[60px] gap-[30px] m-6 justify-center">
-                {teamData.slice(0, 3).map((item, index) => (
+            </div>
+
+
+            <div data-aos="fade-in" className="grid md:grid-cols-3 max-w-[1100px] mx-auto grid-col-1 md:gap-[60px] gap-[30px] m-6 justify-center">
+                {teamData.map((item, index) => (
                     <TeamMemberCard key={index} {...item} />
                 ))}
             </div>
+            <Link className="flex gap-3 text-[20px] justify-center border-b-2 w-fit m-auto items-center" href={"/about"} target="_blank" passHref>
+                Know More <FaArrowRightLong />
+            </Link>
         </div>
     );
 }

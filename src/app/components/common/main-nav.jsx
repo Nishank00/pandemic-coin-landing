@@ -16,11 +16,13 @@ export default function Nav() {
 
     const links = [
         { title: "Home", path: "/" },
-        { title: "About Us", path: "/about" },
+        { title: "About us", path: "/about" },
         { title: "AI", path: "/ai" },
         { title: "Media", path: "/media" },
         { title: "Communities", path: "/communities" },
-        { title: "Contact Us", path: "/contactus" },
+        { title: "Contact us", path: "/contact" },
+        { title: "Whitepaper", path: "https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing"}
+        
     ];
 
     return (
@@ -43,6 +45,7 @@ export default function Nav() {
                             <div key={link.path} className="relative group pb-[6px]">
                                 <Link
                                     className=""
+                                    target="_blank" 
                                     href={link.path}
                                     key={index}
                                 >
@@ -57,8 +60,8 @@ export default function Nav() {
                             </div>
                         );
                     })}
-                    <button className="py-[5px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white">
-                        Buy
+                    <button className="py-[0px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white font_cat">
+                        Purchase
                     </button>
                 </div>
 
@@ -84,6 +87,8 @@ export default function Nav() {
                             onClick={() => setOpen(false)}
                             className="text-center text-xl anim hover:text-pri w-full py-4 anim-slo"
                             href={link.path}
+                            target="_blank" // Add this line to open the link in a new tab
+                            rel="noopener noreferrer" // Add these lines for security reasons
                             key={index}
                         >
                             {link.title}
@@ -100,7 +105,7 @@ export default function Nav() {
                 </Link>
 
                 <button className="py-[5px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white">
-                    Buy
+                   Purchase
                 </button>
 
                 <motion.button

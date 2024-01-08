@@ -16,7 +16,7 @@ const Build = () => {
                         </h2>
                     </h1> */}
                     <h1 className="text-center text-[56px] not-italic  leading-[139.5%] capitalize tracking-[-3.36px] font-medium title-font mb-4 text-white">
-                        Invest
+                        Purchase
                     </h1>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center ">

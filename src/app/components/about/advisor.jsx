@@ -1,5 +1,5 @@
 import React from 'react';
-import { teamData } from "@/data/team-data";
+import { teamData } from "../../../data/team-data";
 import DynamicTitle from '../utils/dynamic-title';
 import { motion } from 'framer-motion';
 

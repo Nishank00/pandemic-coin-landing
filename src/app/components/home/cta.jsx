@@ -9,6 +9,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Tilt from "react-parallax-tilt";
 import { useMediaQuery } from '../common/UseMediaQuery/UseMediaQuery';
+import Linkdin from "../../../assets/icons/foo_link.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faTelegram, faFacebook, faLinkedin, faDiscord, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const CTA = () => {
     gsap.registerPlugin(Scrolltrigger);
@@ -62,33 +65,30 @@ const CTA = () => {
                     </div>
 
                     <div className="flex gap-[14px] mt-[36px] w-fit">
+      <a href="https://twitter.com/PandemicCoinPDC" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faTwitter} height={43} width={43} alt="Twitter" />
+      </a>
 
-                        <Link href={"https://twitter.com/pandemiccoinpdc?s=21&t=E8wxG4bwvel2P0AcbtRtoQ"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
-                            <Image height={43} width={43} alt="Bi twitter" src={twr} />
-                        </Link>
+      <a href="https://t.me/+8z1TNikHqtw5NzVk" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faTelegram} height={43} width={43} alt="Telegram" />
+      </a>
 
-                        <Link href={"https://www.facebook.com/pandemiccoinPDC"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
-                            <Image height={43} width={43}
-                                alt="Brandico facebook"
-                                src={fb}
-                            />
-                        </Link>
+      <a href="https://www.facebook.com/pandemiccoinPDC" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faFacebook} height={43} width={43} alt="Facebook" />
+      </a>
 
-                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
-                            <Image height={43} width={43}
-                                alt="Mdi instagram"
-                                src={insta}
-                            />
-                        </Link>
+      <a href="https://www.linkedin.com/company/pandemiccoinpdc" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faLinkedin} height={43} width={43} alt="LinkedIn" />
+      </a>
 
-                        <Link href={"#"} className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
-                            <Image height={43} width={43}
-                                alt="Formkit email"
-                                src={maill}
-                            />
-                        </Link>
+      <a href="https://discord.gg/ZSh4CrvB" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faDiscord} height={43} width={43} alt="Discord" />
+      </a>
 
-                    </div>
+      <a href="https://www.tiktok.com/@pandemiccoinpdc" className="relative h-[43px] bg-pdc-light-gray rounded-[131.61px]">
+        <FontAwesomeIcon icon={faTiktok} height={43} width={43} alt="TikTok" />
+      </a>
+    </div>
                 </div>
 
 
