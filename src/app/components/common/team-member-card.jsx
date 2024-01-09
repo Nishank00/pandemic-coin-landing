@@ -59,7 +59,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
             <div className="front flex items-center justify-center text-center  w-fit mx-auto flex-col">
                 <Image
                     src={img}
-                    className="mx-auto bg-pdc-d-gray h-[324px] object-cover object-top rounded-[20px]"
+                    className="mx-auto bg-pdc-d-gray h-[324px] object-cover object-top rounded-[20px] grayscale"
                     width={324}
                     height={324}
                     alt={name}

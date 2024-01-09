@@ -8,7 +8,7 @@ import VideoComp from "../common/VideoComp/VideoComp";
 export default function WhoWeAreSection() {
     return (
         <div className="container px-5 md:pb-[149px] pb-[50px] mx-auto ">
-            <DynamicTitle title="Our Introduction Video" description="" />
+            <DynamicTitle title="Introduction" description="" />
 
             <motion.div
                 initial={{ opacity: 0, y: 100 }}

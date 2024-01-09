@@ -112,7 +112,7 @@ const Testimonials = () => {
     return (
         <section className="text-gray-400 body-font min-h-[80vh]" id="testimonials">
             <div className="container px-5 py-12 md:py-24 mx-auto">
-                <DynamicTitle title="Personal Stories" description="testimonials" />
+                <DynamicTitle title="Personal Stories" description="" />
                 <div className="flex flex-wrap p-0" id="TestMon">
                     <Swiper
                         centeredSlides={true}

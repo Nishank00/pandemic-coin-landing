@@ -24,7 +24,7 @@ export default function MiniAboutUs() {
     };
     return (
         <div className="relative">
-            <DynamicTitle title="Our Team" description="WHO WE ARE" />
+            <DynamicTitle title="Our Team" description="" />
 
 
             <div className="df">

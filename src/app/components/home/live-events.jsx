@@ -180,13 +180,27 @@ export default function LiveEvents() {
                         ))}
                     </Swiper>
                 </motion.div>
-                <motion.button
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
-                >
-                    WATCH MORE
-                </motion.button>
+                
+                    <div className="flex justify-center align-middle">
+                        <div className="flex gap-20">
+                            <motion.button
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
+                            >
+                                WATCH MORE
+                            </motion.button>
+                            <motion.button
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
+                                style={{ color: '#BB1A37', backgroundColor: 'white' }}
+                            >
+                                PURCHASE MEMBERSHIP
+                            </motion.button>
+                        </div>
+                    </div>
+                
             </div>
 
         </section>

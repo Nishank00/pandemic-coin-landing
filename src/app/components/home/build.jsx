@@ -26,8 +26,8 @@ const Build = () => {
                         </Tilt>
 
                         {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out  "></div> */}
-                        <button className="pri-btn mt-6 block mx-auto w-fit text-white">
-                            Aquire shelter directly for $100,000
+                        <button className="pri-btn mt-6 block mx-auto w-fit text-white uppercase">
+                        Book shelter directly and become member
                         </button>
                     </div>
                     <div data-aos="fade-in" className="p-4 py-8 w-full relative  hover:bg-[#ffffff15] transition duration-1000 ease-in-out rounded-[20px] overflow-hidden">
@@ -37,7 +37,7 @@ const Build = () => {
 
                         {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out"></div> */}
                         <button className="pri-btn mt-6 block mx-auto w-fit text-white">
-                            Buy $100,000 tokens and join the allocation list.
+                            BUY TOKENS
                         </button>
                     </div>
                 </div>

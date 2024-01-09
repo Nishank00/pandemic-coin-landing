@@ -79,7 +79,7 @@ const Shelters = () => {
     return (
         <section className=" body-font">
             <div className="container px-5 pb-24 mx-auto">
-                <DynamicTitle title="Pandemic shelters images" className="tracking-[-3.36px]" />
+                <DynamicTitle title="AI based pandemic community shelters" className="tracking-[-3.36px]" />
                 <div data-aos="fade-in" className="flex flex-wrap z-0" id="shelters">
                     <Swiper
                         centeredSlides={true}
