@@ -27,8 +27,8 @@ const CountDown = () => {
     const slideComponents = [
         { title: "🔥 Token sale open in :", component: <Timer />, detail: null },
         { title: "Total offering", component: null, detail: '500FBX' },
-        { title: "Presale Price", component: null, detail: '-' },
-        { title: "Purchase Limit", component: null, detail: '-' },
+        { title: "Presale Price", component: null, detail: '$1999' },
+        { title: "Purchase Limit", component: null, detail: '$19999' },
         { title: "Generation Event", component: null, detail: 'Q1 2023' },
         { title: "More details", component: null, detail: 'Tokenomics' }
     ];
@@ -75,7 +75,7 @@ const CountDown = () => {
     }, [buttonRef]);
 
     return (
-        <section id="countdown_id" className="text-gray-600   body-font md:mt-[-100px]">
+        <section id="countdown_id" className="text-gray-600   body-font md:mt-[100px]">
             <div className="container  px-[20px] md:px-[0px] mx-auto">
                 <motion.div
                     // initial={{ opacity: 0, y: 50 }}
@@ -106,12 +106,11 @@ const CountDown = () => {
                         )
                         )}
                     </div>
-                    {currentSlide === 1 ? (
+                    {/* {currentSlide === 1 ? (
                         <button
                             className="xl:absolute relative top-0 md:top-[55%]  xltop-[45%] transition-all right-0 xl:right-[50px] md:right-[0px] text-lg mt-4 mr-4"
                             onClick={handleButtonClick}
                         >
-                            {/* <FaArrowRightLong /> */}
                             <Image src={Arrow} height={20} width={62} alt='arrow' />
 
                         </button>
@@ -122,7 +121,7 @@ const CountDown = () => {
                         >
                             <FaArrowLeftLong />
                         </button>
-                    )}
+                    )} */}
                 </motion.div>
 
             </div>

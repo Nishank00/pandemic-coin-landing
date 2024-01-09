@@ -21,13 +21,13 @@ export default function Nav() {
         { title: "Media", path: "/media" },
         { title: "Communities", path: "/communities" },
         { title: "Contact us", path: "/contact" },
-        { title: "Whitepaper", path: "https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing"}
-        
+        { title: "Whitepaper", path: "https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing" }
+
     ];
 
     return (
         <>
-            <div className="left-0 sticky top-0 pc md:hidden lg:flex w-full topppp p-[0px_62px_0_39px]  items-center bg-[#1C1D26] font-semibold justify-between h-[96px]">
+            <div className="left-0 activeHead fixed top-0 pc md:hidden lg:flex w-full topppp p-[0px_62px_0_39px]  items-center font-semibold justify-between h-[96px]">
                 <Link href="/">
                     {/* <h1 className="text-white font-bold text-2xl">PDC</h1> */}
                     <Image
@@ -45,7 +45,7 @@ export default function Nav() {
                             <div key={link.path} className="relative group pb-[6px]">
                                 <Link
                                     className=""
-                                    target="_blank" 
+                                    target="_blank"
                                     href={link.path}
                                     key={index}
                                 >
@@ -105,7 +105,7 @@ export default function Nav() {
                 </Link>
 
                 <button className="py-[5px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white">
-                   Purchase
+                    Purchase
                 </button>
 
                 <motion.button

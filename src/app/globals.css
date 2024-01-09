@@ -315,3 +315,8 @@ abbr[title] {
 .p_scroll::-webkit-scrollbar-thumb {
     background-color: rgb(52, 44, 178);
 }
+
+.activeHead {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.20) 0%, rgba(10, 10, 10, 0.04) 100%);
+    backdrop-filter: blur(20px);
+}
