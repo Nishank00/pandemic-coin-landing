@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,75 +9,129 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import DynamicTitle from "../utils/dynamic-title";
-import event1 from '../../../assets/event1.png'
-import event2 from '../../../assets/event2.png'
-import event3 from '../../../assets/event3.png'
-import event4 from '../../../assets/event4.png'
-import event5 from '../../../assets/event5.jpg'
+import event1 from '../../../assets/problems/1.jpg'
+import event2 from '../../../assets/problems/2.jpg'
+import event3 from '../../../assets/problems/3.png'
+import event4 from '../../../assets/problems/4.png'
+import event5 from '../../../assets/problems/5.png'
+import event6 from '../../../assets/problems/6.png'
+import event7 from '../../../assets/problems/7.png'
+import event8 from '../../../assets/problems/8.png'
 import clock from '../../../assets/icons/clock.svg'
 
 import { motion } from "framer-motion"
 
-const NewsCard = ({ imageUrl, description }) => (
+const NewsCard = ({ imageUrl, description, title, index, setExpandedIndex, expandedIndex }) => {
+    const isExpanded = index === expandedIndex;
 
-    <div data-aos="fade-in" className="h-full group mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+    const toggleContent = () => {
+        if (isExpanded) {
+            setExpandedIndex(null);
+        } else {
+            setExpandedIndex(index);
+        }
+    };
 
-        <Image
-            width={720}
-            height={600}
-            className=" w-full z-10 group-hover:scale-[1.1] transition duration-300 ease-in-out h-[210px] md:h-full overflow-hidden  object-center"
-            src={imageUrl}
-            alt="blog"
-        />
-        <div className="md:py-2 py-6 px-6 md:mx-0 md:absolute bottom-0 w-full bg-pdc-d-gray/80 backdrop-blur-[5px]">
-            <div className="flex gap-[8px] mb-[6px]" >
-                <Image src={clock} height={20} width={20} className="clock_img" alt='arrow' />
-                <div className=" text-[13.423px] not-italic font-medium leading-[143.5%]">
-                    12-3-2023
+
+    return (
+        <div data-aos="fade-in" className="h-full group mx-auto relative overflow-hidden rounded-[20px]  md:rounded-[20px]">
+
+            <Image
+                width={720}
+                height={600}
+                className=" w-full z-10 group-hover:scale-[1.1] transition duration-300 ease-in-out h-[210px] md:h-full overflow-hidden  object-center"
+                src={imageUrl}
+                alt="blog"
+            />
+            <div className="md:py-2 py-6 px-6 md:mx-0 md:absolute bottom-0 w-full bg-pdc-d-gray/80 backdrop-blur-[5px]">
+                <div className="flex gap-[8px] mb-[6px]" >
+                    <Image src={clock} height={20} width={20} className="clock_img" alt='arrow' />
+                    <div className=" text-[13.423px] not-italic font-medium leading-[143.5%]">
+                        12-3-2023
+                    </div>
+                </div>
+
+                <div>
+                    <div className="leading-relaxed md:px-4 px-0 text-[22px] text-[#E4E4E4]">
+                        {title}
+                    </div>
+                    <p className="leading-relaxed md:px-4 px-0 text-[#E4E4E4]">
+                        {isExpanded ? description : `${description.slice(0, 100)}...`}
+                        &nbsp;
+                        <span
+                            onClick={toggleContent}
+                            className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]"
+                        >
+                            {isExpanded ? 'show less' : 'read more'}
+                        </span>
+                    </p>
                 </div>
             </div>
-            <p className="leading-relaxed md:px-4 px-0  text-[#E4E4E4]">{description}...&nbsp; <span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">read more</span></p>
-            {/* <button className="text-white pri-btn px-4 p-2 text-xs font-medium ">
-                    Learn More
-                </button> */}
         </div>
-    </div>
 
-);
+    )
+};
 
 export default function LiveEvents() {
+    const [expandedIndex, setExpandedIndex] = useState(null);
+    const handleSetExpandedIndex = (index) => {
+        setExpandedIndex(index);
+    };
     const NewsGallery = [
         {
             imageUrl: event1,
+            title: "Pandemic Conflicts Among Nations",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+                "The contemporary world grapples with an array of pressing issues, from geopolitical tensions like those between Russia, the USA, China, Ukraine, and Palestine to space confrontations and the unsettling prospect of space-based missile systems. ",
         },
         {
             imageUrl: event2,
+            title: "Natural Destructions - Climate change",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+                "The Canadian Wildfires of 2023 led to unprecedented devastation, triggering widespread destruction and displacing thousands of individuals. Ignited in early May in Fort McMurray, Alberta, the inferno quickly spiraled out of control, engulfing over 590,000 hectares of land and consuming neighborhoods. ",
         },
         {
             imageUrl: event3,
+            title: "Big Rapid Earthquakes",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+                "Earthquakes, another potent force of nature, can cause widespread devastation, particularly in densely populated areas. Earthquakes, the sudden shaking of the Earth's surface, have left profound marks on history, landscapes, and communities, reminding us of the planet's seismic volatility. ",
         },
         {
             imageUrl: event4,
+            title: "Worldwide Tsunamis",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+                "Tsunamis, colossal oceanic waves often triggered by undersea earthquakes, have left an indelible mark on history, causing widespread devastation and loss of life. ",
         },
         {
             imageUrl: event5,
+            title: "WARS",
             description:
-                "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+                "The Ukraine-Russia conflict has been a modern-day testament to this, its roots entwined in historical tensions, political ambitions, and power struggles. This conflict has not only shaken Eastern Europe but has also strained global relations, drawing in neighbouring countries and stirring concerns about the balance of power in the region.",
+        },
+        {
+            imageUrl: event6,
+            title: "Terrorist Attacks",
+            description:
+                "While terrorism has plagued various regions for decades, its potential for catastrophic impact continues to cast a shadow of uncertainty over global security. Throughout history, we've witnessed acts of terrorism targeting civilians, infrastructure, and nations' stability. ",
+        },
+        {
+            imageUrl: event7,
+            title: "Bio-Chemical Attacks",
+            description:
+                "Bio-chemical attacks represent a menacing facet of warfare and terrorism, leveraging biological or chemical agents to inflict harm and sow fear. Their history is dotted with devastating events, leaving indelible marks on humanity.",
+        },
+        {
+            imageUrl: event8,
+            title: "Nuclear Attacks / Threats ",
+            description:
+                "In a world rife with geopolitical tensions and the possession of nuclear capabilities by multiple nations, the risk of nuclear weapons being used in future conflicts looms ominously. The atomic bombings of Hiroshima and Nagasaki serve as stark reminders of the catastrophic impact of nuclear warfare, fostering widespread fear and compelling individuals to seek alternative safety measures like underground bunkers.",
         },
     ];
 
     return (
         <section className="text-gray-400 bg-pdc-d-gray body-font" id="news-gallery">
             <div className="container px-5 py-16 md:pb-12 mx-auto">
-                <DynamicTitle title="Live Events" descColor="#7B7E98" description={"    "} />
+                <DynamicTitle title="Live Problems" descColor="#7B7E98" description={"    "} />
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +170,12 @@ export default function LiveEvents() {
                     >
                         {NewsGallery.map((testimonial, index) => (
                             <SwiperSlide key={index}>
-                                <NewsCard key={index} {...testimonial} />
+                                <NewsCard key={index}
+                                    index={index}
+                                    expandedIndex={expandedIndex}
+                                    setExpandedIndex={handleSetExpandedIndex}
+                                    {...testimonial}
+                                />
                             </SwiperSlide>
                         ))}
                     </Swiper>
