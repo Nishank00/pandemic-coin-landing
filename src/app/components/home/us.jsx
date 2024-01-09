@@ -45,12 +45,12 @@ export default function MiniAboutUs() {
                         </div>
                     </div>
                     <div className="back">
-                        <div className="h-full flex flex-col justify-center items-center">
+                        <div className="h-full min-w-[284px] flex flex-col justify-center items-center">
                             <div className="text-center">
                                 <div className="text-[40px]">AZ</div>
                                 <div className="text-[25px]">Founder</div>
                             </div>
-                            <p className="text-center mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ullam tempore possimus ea odit nisi pariatur recusandae? Dolorem sequi, eum eveniet et animi sit debitis hic ab pariatur dolores alias!</p>
+                            <p className="text-center mt-3"></p>
                         </div>
                     </div>
                 </div>
@@ -62,9 +62,12 @@ export default function MiniAboutUs() {
                     <TeamMemberCard key={index} {...item} />
                 ))}
             </div>
-            <Link className="flex gap-3 text-[20px] justify-center border-b-2 w-fit m-auto items-center" href={"/about"} target="_blank" passHref>
+            <div className="w-full flex justify-end px-[20px] md:px-[100px]">
+                 <Link className="flex gap-3 text-[20px] justify-center text-[#BB1A37] w-fit border-b-2 items-center border-[#BB1A37]" href={"/about"} target="_blank" passHref>
                 Know More <FaArrowRightLong />
-            </Link>
+            </Link>  
+            </div>
+         
         </div>
     );
 }

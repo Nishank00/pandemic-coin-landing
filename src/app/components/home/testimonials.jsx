@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -25,43 +25,67 @@ const imageTextVariants = {
     transition: { duration: 0.5, ease: "easeOut" },
 };
 
-const TestimonialCard = ({ imageUrl, description }) => (
-    <motion.div
-        layoutId={imageUrl} // Use image URL as layout ID for smooth transitions
-        initial={slideVariants.enter}
-        animate={slideVariants.update}
-        exit={slideVariants.exit}
-        className=""
-    >
-        <div data-aos="fade-in" className="mx-auto group">
-            <motion.div {...imageTextVariants} className="overflow-hidden h-[300px]  md:h-[400px] mb-5 rounded-[30px] ">
-                <Image
-                    className="rounded-[30px]  h-[400px] object-cover w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
-                    src={imageUrl}
-                    alt="testimonials"
-                    width={400}
-                    height={440}
-                />
-            </motion.div>
-            <motion.p {...imageTextVariants} delay={0.25}>
-                {description}...&nbsp;<span className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]">Read</span>
-            </motion.p>
+const TestimonialCard = ({ imageUrl, description, index, setExpandedIndex, expandedIndex }) => {
+    const isExpanded = index === expandedIndex;
 
-            <div className="w-full flex justify-center items-center">
-                <motion.button
-                    whileHover={{ scale: 1.1 }} // Adjust hover scale
-                    whileTap={{ scale: 1 }} // Adjust tap scale
-                    className="pri-btn text-[#FFF] text-[18px] mx-auto not-italic font-normal leading-[139.5%] md:mt-[30px] mt-[20px] capitalize"
-                >
-                    Explore all the stories
-                </motion.button>
+    const toggleContent = () => {
+        if (isExpanded) {
+            setExpandedIndex(null);
+        } else {
+            setExpandedIndex(index);
+        }
+    };
+
+    return (
+        <motion.div
+            layoutId={imageUrl} // Use image URL as layout ID for smooth transitions
+            initial={slideVariants.enter}
+            animate={slideVariants.update}
+            exit={slideVariants.exit}
+            className=""
+        >
+            <div data-aos="fade-in" className="mx-auto group">
+                <motion.div {...imageTextVariants} className="overflow-hidden h-[300px]  md:h-[400px] mb-5 rounded-[30px] ">
+                    <Image
+                        className="rounded-[30px]  h-[400px] object-cover w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
+                        src={imageUrl}
+                        alt="testimonials"
+                        width={400}
+                        height={440}
+                    />
+                </motion.div>
+                <motion.p {...imageTextVariants} delay={0.25}>
+                    {isExpanded ? description : `${description.slice(0, 150)}...`}
+                    &nbsp;
+                    <span
+                        onClick={toggleContent}
+                        className="text-[14px] not-italic font-medium leading-[143.5%] cursor-pointer text-[#342CB2]"
+                    >
+                        {isExpanded ? 'show less' : 'read more'}
+                    </span>
+                </motion.p>
+
+
+                <div className="w-full flex justify-center items-center">
+                    <motion.button
+                        whileHover={{ scale: 1.1 }} // Adjust hover scale
+                        whileTap={{ scale: 1 }} // Adjust tap scale
+                        className="pri-btn text-[#FFF] text-[18px] mx-auto not-italic font-normal leading-[139.5%] md:mt-[30px] mt-[20px] capitalize"
+                    >
+                        Explore all the stories
+                    </motion.button>
+                </div>
+
             </div>
-
-        </div>
-    </motion.div>
-);
+        </motion.div>
+    )
+};
 
 const Testimonials = () => {
+    const [expandedIndex, setExpandedIndex] = useState(null);
+    const handleSetExpandedIndex = (index) => {
+        setExpandedIndex(index);
+    };
     const testimonials = [
         {
             imageUrl: people1,
@@ -114,7 +138,11 @@ const Testimonials = () => {
                     >
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index}>
-                                <TestimonialCard key={index} {...testimonial} />
+                                <TestimonialCard key={index}
+                                    index={index}
+                                    expandedIndex={expandedIndex}
+                                    setExpandedIndex={handleSetExpandedIndex}
+                                    {...testimonial} />
                             </SwiperSlide>
                         ))}
                     </Swiper>

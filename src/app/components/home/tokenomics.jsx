@@ -51,7 +51,7 @@ const Tokenomics = () => {
                     },
                 }}
 
-                className="z-50 py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50">
+                className="z-50 bg_gradient py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50">
                 {/* <Donut
                     id="linearGradient"
                     data={data}

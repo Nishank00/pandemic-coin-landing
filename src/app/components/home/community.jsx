@@ -13,7 +13,7 @@ const Community = () => {
         <div className=" pt-4 md:pt-44 pb-0 overflow-hidden mx-auto px-4 md:px-16 relative">
             <div className="absolute top-[-20%] left-[-20%] bg-[#FF07174D] w-[1000px] h-[500px] opacity-50 blur-[120px] rounded-full"></div>
             <div className="absolute left-[50%] top-[-5%] translate-x-[-50%] w-full">
-                <DynamicTitle title="Community Intro" />
+                <DynamicTitle title="Pandemic Coin Community" />
             </div>
             <div className="flex flex-col md:flex-row item-center justify-center">
                 <motion.div
@@ -41,7 +41,7 @@ const Community = () => {
                         whileTap={{ scale: 0.9 }}
                         className="pri-btn cursor-pointer  w-fit text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] mt-[47px] block transition-all capitalize p-[14px_24px] h-[53px]"
                     >
-                        Explore Community
+                        Explore PENN App
                     </label>
                     {/* </label> */}
 

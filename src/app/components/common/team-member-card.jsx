@@ -98,7 +98,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
             <div className="back">
                 <div className="h-full flex flex-col justify-center items-center">
                     <div className="text-center">
-                        <div className="text-[40px]">{name}</div>
+                        <div className="text-[40px] font_cat">{name}</div>
                         <div className="text-[25px]">{role}</div>
                     </div>
                     <p className="text-center mt-3 max-h-[300px] p_scroll overflow-y-auto">{desc}</p>

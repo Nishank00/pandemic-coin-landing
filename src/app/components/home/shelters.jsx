@@ -86,7 +86,7 @@ const Shelters = () => {
                         initialSlide={2}
                         slidesPerView={1}
                         spaceBetween={0}
-                        pagination={pagination}
+                        // pagination={pagination}
                         onInit={() => calculateBulletWidth()}
                         onSlideChange={() => calculateBulletWidth()}
                         className="mySwiper gap-4"

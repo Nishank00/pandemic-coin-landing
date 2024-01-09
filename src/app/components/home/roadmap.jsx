@@ -104,14 +104,23 @@ const Roadmap = () => {
                 description="see what we’re building and follow us as we get to our goal"
             />
             <div className="container px-5  mx-auto flex flex-wrap">
-                <div className="flex flex-col relative items-center md:items-baseline justify-center md:justify-normal flex-wrap w-full md:max-w-5/6 overflow-hidden">
+                <div className="flex flex-col relative items-center md:items-baseline justify-center md:justify-normal h-[100vh] flex-wrap w-full md:max-w-5/6 overflow-hidden">
+
+                    <iframe
+                        title="External Site"
+                        src="https://pdc-roadmap.vercel.app/"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        allowFullScreen
+                    ></iframe>
                     {/* <div className="flex relative items-center justify-center flex-col mx-auto pl-0 md:pl-10 py-6">
                         {roadmapData.map((data, index) => (
                             <RoadmapSection key={index} roadmapData={roadmapData} {...data} index={index} />
                         ))}
                     </div> */}
-                        {/* New changes */}
-                    <Image
+                    {/* New changes */}
+                    {/* <Image
                         id="hero_img_id"
                         src={isMobile ? roadmapImage : roadmapImage}
                         alt="Pandemic Coin bg"
@@ -128,7 +137,7 @@ const Roadmap = () => {
                         >
                             Roadmap
                         </button>
-                    </Link>
+                    </Link> */}
 
                 </div>
             </div>
