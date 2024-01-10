@@ -23,7 +23,7 @@ export default function MiniAboutUs() {
         },
     };
     return (
-        <div className="relative">
+        <div className="relative pb-[50px]">
             <DynamicTitle title="Our Team" description="" />
 
 
@@ -63,11 +63,11 @@ export default function MiniAboutUs() {
                 ))}
             </div>
             <div className="w-full flex justify-end px-[20px] md:px-[100px]">
-                 <Link className="flex gap-3 text-[20px] justify-center text-[#BB1A37] w-fit border-b-2 items-center border-[#BB1A37]" href={"/about"} target="_blank" passHref>
-                Know More <FaArrowRightLong />
-            </Link>  
+                <Link className="flex gap-3 text-[20px] justify-center text-[#BB1A37] w-fit border-b-2 items-center border-[#BB1A37]" href={"/about"} target="_blank" passHref>
+                    Know More <FaArrowRightLong />
+                </Link>
             </div>
-         
+
         </div>
     );
 }

@@ -31,7 +31,7 @@ const ImageSlider = () => {
 
               className="text-[#401202] text-center md:text-left text-[16px] md:text-[20px] not-italic font-medium leading-[36px] mb-[30px] h-full w-full imageSlider"
             >
-              <Image src={activeCard.imageUrl} height={100} width={100} alt="img" className="h-full w-full imageSlider" />
+              <Image src={activeCard.imageUrl} layout="fill" alt="img" className="h-full w-full imageSlider" />
             </div>
             <button
               onClick={goToPrevCard}

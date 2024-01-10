@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/coin.svg"
 import shelter1 from "../../../assets/shelter1.jpg"
 import Tilt from "react-parallax-tilt";
 
@@ -22,7 +22,7 @@ const Build = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center ">
                     <div data-aos="fade-in" className="p-4 py-8 w-full relative  rounded-[20px] hover:bg-[#ffffff15] transition duration-1000 ease-in-out overflow-hidden ">
                         <Tilt className="track-on-window" trackOnWindow={true}>
-                            <Image width={1000} height={1000} src={shelter1} className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50" alt="" />
+                            <Image width={1000} height={1000} src={logo} className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50" alt="" />
                         </Tilt>
 
                         {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out  "></div> */}

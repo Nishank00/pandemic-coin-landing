@@ -129,7 +129,7 @@ export default function LiveEvents() {
     ];
 
     return (
-        <section className="text-gray-400 bg-pdc-d-gray body-font" id="news-gallery">
+        <section className="text-gray-400  body-font" id="news-gallery">
             <div className="container px-5 py-16 md:pb-12 mx-auto">
                 <DynamicTitle title="Live Problems" descColor="#7B7E98" description={"    "} />
                 <motion.div
