@@ -5,26 +5,73 @@ import ImageSlider from '../components/common/ImageSlider';
 export default function Invest() {
     const [selectedType, setSelectedType] = useState('FAMILY');
     const [selectedModel, setSelectedModel] = useState('');
-    const [selectedSize, setSelectedSize] = useState('');
+    // const [selectedSize, setSelectedSize] = useState('');
     const [selectedService, setSelectedService] = useState('');
+    const [adults, setAdults] = useState(0);
+    const [kids, setKids] = useState(0);
+    const [seniorCitizens, setSeniorCitizens] = useState(0);
+
+    const increment = (type) => {
+        switch (type) {
+            case 'adults':
+                setAdults(adults + 1);
+                break;
+            case 'kids':
+                setKids(kids + 1);
+                break;
+            case 'seniorCitizens':
+                setSeniorCitizens(seniorCitizens + 1);
+                break;
+            default:
+                break;
+        }
+    };
+
+    const decrement = (type) => {
+        switch (type) {
+            case 'adults':
+                setAdults(adults > 0 ? adults - 1 : 0);
+                break;
+            case 'kids':
+                setKids(kids > 0 ? kids - 1 : 0);
+                break;
+            case 'seniorCitizens':
+                setSeniorCitizens(seniorCitizens > 0 ? seniorCitizens - 1 : 0);
+                break;
+            default:
+                break;
+        }
+    };
+
+    const total_BF = adults + kids + seniorCitizens;
+    const total_SF = adults + kids;
+    const total_CP = adults;
+    const totalMembers = adults + kids + seniorCitizens;
 
     const handleTypeChange = (type) => {
         setSelectedType(type);
         setSelectedModel('');
-        setSelectedSize('');
+        // setSelectedSize('');
         setSelectedService('');
     };
 
     const handleModelChange = (model) => {
         setSelectedModel(model);
-        setSelectedSize('');
+        // setSelectedSize('');
         setSelectedService('');
+        setAdults(0);
+        setKids(0);
+        setSeniorCitizens(0);
+
+        if (model === "COUPLES") {
+            setAdults(2);
+        }
     };
 
-    const handleSizeChange = (size) => {
-        setSelectedSize(size);
-        setSelectedService('');
-    };
+    // const handleSizeChange = (size) => {
+    //     setSelectedSize(size);
+    //     setSelectedService('');
+    // };
 
     const handleAdditionalServiceChange = (service) => {
         setSelectedService(service);
@@ -34,7 +81,7 @@ export default function Invest() {
         // Yaha link dalo
     };
     return (
-        <div className="bg-pdc-d-gray h-fit w-[100%] flex  flex-col md:flex-row">
+        <div className="bg-pdc-d-gray h-fit w-[100%] flex md:pt-[96px] pt-0 flex-col md:flex-row">
             <div className=" md:sticky md:top-[96px] static h-full md:w-[60%] w-full">
                 <ImageSlider />
             </div>
@@ -43,7 +90,7 @@ export default function Invest() {
 
                     {/* CONFIGURATOR */}
                     <div>
-                        <h1 className="text-xl font-bold font_nun mb-4">CONFIGURATOR OF A PRACTICAL AND SAFE BOMB SHELTER</h1>
+                        <h1 className="text-xl font-bold font_nun mb-4 uppercase">FIND YOUR PERFECT PANDEMIC SHELTER</h1>
                         <div className="flex gap-[20px] flex-wrap">
                             <button
                                 type="button"
@@ -80,33 +127,111 @@ export default function Invest() {
                                 <div className="flex  gap-[20px] flex-wrap">
                                     <button
                                         type="button"
-                                        onClick={() => handleModelChange('ASCETIC')}
-                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'ASCETIC' ? 'bg-[#BB1A37] text-white border-transparent' : ''
+                                        onClick={() => handleModelChange('SMALL FAMILY')}
+                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'SMALL FAMILY' ? 'bg-[#BB1A37] text-white border-transparent' : ''
                                             }`}
                                     >
-                                        ASCETIC
+                                        SMALL FAMILY
                                     </button>
                                     <button
                                         type="button"
-                                        onClick={() => handleModelChange('BASIC')}
-                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'BASIC' ? 'bg-[#BB1A37] text-white border-transparent' : ''
+                                        onClick={() => handleModelChange('BIG FAMILY')}
+                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'BIG FAMILY' ? 'bg-[#BB1A37] text-white border-transparent' : ''
                                             }`}
                                     >
-                                        BASIC
+                                        BIG FAMILY
                                     </button>
                                     <button
                                         type="button"
-                                        onClick={() => handleModelChange('COMFORT')}
-                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'COMFORT' ? 'bg-[#BB1A37] text-white border-transparent' : ''
+                                        onClick={() => handleModelChange('COUPLES')}
+                                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${selectedModel === 'COUPLES' ? 'bg-[#BB1A37] text-white border-transparent' : ''
                                             }`}
                                     >
-                                        COMFORT
+                                        COUPLES
                                     </button>
 
                                 </div>
                             </div>
 
-                            <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
+                            {
+                                selectedModel === "BIG FAMILY" && (
+                                    <>
+                                        <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => decrement('adults')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{adults}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => increment('adults')}>+</button>
+                                            </div>
+
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`KID'S`}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => decrement('kids')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{kids}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => increment('kids')}>+</button>
+                                            </div>
+
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`SENIOR CITIZEN'S`}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => decrement('seniorCitizens')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{seniorCitizens}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => increment('seniorCitizens')}>+</button>
+                                            </div>
+
+                                            <p className="mt-4 text-[20px]">Total Members: {total_BF}</p>
+                                        </div>
+                                    </>
+                                )
+                            }
+                            {
+                                selectedModel === "SMALL FAMILY" && (
+                                    <>
+                                        <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => decrement('adults')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{adults}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => increment('adults')}>+</button>
+                                            </div>
+
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`KID'S`}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => decrement('kids')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{kids}</p>
+                                                <button className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]" onClick={() => increment('kids')}>+</button>
+                                            </div>
+
+                                            <p className="mt-4 text-[20px]">Total Members: {total_SF}</p>
+                                        </div>
+                                    </>
+                                )
+                            }
+                            {
+                                selectedModel === "COUPLES" && (
+                                    <>
+                                        <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-center mb-4">
+                                                <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
+                                                <button disabled className="cursor-not-allowed mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] bg-opacity-70" onClick={() => decrement('adults')}>-</button>
+                                                <p className="mx-2 w-[30px] text-center">{adults}</p>
+                                                <button disabled className="cursor-not-allowed mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] bg-opacity-70" onClick={() => increment('adults')}>+</button>
+                                            </div>
+
+                                            <p className="mt-4 text-[20px]">Total Members: {total_CP}</p>
+                                        </div>
+                                    </>
+                                )
+                            }
+
+
+
+
+
+
+                            {/* <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
                             <div className="flex  gap-[20px] flex-wrap">
                                 <button
                                     type="button"
@@ -132,7 +257,7 @@ export default function Invest() {
                                 >
                                     46м²
                                 </button>
-                            </div>
+                            </div> */}
                         </>
                     )}
 
@@ -184,7 +309,7 @@ export default function Invest() {
                                 </div>
                             </div>
 
-                            <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
+                            {/* <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
                             <div className="flex  gap-[20px] flex-wrap">
                                 <button
                                     type="button"
@@ -194,7 +319,7 @@ export default function Invest() {
                                 >
                                     35,77м²
                                 </button>
-                            </div>
+                            </div> */}
                         </>
                     )}
 
@@ -239,7 +364,7 @@ export default function Invest() {
                                 </div>
                             </div>
 
-                            <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
+                            {/* <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
                             <div className="flex  gap-[20px] flex-wrap">
                                 <button
                                     type="button"
@@ -249,7 +374,7 @@ export default function Invest() {
                                 >
                                     29,84м²
                                 </button>
-                            </div>
+                            </div> */}
                         </>
                     )}
 
@@ -309,11 +434,11 @@ export default function Invest() {
 
                     <div className="flex justify-between items-center">
                         <div className='text-xl font-bold font_nun'>
-                            $1900
+                            ₹ {totalMembers * 100000}
                         </div>
                         <div>
                             <button onClick={handleContactUs} className="bg-[#BB1A37] text-white border-transparent font_cat font-bold  w-fit  rounded-[15px] px-4 py-2 ">
-                                Contact Us
+                                Purchase
                             </button>
                         </div>
                     </div>

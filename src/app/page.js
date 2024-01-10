@@ -8,14 +8,13 @@ import WhoWeAreSection from "./components/home/who-we-are";
 import MiniAboutUs from "./components/home/us";
 import Partners from "./components/home/partners";
 import Shelters from "./components/home/shelters";
-import Webinar from "./components/home/webinars";
 import Community from "./components/home/community";
 import Testimonials from "./components/home/testimonials";
 import Build from "./components/home/build";
 import Cta from "./components/home/cta";
 import Feature from "./components/home/features";
 import CountDown from "./components/home/countdown";
-import VideoComp from "./components/common/VideoComp/VideoComp";
+
 
 
 export default function Home() {

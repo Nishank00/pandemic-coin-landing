@@ -67,7 +67,7 @@ export default function HeroSection() {
                         className="text-[#FFF]  md:text-[36px] text-[24px] mt-[10px] font-normal leading-[139.5%] capitalize">
                         The Pandemic Coin
                     </motion.h1>
-                    
+
 
                     {/* <div className="flex ">
                     <button
@@ -86,19 +86,19 @@ export default function HeroSection() {
                     </button>
                     </div> */}
                     <div className="flex flex-col md:flex-row md:space-x-5">
-  <button
-    className="bg-[#BB1A37] text-white rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[10px] md:mt-0 mt-5 px-4 py-2 font_cat"
-    data-aos="fade-in"
-  >
-    Purchase now
-  </button>
-  <button
-    className="bg-[#fff] text-black rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[10px] md:mt-0 mt-5 px-4 py-2 font_cat"
-    data-aos="fade-in"
-  >
-    Whitepaper
-  </button>
-</div>
+                        <button
+                            className="bg-[#BB1A37] text-white rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[14px] md:mt-0 mt-5 px-4 py-2 font_cat"
+                            data-aos="fade-in"
+                        >
+                            Purchase now
+                        </button>
+                        <button
+                            className="bg-[#fff] text-black rounded-[8px] mx-auto w-[150px] md:w-[150px] text-[14px] md:mt-0 mt-5 px-4 py-2 font_cat"
+                            data-aos="fade-in"
+                        >
+                            Whitepaper
+                        </button>
+                    </div>
                 </div>
 
             </div></>
