@@ -96,7 +96,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                 </div>
             </div>
             <div className="back relative">
-                <div className="h-full  flex flex-col justify-center items-center">
+                <div className="h-full pb-[40px] flex flex-col justify-center items-center">
                     <div className="text-center">
                         <div className="text-[40px] font_cat">{name}</div>
                         <div className="text-[25px]">{role}</div>
