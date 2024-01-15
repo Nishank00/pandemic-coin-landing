@@ -4,7 +4,7 @@ import TeamMemberCard from "../common/team-member-card";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion } from "framer-motion";
 import azImage from "../../../assets/az_image.png";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaLinkedinIn } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function MiniAboutUs() {

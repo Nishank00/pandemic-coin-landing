@@ -70,7 +70,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                         transformOrigin: "center",
                     }}
                 />
-                <div className="p-2 w-[324px] mx-auto">
+                <div className="p-2 w-[324px] mx-auto ">
                     <div className="">
                         <motion.h1
                             className="font_cat text-[20px] text-[#7B7E98] not-italic font-normal leading-[normal] tracking-[0.8px] mb-1"
@@ -87,7 +87,7 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     <div className="flex gap-3 mt-6">
 
                         <Link
-                            className="bg-pdc-blue flex w-12 h-12 rounded-md  justify-center items-center"
+                            className="bg-pdc-blue flex w-10 h-10 rounded-md  justify-center items-center"
                             href={linkedin}
                         >
                             <FaLinkedinIn />
@@ -95,13 +95,21 @@ const TeamCard = ({ img, name, desc, role, linkedin, link }) => {
                     </div>
                 </div>
             </div>
-            <div className="back">
-                <div className="h-full flex flex-col justify-center items-center">
+            <div className="back relative">
+                <div className="h-full  flex flex-col justify-center items-center">
                     <div className="text-center">
                         <div className="text-[40px] font_cat">{name}</div>
                         <div className="text-[25px]">{role}</div>
                     </div>
-                    <p className="text-center mt-3 max-h-[300px] p_scroll overflow-y-auto">{desc}</p>
+                    <p className="text-center mt-3 max-h-[250px] p_scroll overflow-y-auto">{desc}</p>
+                </div>
+                <div className="absolute left-[8px] bottom-[8px]">
+                    <Link
+                        className="bg-pdc-blue flex w-10 h-10 rounded-md  justify-center items-center"
+                        href={linkedin}
+                    >
+                        <FaLinkedinIn />
+                    </Link>
                 </div>
             </div>
         </div>
