@@ -61,7 +61,7 @@ const Media = () => {
     ];
 
     return (
-        <section className="p-4 md:p-8 mx-auto bg-pdc-d-gray overflow-hidden relative">
+        <section className="p-4 md:p-8 mx-auto bg-pdc-d-gray overflow-hidden relative md:pt-[6rem] ">
             <div className="absolute w-[700px] h-[700px] blur-[100px] bg-gradient-to-tr from-[#FF071720] to-[#342CB220] rounded-full right-[-5%] z-0"></div>
             <div className="grid grid-cols-1 md:grid-cols-12 relative z-10 py-12 md:py-4 gap-1 md:gap-5">
                 <div className="absolute w-[700px] h-[700px] blur-[200px] bg-pdc-blue rounded-full top-[50%] left-[-20%] z-0"></div>
