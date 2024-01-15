@@ -4,7 +4,7 @@ import ImageSlider from "../components/common/ImageSlider";
 
 export default function Purchase() {
   const [selectedType, setSelectedType] = useState("FAMILY");
-  const [selectedModel, setSelectedModel] = useState("");
+  const [selectedModel, setSelectedModel] = useState("SMALL FAMILY");
   // const [selectedSize, setSelectedSize] = useState('');
   const [selectedService, setSelectedService] = useState("");
   const [adults, setAdults] = useState(0);
@@ -85,7 +85,7 @@ export default function Purchase() {
       <div className=" md:sticky md:top-[96px] static h-full md:w-[60%] w-full">
         <ImageSlider />
       </div>
-      <div className="b_grey h-full md:w-[40%] w-full md:p-[40px]">
+      <div className="h-full md:w-[40%] w-full md:p-[40px]">
         <div className="p-4">
           {/* CONFIGURATOR */}
           <div>
@@ -104,7 +104,7 @@ export default function Purchase() {
               >
                 FAMILY
               </button>
-              <button
+              {/* <button
                 type="button"
                 onClick={() => handleTypeChange("PUBLIC")}
                 className={`h-[60px] font_cat font-bold  w-fit px-4 rounded-[15px] border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
@@ -114,8 +114,8 @@ export default function Purchase() {
                 }`}
               >
                 PUBLIC
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 type="button"
                 onClick={() => handleTypeChange("MILITARY")}
                 className={`h-[60px] font_cat font-bold  w-fit px-4 rounded-[15px] border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
@@ -125,7 +125,7 @@ export default function Purchase() {
                 }`}
               >
                 MILITARY
-              </button>
+              </button> */}
             </div>
           </div>
 
