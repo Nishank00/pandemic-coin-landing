@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import CustomFileInput from "./custom-file-input";
-import join from "../../../assets/join.png";
+import join from "../../../assets/ai/5.png";
 
 const JoinUs = () => {
     const [firstName, setFirstName] = useState("");
@@ -33,8 +33,8 @@ const JoinUs = () => {
     };
 
     return (
-        <section className="text-gray-400 px-12 pb-12 body-font">
-            <div className="container mx-auto bg-[#111327] flex p-12 rounded-[30px] md:flex-row flex-col items-center">
+        <section className="text-gray-400 px-4 md:px-12 pb-12 body-font">
+            <div className="container mx-auto bg-[#111327] flex p-12 rounded-[30px] md:flex-row flex-col items-center justify-evenly">
                 <div className="md:w-1/2 lg:pr-20 md:pr-16 flex flex-col md:items-start md:text-left md:mb-0 items-center text-center">
                     <h2 className="text-white text-[32px] font-medium title-font mb-6">
                         Join our growing team
@@ -83,7 +83,7 @@ const JoinUs = () => {
                         </button>
                     </div>
                 </div>
-                <div className="w-5/6 md:w-1/2 hidden md:block">
+                <div className=" hidden md:block  rounded-[60px] overflow-hidden">
                     <Image
                         className="object-contain object-right rounded"
                         alt="hero"
@@ -98,3 +98,4 @@ const JoinUs = () => {
 };
 
 export default JoinUs;
+

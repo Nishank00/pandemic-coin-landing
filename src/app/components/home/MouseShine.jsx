@@ -27,7 +27,7 @@ const HoverEffect = ({ children }) => {
     return (
         <motion.div
             ref={buttonRef}
-            className="relative shiny"
+            className="relative shiny "
             // whileHover={{ '&:after': { opacity: 0.4 } }}
             
         >

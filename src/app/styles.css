@@ -395,21 +395,66 @@ canvas:hover {
 }
 
 .count_sec {
-  background: url("../../public/images/sec-ai/6.jpg");
+  background: url("../../src/assets/ai/8.png");
   background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+.count_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .live_sec {
-  background: url("../../public/images/sec-ai/5.jpg");
+  background: url("../../src/assets/ai/7.png");
   background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+.live_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .team_sec {
-  background: url("../../public/images/sec-ai/3.jpg");
+  background: url("../../src/assets/ai/4.png");
   background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+
+.team_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .PS_sec {
-  background: url("../../public/images/sec-ai/2.jpg");
-  background-size: contain;
+  background: url("../../src/assets/ai/1.png");
+  background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+.PS_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }

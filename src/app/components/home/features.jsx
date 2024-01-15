@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee'
-import feature1 from '../../../assets/feature-image1.png'
-import feature2 from '../../../assets/feature-image2.png'
-import feature3 from '../../../assets/feature-image3.png'
-import feature4 from '../../../assets/feature-image4.png'
+import feature1 from '../../../assets/features/1.png'
+import feature2 from '../../../assets/features/2.png'
+import feature3 from '../../../assets/features/3.jpg'
+import feature4 from '../../../assets/features/4.png'
+import feature5 from '../../../assets/features/5.png'
+import feature6 from '../../../assets/features/6.jpg'
 import DynamicTitle from '../utils/dynamic-title';
 import { motion } from 'framer-motion'
 import HoverEffect from './MouseShine';
@@ -47,7 +49,7 @@ const Feature = () => {
             number: '#05',
             title: 'Integration with Commercial Real Estate Projects',
             description: "Pandemic Coin's strategy extends beyond underground shelters, venturing into overground commercial real estate projects to establish a multi-faceted and sustainable approach.",
-            imageUrl: feature1,
+            imageUrl: feature5,
             backgroundColor: 'bg-[#3A3A3A]',
             color: 'text-[#342CB2]',
         },
@@ -55,7 +57,7 @@ const Feature = () => {
             number: '#06',
             title: 'Pandemic Food Voucher (PDFV)',
             description: "Pandemic Coin's groundbreaking NFT feature, the Pandemic Food Voucher (PDFV), is a pivotal element enhancing disaster preparedness. ",
-            imageUrl: feature2,
+            imageUrl: feature6,
             backgroundColor: 'bg-gradient-to-b from-[#140E7B17] to-[#140E7B17]',
             color: 'text-[#342CB2]',
         }
@@ -86,14 +88,21 @@ const Feature = () => {
 
                             <div data-aos="fade-in" key={index} className={`p-4 w-[360px] pt-[100px] md:w-[420px] md:max-h-[700px] max-h-[600px] flex`}>
                                 <div className={`overflow-hidden flex-1 hover:translate-y-[-50px] hover:scale-105 transition duration-[0.4s] ease-in rounded-[20px] border-[0.873px] border-[solid] border-[#342CB2] border-opacity-50 ${feature.backgroundColor}`}>
-                                <HoverEffect>
-                                    <div className="p-6 py-12 text-center w-full">
-                                        <p className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}>{feature.number}</p>
-                                        <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3 font_cat uppercase">{feature.title}</h1>
-                                        <p className="leading-relaxed mb-3 text-gray-500">{feature.description}</p>
-                                    </div>
-                                    <Image width={720} height={600} className="w-full object-cover object-center" src={feature.imageUrl} alt="blog" />
-                                </HoverEffect>
+                                    <HoverEffect>
+                                      
+                                            <div className="p-6 min-h-[400px] py-12 text-center w-full">
+                                                <p className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}>{feature.number}</p>
+                                                <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3 font_cat uppercase">{feature.title}</h1>
+                                                <p className="leading-relaxed mb-3 text-gray-500">{feature.description}</p>
+                                            </div>
+
+                                            <div className='h-full w-full'>
+                                                <Image width={720} height={600} className="w-full h-f object-cover " src={feature.imageUrl} alt="blog" />
+                                            </div>
+                                      
+
+
+                                    </HoverEffect>
                                 </div>
                             </div>
 

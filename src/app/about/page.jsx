@@ -27,8 +27,8 @@ export default function About() {
                     <p className="opacity-60">AZ</p>
                 </div>
             </div>
-            <div className="relative grid md:grid-cols-3 max-w-[1100px] mx-auto grid-col-1 md:gap-[60px] gap-[30px]">
-                <div className="absolute top-[40%] translate-y-[-55%] left-[-20%] bg-pdc-blue blur-[200px] opacity-90 z-0 md:opacity-100 rounded-full w-[500px] h-[500px]"></div>
+            <div className="relative grid md:grid-cols-3  max-w-[1100px] mx-auto grid-col-1 md:gap-[60px] gap-[30px]">
+                <div className="absolute top-[40%] translate-y-[-55%] left-[-20%] bg-pdc-blue blur-[200px] opacity-90 z-0 md:opacity-100 px-2 b1 rounded-full w-[500px] h-[500px]"></div>
                 {teamData.map((item, index) => (
                     <TeamCard key={index} {...item} />
                 ))}

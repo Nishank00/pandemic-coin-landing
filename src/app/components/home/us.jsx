@@ -3,7 +3,7 @@ import Image from "next/image";
 import TeamMemberCard from "../common/team-member-card";
 import DynamicTitle from "../utils/dynamic-title";
 import { motion } from "framer-motion";
-import azImage from "../../../assets/az_image.png";
+import azImage from "../../../assets//founder_1.jpeg";
 import { FaArrowRightLong, FaLinkedinIn } from "react-icons/fa6";
 import Link from "next/link";
 
@@ -31,7 +31,7 @@ export default function MiniAboutUs() {
                 <div className="flip ">
                     <div className="front flex items-center justify-center text-center  w-fit mx-auto flex-col">
                         <Image
-                            className="mx-auto bg-pdc-d-gray h-[324px] rounded-[20px]"
+                            className="mx-auto bg-pdc-d-gray object-cover h-[324px] rounded-[20px]"
                             width={324}
                             height={324}
                             src={azImage}

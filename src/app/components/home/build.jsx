@@ -8,7 +8,7 @@ import Link from "next/link";
 const Build = () => {
   return (
     <section className="text-gray-400 body-font">
-      <div className="container px-10 py-10 md:py-0 mx-auto  ">
+      <div className="container md:px-10 py-10 md:py-0 px-4  mx-auto  ">
         <div className="flex flex-col text-center w-full mb-12">
           {/* <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">
                         Building a Brighter Future:
@@ -16,14 +16,16 @@ const Build = () => {
                             Invest in Cathy&quot;s Vision for Secure Shelters and Make a Lasting Impact!
                         </h2>
                     </h1> */}
-          <h1 className="text-center text-[56px] not-italic  leading-[139.5%] capitalize tracking-[-3.36px] font-medium title-font mb-4 text-white">
+          <h1 className="text-center  text-[56px] not-italic  leading-[139.5%] capitalize tracking-[-3.36px] font-medium title-font mb-4 text-white">
             Purchase
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center ">
+
+        <div className="grid rounded-[60px] PS_sec grid-cols-1 md:grid-cols-2 gap-4 text-center ">
           <div
             data-aos="fade-in"
-            className="p-4 py-8 w-full relative  rounded-[20px] hover:bg-[#ffffff15] transition duration-1000 ease-in-out overflow-hidden "
+            // hover:bg-[#ffffff15] transition duration-1000 ease-in-out
+            className="p-4 py-8 w-full relative  rounded-[20px] overflow-hidden "
           >
             <Tilt className="track-on-window" trackOnWindow={true}>
               <Image
@@ -45,7 +47,8 @@ const Build = () => {
           </div>
           <div
             data-aos="fade-in"
-            className="p-4 py-8 w-full relative  hover:bg-[#ffffff15] transition duration-1000 ease-in-out rounded-[20px] overflow-hidden"
+            // hover:bg-[#ffffff15] transition duration-1000 ease-in-out
+            className="p-4 py-8 w-full relative   rounded-[20px] overflow-hidden"
           >
             <Tilt className="track-on-window" trackOnWindow={true}>
               <Image

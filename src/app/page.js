@@ -16,12 +16,6 @@ import Feature from "./components/home/features";
 import CountDown from "./components/home/countdown";
 
 // images
-// import img1 from "../../public/images/sec-ai/1.jpg"
-// import img2 from "../assets/sec-ai/2.jpg"
-// import img3 from "../assets/sec-ai/3.jpg"
-// import img4 from "../assets/sec-ai/4.jpg"
-// import img5 from "../assets/sec-ai/5.jpg"
-// import img6 from "../assets/sec-ai/6.jpg"
 
 
 
@@ -31,26 +25,26 @@ export default function Home() {
 
       <HeroSection />
 
-      <div className="count_sec border-gray-700 border-[0.001px]">
+      <div className="count_sec border-t-[0.001px] border-transparent">
         <CountDown />
         <WhoWeAreSection />
       </div>
 
-      <div className="live_sec">
+      <div className="live_sec ">
         <LiveEvents />
       </div>
       <Feature />
       <Tokenomics />
       <Roadmap />
 
-      <div className="team_sec">
+      <div className="team_sec ">
         <MiniAboutUs />
       </div>
       <Partners />
       <Shelters />
       <Community />
       <Testimonials />
-      <div className="PS_sec">
+      <div className="">
         <Build />
       </div>
       <Cta />
