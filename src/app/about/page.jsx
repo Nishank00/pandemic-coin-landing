@@ -33,8 +33,8 @@ export default function About() {
                     <TeamCard key={index} {...item} />
                 ))}
             </div>
-            <Advisors title="Advisors" />
-            <Advisors title="Specialists" />
+            {/* <Advisors title="Advisors" />
+            <Advisors title="Specialists" /> */}
 
             <div className="pb-[100px]">
                 <Partners />
