@@ -33,9 +33,10 @@ const Community = () => {
               Journey
             </h1>
             <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
-            <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
-                Welcome to the Pandemic Coin Community! Join us on our shared journey as we explore the possibilities together.
-            </p>
+              <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
+                Welcome to the Pandemic Coin Community! Join us on our shared
+                journey as we explore the possibilities together.
+              </p>
             </p>
             {/* <label  className="btn"> */}
             <label
@@ -45,7 +46,7 @@ const Community = () => {
               whileTap={{ scale: 0.9 }}
               className="pri-btn cursor-pointer  w-fit text-[#FFF] text-[18px] not-italic font-normal leading-[139.5%] mt-[47px] block transition-all capitalize p-[14px_24px] h-[53px]"
             >
-              Explore PENN App
+              Chat
             </label>
             {/* </label> */}
           </motion.div>

@@ -481,7 +481,7 @@ export default function Purchase() {
           )}
 
           {/* SERVICES */}
-          <div>
+          {/* <div>
             <h2 className="text-xl font-bold font_nun mt-4">
               ADDITIONAL SERVICES
             </h2>
@@ -491,7 +491,7 @@ export default function Purchase() {
             </p>
 
             {/* Two radio button options */}
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
               <div className="flex flex-col gap-[20px]">
                 <button
                   type="button"
@@ -549,15 +549,15 @@ export default function Purchase() {
                   </p>
                 </button>
               </div>
-            </div>
-          </div>
+            </div> 
+          </div> */}
         </div>
         {/* Contact Us section */}
 
         <div className="p-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold font_nun">
-              ₹ {totalMembers * 100000}
+              $ {totalMembers * 100000}
             </div>
             <div>
               <button

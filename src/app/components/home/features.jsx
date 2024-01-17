@@ -3,8 +3,8 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import feature1 from "../../../assets/features/feat1.png";
 import feature2 from "../../../assets/features/feat2.png";
-import feature3 from "../../../assets/features/feat6.png";
-import feature4 from "../../../assets/features/feat1.png";
+import feature3 from "../../../assets/features/feat3.png";
+import feature4 from "../../../assets/features/feat2.png";
 import feature5 from "../../../assets/features/feat5.png";
 import feature6 from "../../../assets/features/feat6.png";
 import DynamicTitle from "../utils/dynamic-title";
@@ -96,7 +96,7 @@ const Feature = () => {
           }}
           className="flex flex-wrap -m-4 relative z-10 "
         >
-          <Marquee>
+          {/* <Marquee> */}
             {features.map((feature, index) => (
               <div
                 data-aos="fade-in"
@@ -125,7 +125,7 @@ const Feature = () => {
                       <Image
                         width={720}
                         height={600}
-                        className="w-full h-f object-cover "
+                        className="w-full h-full "
                         src={feature.imageUrl}
                         alt="blog"
                       />
@@ -134,7 +134,7 @@ const Feature = () => {
                 </div>
               </div>
             ))}
-          </Marquee>
+          {/* </Marquee> */}
         </motion.div>
         <div className="bg-gradient-to-tr from-[#FF071750] to-[#342CB250] absolute w-[900px] blur-[120px] z-0 rounded-full h-[900px] -top-[50%] -right-[30%]"></div>
         <div className="bg-gradient-to-tr from-[#FF071740] to-[#342CB240] absolute w-[500px] blur-[120px] z-0 rounded-full h-[500px] -bottom-[60%] -left-[10%]"></div>
