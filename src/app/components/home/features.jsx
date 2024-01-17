@@ -96,7 +96,7 @@ const Feature = () => {
           }}
           className="flex flex-wrap -m-4 relative z-10 "
         >
-          {/* <Marquee> */}
+          <Marquee>
             {features.map((feature, index) => (
               <div
                 data-aos="fade-in"
@@ -134,7 +134,7 @@ const Feature = () => {
                 </div>
               </div>
             ))}
-          {/* </Marquee> */}
+          </Marquee>
         </motion.div>
         <div className="bg-gradient-to-tr from-[#FF071750] to-[#342CB250] absolute w-[900px] blur-[120px] z-0 rounded-full h-[900px] -top-[50%] -right-[30%]"></div>
         <div className="bg-gradient-to-tr from-[#FF071740] to-[#342CB240] absolute w-[500px] blur-[120px] z-0 rounded-full h-[500px] -bottom-[60%] -left-[10%]"></div>
