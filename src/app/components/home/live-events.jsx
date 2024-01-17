@@ -211,14 +211,16 @@ export default function LiveEvents() {
             >
               WATCH MORE
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
-              style={{ color: "#BB1A37", backgroundColor: "white" }}
-            >
-              <Link href="/purchase">PURCHASE MEMBERSHIP</Link>
-            </motion.button>
+            <Link href="/purchase">
+              <motion.button
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="pri-btn md:mt-[35px] mt-[20px] block transition-all mx-auto w-[150px] md:w-[208px] text-white"
+                style={{ color: "#BB1A37", backgroundColor: "white" }}
+              >
+                PURCHASE MEMBERSHIP
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>
