@@ -77,6 +77,7 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
+      <h2 className="text-center text-4xl font-bold my-8">TBA</h2>
       <div className="flex flex-wrap justify-center items-center gap-4">
         {advisors.map((member, index) => (
           <Advisor key={index} member={member} />
