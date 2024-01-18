@@ -581,6 +581,7 @@ canvas:hover {
   transition: all 0.5s;
   position: absolute;
   z-index: -1;
+  scale: 1.6;
 }
 
 .card_ai:hover .character_ai {

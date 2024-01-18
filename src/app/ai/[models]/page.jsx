@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import model1 from "../../../assets/ai/5.png";
-import model2 from "../../../assets/ai/2.png";
-import model3 from "../../../assets/ai/5.png";
-import model4 from "../../../assets/ai/2.png";
+import model1 from "../../../assets/ai/ai1.jpeg";
+import model2 from "../../../assets/ai/ai2.jpeg";
+import model3 from "../../../assets/ai/ai3.jpeg";
+import model4 from "../../../assets/ai/ai4.jpeg";
 import { usePathname } from "next/navigation";
 import React from "react";
 
