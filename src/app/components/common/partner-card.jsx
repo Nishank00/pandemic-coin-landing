@@ -5,7 +5,7 @@ import React from "react";
 const partnerCard = ({ member }) => {
   return (
     <>
-      <Link href={member.url} target="_blank">
+      <Link href={member.url} >
         <div
           data-aos="fade-in"
           className="h-[111px] border-[0.75px] border-[solid] border-[#342CB2] border-opacity-80 relative flex items-center justify-center overflow-hidden bg-pdc-d-gray/30  px-12 py-8 rounded-lg"

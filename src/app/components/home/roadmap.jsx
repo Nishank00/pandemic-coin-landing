@@ -131,7 +131,7 @@ const Roadmap = () => {
 
                     <Link
                         href={" https://pdc-roadmap.vercel.app/"}
-                        target="_blank">
+                        >
                         <button
                             className="bg-[#BB1A37] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[15px] font-[18px]  rounded-[8px] mx-auto w-[200px] md:w-[220px] text-white"
                         >

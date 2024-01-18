@@ -45,7 +45,7 @@ export default function Nav() {
           {links.map((link, index) => {
             return (
               <div key={link.path} className="relative group pb-[6px]">
-                <Link className="" target="_blank" href={link.path} key={index}>
+                <Link className=""  href={link.path} key={index}>
                   <span
                     className={`anim-slo text-[#FFF]  text-[18px] not-italic font-normal leading-[139.5%]`}
                   >
@@ -90,7 +90,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className="text-center text-xl anim hover:text-pri w-full py-4 anim-slo"
               href={link.path}
-              target="_blank" // Add this line to open the link in a new tab
+               // Add this line to open the link in a new tab
               rel="noopener noreferrer" // Add these lines for security reasons
               key={index}
             >
