@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import asset from "../../../assets/bg.png";
-import asset1 from "../../../assets/asset1.png";
+import asset1 from "../../../assets/comm2.png";
 import "./webinar.css";
 import { motion } from "framer-motion";
 import DynamicTitle from "../utils/dynamic-title";
@@ -57,7 +57,7 @@ const Community = () => {
             alt="image"
             width={500}
             height={500}
-            data-aos="fade-in"
+            data-aos="fade-in" 
           />
           {/* The button to open modal */}
 

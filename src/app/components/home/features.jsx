@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import feature1 from "../../../assets/features/feat1.png";
 import feature2 from "../../../assets/features/feat2.png";
 import feature3 from "../../../assets/features/feat3.png";
-import feature4 from "../../../assets/features/feat2.png";
+import feature4 from "../../../assets/features/feat4.png";
 import feature5 from "../../../assets/features/feat5.png";
 import feature6 from "../../../assets/features/feat6.png";
 import DynamicTitle from "../utils/dynamic-title";
@@ -101,13 +101,13 @@ const Feature = () => {
               <div
                 data-aos="fade-in"
                 key={index}
-                className={`p-4 w-[360px] pt-[100px] md:w-[420px] md:max-h-[700px] max-h-[600px] flex`}
+                className={`p-4 w-[360px] pt-[100px] md:w-[420px] flex`}
               >
                 <div
                   className={`overflow-hidden flex-1 hover:translate-y-[-50px] hover:scale-105 transition duration-[0.4s] ease-in rounded-[20px] border-[0.873px] border-[solid] border-[#342CB2] border-opacity-50 ${feature.backgroundColor}`}
                 >
                   <HoverEffect>
-                    <div className="p-6 min-h-[400px] py-12 text-center w-full">
+                    <div className="p-6 py-12 text-center w-full">
                       <p
                         className={` font-bold text-4xl ${feature.color} font-semibold mb-3  `}
                       >
