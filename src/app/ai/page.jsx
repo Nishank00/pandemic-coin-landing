@@ -8,6 +8,10 @@ import model1 from "../../assets/ai/m1_out.webp";
 import model2 from "../../assets/ai/m2_out.webp";
 import model3 from "../../assets/ai/m3_out.webp";
 import model4 from "../../assets/ai/m4_out.webp";
+import modeltext1 from "../../assets/ai/t1.png";
+import modeltext2 from "../../assets/ai/t2.png";
+import modeltext3 from "../../assets/ai/t3.png";
+import modeltext4 from "../../assets/ai/t4.png";
 export default function Ai() {
   return (
     <div className="flex flex-col bg-pdc-d-gray gap-[40px] md:gap-0 overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg_ai">
@@ -28,9 +32,17 @@ export default function Ai() {
                 className="cover-image_ai"
               /> */}
             </div>
-            <img
+            {/* <img
               src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png"
               className="title_ai"
+            /> */}
+            <Image
+              src={modeltext1}
+              height={600}
+              width={250}
+              alt="ai-img"
+              className="title_ai"
+              quality={100}
             />
             {/* <img
               src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp"
@@ -63,9 +75,17 @@ export default function Ai() {
                 quality={100}
               />
             </div>
-            <img
+            {/* <img
               src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
               className="title_ai"
+            /> */}
+            <Image
+              src={modeltext2}
+              height={600}
+              width={250}
+              alt="ai-img"
+              className="title_ai"
+              quality={100}
             />
             {/* <img
               src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
@@ -99,9 +119,17 @@ export default function Ai() {
                 quality={100}
               />
             </div>
-            <img
+            {/* <img
               src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png"
               className="title_ai"
+            /> */}
+            <Image
+              src={modeltext3}
+              height={600}
+              width={250}
+              alt="ai-img"
+              className="title_ai"
+              quality={100}
             />
             {/* <img
               src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp"
@@ -133,9 +161,17 @@ export default function Ai() {
                 quality={100}
               />
             </div>
-            <img
+            {/* <img
               src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
               className="title_ai"
+            /> */}
+            <Image
+              src={modeltext4}
+              height={600}
+              width={250}
+              alt="ai-img"
+              className="title_ai"
+              quality={100}
             />
             {/* <img
               src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
