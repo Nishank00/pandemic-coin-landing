@@ -149,7 +149,7 @@ canvas:hover {
   max-width: 33.33%;
 }
 
-#shelters .swiper-horizontal > .swiper-pagination-bullets,
+#shelters .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   right: 80px !important;
   left: auto !important;
@@ -238,7 +238,7 @@ canvas:hover {
     height: fit-content;
   }
 
-  #shelters .swiper-horizontal > .swiper-pagination-bullets,
+  #shelters .swiper-horizontal>.swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     right: auto !important;
     left: 45% !important;
@@ -409,6 +409,23 @@ canvas:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.contact_sec {
+  background: url("../../src/assets/ai/ai4.jpeg");
+  background-size: cover;
+  background-position: center 100%;
+  position: relative;
+}
+
+.contact_sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .team_sec {
   background: url("../../src/assets/ai/4.png");
   background-size: cover;
@@ -511,23 +528,19 @@ canvas:hover {
 .wrapper_ai::before {
   top: 0;
   height: 100%;
-  background-image: linear-gradient(
-    to top,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
 }
 
 .wrapper_ai::after {
   bottom: 0;
   opacity: 1;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
 }
 
 .card_ai:hover .wrapper_ai::before,
@@ -564,5 +577,124 @@ canvas:hover {
 @media screen and (max-width: 800px) {
   .bg_ai {
     flex-direction: column;
+  }
+}
+
+
+
+#robot {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate3d(-50%, -50%, 0) scale(1.5);
+  max-width: 50vw;
+  max-height: 80vh;
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width: 800px) {
+  #robot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.5);
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0 auto;
+
+  }
+}
+
+
+#body {
+  animation: hover 1.1s ease-in-out 0s infinite alternate
+}
+
+#head {
+  animation: hover 1.1s ease-in-out 0.05s infinite alternate
+}
+
+#arms {
+  animation: hover 1.1s ease-in-out 0.1s infinite alternate
+}
+
+#left_arm {
+  transform-origin: center right;
+  animation: arms_bounce_left 1.1s ease-in-out 0s infinite alternate
+}
+
+#right_arm {
+  transform-origin: center left;
+  animation: arms_bounce_right 1.1s ease-in-out 0s infinite alternate
+}
+
+#eyes ellipse {
+  transform-origin: center center;
+  animation: eyes_blink 2s ease-out 0s infinite alternate
+}
+
+#shadow {
+  transform-origin: center center;
+  animation: shadow 1.1s ease-in-out 0s infinite alternate
+}
+
+@keyframes hover {
+  0% {
+    transform: translate3d(0, 80px, 0)
+  }
+
+  100% {
+    transform: translate3d(0, 30px, 0)
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.5, 1.2);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1, 1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes arms_bounce_left {
+  0% {
+    transform: translate3d(0, 80px, 0)rotate(0deg)
+  }
+
+  100% {
+    transform: translate3d(0, 30px, 0)rotate(-10deg)
+  }
+}
+
+@keyframes arms_bounce_right {
+  0% {
+    transform: translate3d(0, 80px, 0)rotate(0deg)
+  }
+
+  100% {
+    transform: translate3d(0, 30px, 0)rotate(10deg)
+  }
+}
+
+@keyframes eyes_blink {
+  0% {
+    transform: scale(1, 1)
+  }
+
+  90% {
+    transform: scale(1, 1)
+  }
+
+  95% {
+    transform: scale(0.8, 0)
+  }
+
+  100% {
+    transform: scale(1, 1)
   }
 }

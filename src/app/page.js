@@ -17,12 +17,9 @@ import CountDown from "./components/home/countdown";
 
 // images
 
-
-
 export default function Home() {
   return (
     <main className="overflow-hidden">
-
       <HeroSection />
 
       <div className="count_sec border-t-[0.001px] border-transparent">
@@ -30,7 +27,7 @@ export default function Home() {
         <WhoWeAreSection />
       </div>
 
-      <div className="live_sec ">
+      <div className="live_sec">
         <LiveEvents />
       </div>
       <Feature />
