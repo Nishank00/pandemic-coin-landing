@@ -57,7 +57,7 @@ const ActiveShape = (props) => {
                 x={cx}
                 y={cy + 20}
                 dy={0}
-                fontSize={10}
+                fontSize={16}
                 fontWeight={500}
                 textAnchor="middle"
                 fill={"#fff"}
@@ -80,7 +80,7 @@ const ActiveShape = (props) => {
                 endAngle={endAngle}
                 innerRadius={innerRadius - 6}
                 outerRadius={outerRadius + 10}
-                fill={"rgba(255, 255, 255, 0.40)"}
+                fill={"#ff0000"}
 
             />
             <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} fill="none" />
@@ -96,7 +96,7 @@ const ActiveShape = (props) => {
                 y={ey}
                 // dy={18}
                 textAnchor={textAnchor}
-                fill="#000"
+                fill="#fff"
             >
                 {`Rate ${(percent * 100).toFixed(2)}%`}
             </text>

@@ -116,7 +116,7 @@ const Feature = () => {
                       <h1 className="text-[30px] h-[100px] inline-flex items-center justify-center font-medium text-[#F4F1F8] mb-3 font_cat uppercase">
                         {feature.title}
                       </h1>
-                      <p className="leading-relaxed mb-3 text-gray-500">
+                      <p className="leading-relaxed mb-3 text-yellow-200">
                         {feature.description}
                       </p>
                     </div>

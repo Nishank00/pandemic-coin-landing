@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import asset from "../../../assets/bg.png";
-import asset1 from "../../../assets/comm2.png";
+import asset1 from "../../../assets/comm1.png";
 import "./webinar.css";
 import { motion } from "framer-motion";
 import DynamicTitle from "../utils/dynamic-title";

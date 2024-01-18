@@ -12,11 +12,11 @@ import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import img from "../../../assets/bg.png";
 import DynamicTitle from "../utils/dynamic-title";
-import shelter1 from "../../../assets/shelter/1.png";
-import shelter2 from "../../../assets/shelter/2.png";
-import shelter3 from "../../../assets/shelter/3.png";
-import shelter4 from "../../../assets/shelter/4.png";
-import shelter5 from "../../../assets/shelter/5.png";
+import shelter1 from "../../../assets/shelter01.png";
+import shelter2 from "../../../assets/shelter02.webp";
+import shelter3 from "../../../assets/shelter03.png";
+import shelter4 from "../../../assets/shelter04.webp";
+import shelter5 from "../../../assets/shelter05.png";
 
 const shelters = [
   {

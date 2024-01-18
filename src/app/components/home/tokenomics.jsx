@@ -57,11 +57,8 @@ const Tokenomics = () => {
             },
           },
         }}
-        className="z-50 toke_bg py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-pdc-d-gray/50 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50"
+        className="z-50 py-4 w-[320px] md:h-[523px] flex items-center justify-center md:w-[1140px] md:py-28 bg-clip-padding backdrop-filter backdrop-blur-xl rounded-[30px] bg-opacity-10 border-[1px] border-[solid] border-[#342CB2] border-opacity-50 bg-white"
       >
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
         {/* <Donut
                     id="linearGradient"
                     data={data}
@@ -75,7 +72,9 @@ const Tokenomics = () => {
           onPieEnter={onPieEnter}
         />
       </motion.div>
-
+      <div className="absolute w-[450px] h-[450px] transition-all bottom-[26%] right-[66%] border-2 rounded-full border-[#615E9A] p-4 z-[-1] animate-spin">
+        <div className="w-[200px] h-[200px] bg-gradient-to-r from-[#342CB2] to-[#FC4F5A] rounded-full m-8"></div>
+      </div>
       <div className="absolute w-[450px] h-[450px] transition-all bottom-[-2%] right-[-5%] border-2 rounded-full border-[#615E9A] p-4 z-[-1] animate-spin">
         <div className="w-[200px] h-[200px] bg-gradient-to-r from-[#342CB2] to-[#FC4F5A] rounded-full m-8"></div>
       </div>

@@ -67,7 +67,7 @@ export default function MiniAboutUs() {
       </div>
       <div className="w-full flex justify-end px-[20px] md:px-[100px]">
         <Link
-          className="flex gap-3 text-[20px] justify-center text-white w-fit items-center bg-[#BB1A37] px-[20px] md:px-[30px] py-[10px] md:py-[20px]"
+          className="flex gap-3 text-[20px] justify-center text-white w-fit items-center bg-[#BB1A37] px-[20px] md:px-[30px] py-[10px] md:py-[20px] rounded-[20px]"
           href={"/about"}
           target="_blank"
           passHref

@@ -6,6 +6,7 @@ import Partners from "../components/home/partners";
 import JoinUs from "../components/about/join-us";
 import { teamData } from "../../data/team-data";
 import azImage from "../../assets//founder_1.jpeg";
+import Advisor from "../components/common/advisor-card";
 
 export default function About() {
   return (
@@ -47,8 +48,8 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
-      {/* <Advisors title="Advisors" />
-            <Advisors title="Specialists" /> */}
+      {/* <Advisor title="Advisors" />
+      <Advisor title="Specialists" /> */}
 
       <div className="pb-[100px]">
         <Partners />
