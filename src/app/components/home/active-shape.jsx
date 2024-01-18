@@ -96,7 +96,7 @@ const ActiveShape = (props) => {
                 y={ey}
                 // dy={18}
                 textAnchor={textAnchor}
-                fill="#999"
+                fill="#000"
             >
                 {`Rate ${(percent * 100).toFixed(2)}%`}
             </text>

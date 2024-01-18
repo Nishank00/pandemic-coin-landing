@@ -45,6 +45,15 @@ export default function Purchase() {
       if (newKidAge[index] >= 5) {
         console.log("Hello");
       }
+      if (newKidAge[index] >= 18) {
+        console.log("Kid is now an adult");
+        setCounts((prevCounts) => ({
+          ...prevCounts,
+          ["adults"]: prevCounts["adults"] + 1,
+          ["kids"]: prevCounts["kids"] > 0 ? prevCounts["kids"] - 1 : 0,
+        }));
+        newKidAge.splice(index, 1);
+      }
     } else if (action === "decrement") {
       newKidAge[index] = newKidAge[index] > 0 ? newKidAge[index] - 1 : 0;
       if (newKidAge[index] < 5) {
@@ -53,7 +62,6 @@ export default function Purchase() {
     }
     setKidAge(newKidAge);
   };
-
   const total_BF = adults + kids + seniorCitizens;
   const total_SF = adults + kids;
   const total_CP = adults;
