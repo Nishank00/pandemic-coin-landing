@@ -46,7 +46,7 @@ const VideoComp = (props) => {
   // const handlePause = () => setPlaying(false);
   return (
     <div className="videoContainer" ref={containerRef}>
-      <Image alt="" src={frame}  className="absolute h-full w-full"/>
+      {/* <Image alt="" src={frame}  className="absolute h-full w-full"/> */}
       <ReactPlayer
         ref={playerRef}
         url={props?.url}

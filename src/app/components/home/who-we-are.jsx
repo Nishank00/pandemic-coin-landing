@@ -17,7 +17,7 @@ export default function WhoWeAreSection() {
                     duration: 0.5,
                     ease: "easeInOut",
                 }}
-                className="rounded-[30px] group relative md:max-w-[1100px] max-w-full md:h-[80vh] mx-auto  overflow-hidden ">
+                className="rounded-[16px] group relative md:max-w-[1100px] max-w-full md:h-[80vh] mx-auto  overflow-hidden ">
                 {/* <Image
                     src={whowe}
                     className="mx-auto group-hover:scale-[1.1] transition duration-300 ease-in-out object-cover object-center w-full rounded-2xl "
