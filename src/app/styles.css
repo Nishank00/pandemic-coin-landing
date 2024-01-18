@@ -291,7 +291,7 @@ canvas:hover {
   }
 }
 
-.bg_gradient {
+/* .bg_gradient {
   align-items: center;
   background: linear-gradient(-45deg, #318ce7, #007fff, #23a6d5, #7fffd4);
   background-size: 400% 400%;
@@ -311,7 +311,7 @@ canvas:hover {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 /* contact us svg animation */
 #envelope {
