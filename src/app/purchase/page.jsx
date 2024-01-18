@@ -8,12 +8,14 @@ export default function Purchase() {
   const [kidAge, setKidAge] = useState([]);
   const [total, setTotal] = useState(0);
   const [counts, setCounts] = useState({
-    adults: 0,
+    adults: 1,
     kids: 0,
     seniorCitizens: 0,
+    pets: 0,
   });
 
-  const { adults, kids, seniorCitizens } = counts;
+  const { adults, kids, seniorCitizens, pets } = counts;
+  const modelNames = ["SINGLE", "COUPLES", "SMALL FAMILY", "BIG FAMILY"];
 
   const increment = (type) => {
     setCounts((prevCounts) => ({
@@ -21,7 +23,7 @@ export default function Purchase() {
       [type]: prevCounts[type] + 1,
     }));
     if (type === "kids") {
-      setKidAge([...kidAge, 0]);
+      setKidAge([...kidAge, 1]);
     }
   };
 
@@ -49,7 +51,7 @@ export default function Purchase() {
         newKidAge.splice(index, 1);
       }
     } else if (action === "decrement") {
-      newKidAge[index] = newKidAge[index] > 0 ? newKidAge[index] - 1 : 0;
+      newKidAge[index] = newKidAge[index] > 1 ? newKidAge[index] - 1 : 1;
     }
     setKidAge(newKidAge);
   };
@@ -57,6 +59,7 @@ export default function Purchase() {
   const calculateTotal = () => {
     const adultTotal = adults * 100000;
     const seniorCitizensTotal = seniorCitizens * 100000;
+    const petsTotal = pets * 20000;
     let kidTotal = 0;
     kidAge.forEach((age) => {
       if (age >= 5) {
@@ -66,7 +69,7 @@ export default function Purchase() {
       }
     });
 
-    setTotal(adultTotal + kidTotal + seniorCitizensTotal);
+    setTotal(adultTotal + kidTotal + seniorCitizensTotal + petsTotal);
   };
 
   useEffect(() => {
@@ -86,9 +89,10 @@ export default function Purchase() {
     setSelectedModel(model);
 
     setCounts({
-      adults: model === "COUPLES" ? 2 : 0,
+      adults: model === "COUPLES" ? 2 : 1,
       kids: 0,
       seniorCitizens: 0,
+      pets: 0,
     });
     setKidAge([]);
   };
@@ -96,6 +100,52 @@ export default function Purchase() {
   const handleContactUs = () => {
     // Yaha link dalo
   };
+
+  const models = [
+    {
+      modelName: "BIG FAMILY",
+      memberTypes: [
+        { name: "ADULT'S", count: adults },
+        { name: "KID'S", count: kids },
+        { name: "SENIOR CITIZEN'S", count: seniorCitizens },
+        { name: "PET'S", count: pets },
+      ],
+      totalMembers: total_BF,
+    },
+    {
+      modelName: "SMALL FAMILY",
+      memberTypes: [
+        { name: "ADULT'S", count: adults },
+        { name: "KID'S", count: kids },
+        { name: "PET'S", count: pets },
+      ],
+      totalMembers: total_SF,
+    },
+    {
+      modelName: "COUPLES",
+      memberTypes: [
+        {
+          name: "ADULT'S",
+          count: adults,
+          disableDecrement: true,
+          disableIncrement: true,
+        },
+        { name: "PET'S", count: pets },
+      ],
+      totalMembers: total_CP,
+    },
+    {
+      modelName: "SINGLE",
+      memberTypes: [
+        {
+          name: "ADULT'S",
+          count: adults,
+        },
+        { name: "PET'S", count: pets },
+      ],
+      totalMembers: total_CP,
+    },
+  ];
 
   return (
     <div className="bg-pdc-d-gray h-fit w-[100%] flex md:pt-[96px] pt-0 flex-col md:flex-row">
@@ -129,177 +179,89 @@ export default function Purchase() {
               <h2 className="text-xl font-bold font_nun my-4">MODEL</h2>
               <div className="flex space-x-4">
                 <div className="flex  gap-[20px] flex-wrap">
-                  <button
-                    type="button"
-                    onClick={() => handleModelChange("SMALL FAMILY")}
-                    className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
-                      selectedModel === "SMALL FAMILY"
-                        ? "bg-[#BB1A37] text-white border-transparent"
-                        : ""
-                    }`}
-                  >
-                    SMALL FAMILY
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => handleModelChange("BIG FAMILY")}
-                    className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
-                      selectedModel === "BIG FAMILY"
-                        ? "bg-[#BB1A37] text-white border-transparent"
-                        : ""
-                    }`}
-                  >
-                    BIG FAMILY
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => handleModelChange("COUPLES")}
-                    className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
-                      selectedModel === "COUPLES"
-                        ? "bg-[#BB1A37] text-white border-transparent"
-                        : ""
-                    }`}
-                  >
-                    COUPLES
-                  </button>
+                  {
+                    // Map over the modelNames array
+                    modelNames.map((modelName, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => handleModelChange(modelName)}
+                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
+                          selectedModel === modelName
+                            ? "bg-[#BB1A37] text-white border-transparent"
+                            : ""
+                        }`}
+                      >
+                        {modelName}
+                      </button>
+                    ))
+                  }
                 </div>
               </div>
 
-              {selectedModel === "BIG FAMILY" && (
-                <>
-                  <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
-                  <div className="flex flex-col">
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => decrement("adults")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">{adults}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => increment("adults")}
-                      >
-                        +
-                      </button>
-                    </div>
+              {models.map(
+                (model) =>
+                  selectedModel === model.modelName && (
+                    <>
+                      <h2 className="text-xl font-bold font_nun my-4">
+                        MEMBERS
+                      </h2>
+                      <div className="flex flex-col">
+                        {model.memberTypes.map((memberType, index) => (
+                          <div className="flex items-center mb-4" key={index}>
+                            <p className="mx-2 w-[40%] B1">{memberType.name}</p>
+                            <button
+                              className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
+                                memberType.disableDecrement &&
+                                "cursor-not-allowed bg-opacity-70"
+                              }`}
+                              onClick={
+                                memberType.disableDecrement
+                                  ? null
+                                  : () =>
+                                      decrement(
+                                        memberType.name
+                                          .toLowerCase()
+                                          .replace(/'/g, "")
+                                      )
+                              }
+                              disabled={memberType.disableDecrement}
+                            >
+                              -
+                            </button>
+                            <p className="mx-2 w-[30px] text-center">
+                              {memberType.count}
+                            </p>
+                            <button
+                              className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
+                                memberType.disableIncrement &&
+                                "cursor-not-allowed bg-opacity-70"
+                              }`}
+                              onClick={
+                                memberType.disableIncrement
+                                  ? null
+                                  : () =>
+                                      increment(
+                                        memberType.name
+                                          .toLowerCase()
+                                          .replace(/'/g, "")
+                                      )
+                              }
+                              disabled={memberType.disableIncrement}
+                            >
+                              +
+                            </button>
+                          </div>
+                        ))}
 
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`KID'S`}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => decrement("kids")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">{kids}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => increment("kids")}
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`SENIOR CITIZEN'S`}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => decrement("seniorCitizens")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">
-                        {seniorCitizens}
-                      </p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => increment("seniorCitizens")}
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    <p className="mt-4 text-[20px]">
-                      Total Members: {total_BF}
-                    </p>
-                  </div>
-                </>
+                        <p className="mt-4 text-[20px]">
+                          Total Members: {model.totalMembers}
+                        </p>
+                      </div>
+                    </>
+                  )
               )}
-              {selectedModel === "SMALL FAMILY" && (
-                <>
-                  <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
-                  <div className="flex flex-col">
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => decrement("adults")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">{adults}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => increment("adults")}
-                      >
-                        +
-                      </button>
-                    </div>
 
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`KID'S`}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => decrement("kids")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">{kids}</p>
-                      <button
-                        className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                        onClick={() => increment("kids")}
-                      >
-                        +
-                      </button>
-                    </div>
-                    <p className="mt-4 text-[20px]">
-                      Total Members: {total_SF}
-                    </p>
-                  </div>
-                </>
-              )}
-              {selectedModel === "COUPLES" && (
-                <>
-                  <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
-                  <div className="flex flex-col">
-                    <div className="flex items-center mb-4">
-                      <p className="mx-2 w-[40%] B1">{`ADULT'S`}</p>
-                      <button
-                        disabled
-                        className="cursor-not-allowed mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] bg-opacity-70"
-                        onClick={() => decrement("adults")}
-                      >
-                        -
-                      </button>
-                      <p className="mx-2 w-[30px] text-center">{adults}</p>
-                      <button
-                        disabled
-                        className="cursor-not-allowed mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] bg-opacity-70"
-                        onClick={() => increment("adults")}
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    <p className="mt-4 text-[20px]">
-                      Total Members: {total_CP}
-                    </p>
-                  </div>
-                </>
-              )}
               {kids > 0 && (
                 <>
                   <div className={`${kids > 5 && `h-[250px]`} overflow-y-auto`}>
