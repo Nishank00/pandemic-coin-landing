@@ -9,6 +9,35 @@ import azImage from "../../assets//founder_1.jpeg";
 import Advisor from "../components/common/advisor-card";
 
 export default function About() {
+  const advisors = [
+    { title: "AI Head / Advisor", url: "#", logo: "" },
+    { title: "Construction Head", url: "#", logo: "" },
+    { title: "Blockchain Security Head", url: "#", logo: "" },
+    { title: "Healthcare Manager", url: "#", logo: "" },
+    { title: "Supply head", url: "#", logo: "" },
+    { title: "Head of Town planning", url: "#", logo: "" },
+    { title: "License Manager", url: "#", logo: "" },
+    { title: "Public Relations Head", url: "#", logo: "" },
+    { title: "Legal Head", url: "#", logo: "" },
+    { title: "Transportation Head", url: "#", logo: "" },
+    { title: "Business Development -Head of Community", url: "#", logo: "" },
+    { title: "Head of Communication", url: "#", logo: "" },
+    { title: "Accounts Head", url: "#", logo: "" },
+    { title: "SEO Manager", url: "#", logo: "" },
+    { title: "Translation Manager", url: "#", logo: "" },
+    { title: "Marketing Manager", url: "#", logo: "" },
+    { title: "Sales Manager", url: "#", logo: "" },
+    { title: "Pandemic advisor", url: "#", logo: "" },
+    { title: "War security advisor", url: "#", logo: "" },
+    { title: "Atomic weapons advisor", url: "#", logo: "" },
+    { title: "Environment / Weather advisor", url: "#", logo: "" },
+    { title: "Water security advisor", url: "#", logo: "" },
+    { title: "Food preservation & hygiene advisor", url: "#", logo: "" },
+    { title: "Partnership advisor", url: "#", logo: "" },
+    { title: "Sales advisor", url: "#", logo: "" },
+    { title: "Fund advisor", url: "#", logo: "" },
+  ];
+
   return (
     <div className=" bg-pdc-d-gray overflow-hidden">
       <AboutHead />
@@ -48,8 +77,10 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
-      {/* <Advisor title="Advisors" />
-      <Advisor title="Specialists" /> */}
+
+      {advisors.map((member, index) => (
+        <Advisor key={index} member={member} />
+      ))}
 
       <div className="pb-[100px]">
         <Partners />

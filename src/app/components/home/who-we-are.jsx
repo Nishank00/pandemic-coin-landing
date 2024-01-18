@@ -23,7 +23,7 @@ export default function WhoWeAreSection() {
                     className="mx-auto group-hover:scale-[1.1] transition duration-300 ease-in-out object-cover object-center w-full rounded-2xl "
                     alt="placeholder"
                 /> */}
-                <VideoComp autoplay="true" loop="true" url={"/video/tunnel_v4.mp4"} />
+                <VideoComp autoplay="true" loop="true" url={"/video/video1.mp4"} />
                 {/* <div className="w-full h-full absolute top-0 left-0">
                     <div className="absolute top-[50%] left-[50%] w-[86px] h-[86px] translate-x-[-50%] rounded-full translate-y-[-50%] hover:scale-125 transition-all z-10 flex items-center justify-center text-center">
                        
