@@ -6,41 +6,52 @@ export default function Purchase() {
   const [selectedType, setSelectedType] = useState("FAMILY");
   const [selectedModel, setSelectedModel] = useState("SMALL FAMILY");
   // const [selectedSize, setSelectedSize] = useState('');
-  const [selectedService, setSelectedService] = useState("");
-  const [adults, setAdults] = useState(0);
-  const [kids, setKids] = useState(0);
-  const [seniorCitizens, setSeniorCitizens] = useState(0);
+  // const [selectedService, setSelectedService] = useState("");
+  const [kidAge, setKidAge] = useState([]);
+
+  const [counts, setCounts] = useState({
+    adults: 0,
+    kids: 0,
+    seniorCitizens: 0,
+  });
+
+  const { adults, kids, seniorCitizens } = counts;
 
   const increment = (type) => {
-    switch (type) {
-      case "adults":
-        setAdults(adults + 1);
-        break;
-      case "kids":
-        setKids(kids + 1);
-        break;
-      case "seniorCitizens":
-        setSeniorCitizens(seniorCitizens + 1);
-        break;
-      default:
-        break;
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [type]: prevCounts[type] + 1,
+    }));
+    if (type === "kids") {
+      setKidAge([...kidAge, 0]);
     }
   };
 
   const decrement = (type) => {
-    switch (type) {
-      case "adults":
-        setAdults(adults > 0 ? adults - 1 : 0);
-        break;
-      case "kids":
-        setKids(kids > 0 ? kids - 1 : 0);
-        break;
-      case "seniorCitizens":
-        setSeniorCitizens(seniorCitizens > 0 ? seniorCitizens - 1 : 0);
-        break;
-      default:
-        break;
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [type]: prevCounts[type] > 0 ? prevCounts[type] - 1 : 0,
+    }));
+
+    if (type === "kids" && counts[type] > 0) {
+      setKidAge(kidAge.slice(0, -1));
     }
+  };
+
+  const handleKidAgeChange = (index, action) => {
+    const newKidAge = [...kidAge];
+    if (action === "increment") {
+      newKidAge[index]++;
+      if (newKidAge[index] >= 5) {
+        console.log("Hello");
+      }
+    } else if (action === "decrement") {
+      newKidAge[index] = newKidAge[index] > 0 ? newKidAge[index] - 1 : 0;
+      if (newKidAge[index] < 5) {
+        console.log("World");
+      }
+    }
+    setKidAge(newKidAge);
   };
 
   const total_BF = adults + kids + seniorCitizens;
@@ -57,15 +68,13 @@ export default function Purchase() {
 
   const handleModelChange = (model) => {
     setSelectedModel(model);
-    // setSelectedSize('');
     setSelectedService("");
-    setAdults(0);
-    setKids(0);
-    setSeniorCitizens(0);
 
-    if (model === "COUPLES") {
-      setAdults(2);
-    }
+    setCounts({
+      adults: model === "COUPLES" ? 2 : 0,
+      kids: 0,
+      seniorCitizens: 0,
+    });
   };
 
   // const handleSizeChange = (size) => {
@@ -80,6 +89,7 @@ export default function Purchase() {
   const handleContactUs = () => {
     // Yaha link dalo
   };
+
   return (
     <div className="bg-pdc-d-gray h-fit w-[100%] flex md:pt-[96px] pt-0 flex-col md:flex-row">
       <div className=" md:sticky md:top-[96px] static h-full md:w-[60%] w-full">
@@ -270,7 +280,6 @@ export default function Purchase() {
                         +
                       </button>
                     </div>
-
                     <p className="mt-4 text-[20px]">
                       Total Members: {total_SF}
                     </p>
@@ -306,7 +315,35 @@ export default function Purchase() {
                   </div>
                 </>
               )}
-
+              {kids > 0 && (
+                <>
+                  <div className={`${kids > 5 && `h-[250px]`} overflow-y-auto`}>
+                    {kidAge.map((age, index) => (
+                      <div
+                        className="flex items-center mb-4 md:ml-10"
+                        key={index}
+                      >
+                        <p className="mx-2 w-[40%] B1">{`KID ${
+                          index + 1
+                        }'s age`}</p>
+                        <button
+                          className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
+                          onClick={() => handleKidAgeChange(index, "decrement")}
+                        >
+                          -
+                        </button>
+                        <p className="mx-2 w-[30px] text-center">{age}</p>
+                        <button
+                          className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
+                          onClick={() => handleKidAgeChange(index, "increment")}
+                        >
+                          +
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
               {/* <h2 className="text-xl font-bold font_nun my-4">SIZE</h2>
                             <div className="flex  gap-[20px] flex-wrap">
                                 <button
@@ -491,7 +528,7 @@ export default function Purchase() {
             </p>
 
             {/* Two radio button options */}
-            {/* <div className="flex justify-between">
+          {/* <div className="flex justify-between">
               <div className="flex flex-col gap-[20px]">
                 <button
                   type="button"
