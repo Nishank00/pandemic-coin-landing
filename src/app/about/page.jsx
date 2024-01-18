@@ -77,10 +77,11 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
-
-      {advisors.map((member, index) => (
-        <Advisor key={index} member={member} />
-      ))}
+      <div className="flex flex-wrap justify-center items-center gap-4">
+        {advisors.map((member, index) => (
+          <Advisor key={index} member={member} />
+        ))}
+      </div>
 
       <div className="pb-[100px]">
         <Partners />
