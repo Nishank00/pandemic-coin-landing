@@ -2,8 +2,8 @@
 
 export default function Ai() {
   return (
-    <div className=" bg-pdc-d-gray overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg_ai">
-      <div className="">
+    <div className="flex flex-col bg-pdc-d-gray gap-[40px] md:gap-0 overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg_ai">
+      <div className="mt-[80px] flex gap-[40px] md:flex-row flex-col">
         <a href="/ai/model1" alt="Mythrill" target="_blank">
           <div class="card_ai">
             <div class="wrapper_ai">
@@ -42,7 +42,7 @@ export default function Ai() {
           </div>
         </a>
       </div>
-      <div className="">
+      <div className=" flex w-full gap-[40px]  md:mt-[-280px] justify-between md:flex-row flex-col">
         <a href="/ai/model3" alt="Mythrill" target="_blank">
           <div class="card_ai">
             <div class="wrapper_ai">
