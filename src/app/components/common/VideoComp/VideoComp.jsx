@@ -52,13 +52,14 @@ const VideoComp = (props) => {
         url={props?.url}
         playing={playing}
         autoplay={true}
-        width="97%"
-        height="85%"
+        width="100%"
+        height="100%"
         // onPlay={handlePlay}
         // onPause={handlePause}
         muted={props.autoplay ? true : false}
         loop={props.loop ? true : false}
         playsinline
+        controls={props.controls ? true : false}
       />
     </div>
   );
