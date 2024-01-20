@@ -7,6 +7,7 @@ import JoinUs from "../components/about/join-us";
 import { teamData } from "../../data/team-data";
 import azImage from "../../assets//founder_1.jpeg";
 import Advisor from "../components/common/advisor-card";
+import DynamicTitle from "../components/utils/dynamic-title";
 
 export default function About() {
   const advisors = [
@@ -40,6 +41,24 @@ export default function About() {
 
   return (
     <div className=" bg-pdc-d-gray overflow-hidden">
+      <DynamicTitle
+        customClass="!text-[30px] !text-[#BB1A37] !font-bold"
+        title="Pandemic Coin PDC -  Your AI-based Secure, life-saving, Underground Heaven"
+      />
+      <sub
+        className="
+      text-white/70 not-italic font-light leading-[139.5%] capitalize text-center text-[25px] w-[70%] mx-auto block 
+      "
+      >
+        Pandemic Coin PDC is a digital currency that enables you to access a
+        network of underground shelters powered by artificial intelligence.
+        These shelters are designed to protect you and your loved ones from any
+        global catastrophe, such as a pandemic, a nuclear war, or a natural
+        disaster. By using PDC, you can enjoy a safe, comfortable, and
+        sustainable living environment, while also supporting the development of
+        innovative solutions for a better future. PDC is more than just a coin,
+        it is a lifeline.
+      </sub>
       <AboutHead />
       <div className="df">
         <div className="flip ">
@@ -77,6 +96,7 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
+      <DynamicTitle title="Our Advisors" />
       <div className="flex flex-wrap justify-center items-center gap-4">
         <div className="grid grid-cols-3 gap-4">
           {advisors.map((member, index) => (
@@ -84,11 +104,9 @@ export default function About() {
           ))}
         </div>
       </div>
-
       <div className="pb-[100px]">
         <Partners />
       </div>
-
       <JoinUs />
     </div>
   );

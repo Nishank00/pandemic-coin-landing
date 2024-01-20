@@ -33,8 +33,10 @@ const Community = () => {
             </h1>
             <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
               <p data-aos="fade-in" className="w-5/6 mt-6 text-[#D4D4D4]">
-                Welcome to the Pandemic Coin Community! Join us on our shared
-                journey as we explore the possibilities together.
+                The Pandemic Coin ecosystem is augmented with the PEN (Pandemic
+                Emergency Network) app, connecting individuals directly to the
+                platform. The PEN app serves as a gateway for users to access
+                information, make transactions, and engage with the community.
               </p>
             </p>
             {/* <label  className="btn"> */}
@@ -56,7 +58,7 @@ const Community = () => {
             alt="image"
             width={500}
             height={500}
-            data-aos="fade-in" 
+            data-aos="fade-in"
           />
           {/* The button to open modal */}
 

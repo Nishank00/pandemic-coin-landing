@@ -52,7 +52,7 @@ export default function Ai() {
     model4: {
       image: model4,
       title:
-        "AI integrated Alternative Energy and Ventilation system: EnerVent ",
+        "AI integrated Alternative Energy and Ventilation system: AIES ",
       description:
         "Pandemic Coin integrates AI into alternative energy and ventilation systems for disaster-resilient living, optimizing renewable energy and ensuring air quality in underground shelters, prioritizing safety and sustainability.",
       features: [
