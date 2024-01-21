@@ -6,6 +6,7 @@ import Partners from "../components/home/partners";
 import JoinUs from "../components/about/join-us";
 import { teamData } from "../../data/team-data";
 import azImage from "../../assets//founder_1.jpeg";
+import AboutUS from "../../assets//aboutUs.jpeg";
 import Advisor from "../components/common/advisor-card";
 import DynamicTitle from "../components/utils/dynamic-title";
 
@@ -42,27 +43,34 @@ export default function About() {
   return (
     <div className=" bg-pdc-d-gray overflow-hidden">
       <DynamicTitle
-        customClass="!text-[30px] !text-[#BB1A37] !font-bold"
+        customClass="md:!text-[30px] text-sm !text-[#BB1A37] !font-bold"
         title="Pandemic Coin PDC -  Your AI-based Secure, life-saving, Underground Heaven"
       />
-      <sub
-        className="
-      text-white/70 not-italic font-light leading-[139.5%] capitalize text-center text-[25px] w-[70%] mx-auto block 
+      <div className="df flex-col md:flex-row gap-8 md:px-36">
+        <Image alt="" className="md:w-1/2" src={AboutUS} />
+
+        <sub
+          className="
+      text-white/70 not-italic font-light leading-[139.5%] capitalize text-center text-sm md:text-[22px] w-[90%] md:w-[70%] mx-auto block 
       "
-      >
-        Pandemic Coin PDC is a digital currency that enables you to access a
-        network of underground shelters powered by artificial intelligence.
-        These shelters are designed to protect you and your loved ones from any
-        global catastrophe, such as a pandemic, a nuclear war, or a natural
-        disaster. By using PDC, you can enjoy a safe, comfortable, and
-        sustainable living environment, while also supporting the development of
-        innovative solutions for a better future. PDC is more than just a coin,
-        it is a lifeline.
-      </sub>
+        >
+          Pandemic Coin PDC is a digital currency that enables you to access a
+          network of underground shelters powered by artificial intelligence.
+          These shelters are designed to protect you and your loved ones from
+          any global catastrophe, such as a pandemic, a nuclear war, or a
+          natural disaster. By using PDC, you can enjoy a safe, comfortable, and
+          sustainable living environment, while also supporting the development
+          of innovative solutions for a better future. PDC is more than just a
+          coin, it is a lifeline.
+        </sub>
+      </div>
       <AboutHead />
       <div className="df">
         <div className="flip ">
-          <div className="front flex items-center justify-center text-center  w-fit mx-auto flex-col">
+          <div
+            className="front flex items-center justify-center text-center  w-fit'
+           mx-auto flex-col"
+          >
             <Image
               className="mx-auto bg-pdc-d-gray object-cover h-[324px] rounded-[20px]"
               width={324}
