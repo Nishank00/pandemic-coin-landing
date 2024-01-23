@@ -25,7 +25,7 @@ export default function WhoWeAreSection() {
                     alt="placeholder"
                 /> */}
         <VideoComp
-          autoplay="true"
+          muted={false}
           loop="true"
           controls="false"
           url={"/video/video1.mp4"}

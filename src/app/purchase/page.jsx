@@ -105,19 +105,23 @@ export default function Purchase() {
     {
       modelName: "BIG FAMILY",
       memberTypes: [
-        { name: "ADULT'S", count: adults },
-        { name: "KID'S", count: kids },
-        { name: "SENIOR CITIZEN'S", count: seniorCitizens },
-        { name: "PET'S", count: pets },
+        { name: "ADULT'S", count: adults, type: "adults" },
+        { name: "KID'S", count: kids, type: "kids" },
+        {
+          name: "SENIOR CITIZEN'S",
+          count: seniorCitizens,
+          type: "seniorCitizens",
+        },
+        { name: "PET'S", count: pets, type: "pets" },
       ],
       totalMembers: total_BF,
     },
     {
       modelName: "SMALL FAMILY",
       memberTypes: [
-        { name: "ADULT'S", count: adults },
-        { name: "KID'S", count: kids },
-        { name: "PET'S", count: pets },
+        { name: "ADULT'S", count: adults, type: "adults" },
+        { name: "KID'S", count: kids, type: "kids" },
+        { name: "PET'S", count: pets, type: "pets" },
       ],
       totalMembers: total_SF,
     },
@@ -129,8 +133,9 @@ export default function Purchase() {
           count: adults,
           disableDecrement: true,
           disableIncrement: true,
+          type: "adults",
         },
-        { name: "PET'S", count: pets },
+        { name: "PET'S", count: pets, type: "pets" },
       ],
       totalMembers: total_CP,
     },
@@ -140,8 +145,9 @@ export default function Purchase() {
         {
           name: "ADULT'S",
           count: adults,
+          type: "adults",
         },
-        { name: "PET'S", count: pets },
+        { name: "PET'S", count: pets, type: "pets" },
       ],
       totalMembers: total_CP,
     },
@@ -174,123 +180,101 @@ export default function Purchase() {
             </div>
           </div>
 
-          {selectedType === "FAMILY" && (
-            <>
-              <h2 className="text-xl font-bold font_nun my-4">MODEL</h2>
-              <div className="flex space-x-4">
-                <div className="flex  gap-[20px] flex-wrap">
-                  {
-                    // Map over the modelNames array
-                    modelNames.map((modelName, index) => (
-                      <button
-                        key={index}
-                        type="button"
-                        onClick={() => handleModelChange(modelName)}
-                        className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
-                          selectedModel === modelName
-                            ? "bg-[#BB1A37] text-white border-transparent"
-                            : ""
-                        }`}
-                      >
-                        {modelName}
-                      </button>
-                    ))
-                  }
-                </div>
-              </div>
+          <h2 className="text-xl font-bold font_nun my-4">MODEL</h2>
+          <div className="flex space-x-4">
+            <div className="flex  gap-[20px] flex-wrap">
+              {modelNames.map((modelName, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => handleModelChange(modelName)}
+                  className={`h-[60px] px-4 font_cat rounded-[15px] font-bold border-[0.1px] border-dotted transition-all duration-500 ease-in-out border-gray-300 ${
+                    selectedModel === modelName
+                      ? "bg-[#BB1A37] text-white border-transparent"
+                      : ""
+                  }`}
+                >
+                  {modelName}
+                </button>
+              ))}
+            </div>
+          </div>
 
-              {models.map(
-                (model) =>
-                  selectedModel === model.modelName && (
-                    <>
-                      <h2 className="text-xl font-bold font_nun my-4">
-                        MEMBERS
-                      </h2>
-                      <div className="flex flex-col">
-                        {model.memberTypes.map((memberType, index) => (
-                          <div className="flex items-center mb-4" key={index}>
-                            <p className="mx-2 w-[40%] B1">{memberType.name}</p>
-                            <button
-                              className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
-                                memberType.disableDecrement &&
-                                "cursor-not-allowed bg-opacity-70"
-                              }`}
-                              onClick={
-                                memberType.disableDecrement
-                                  ? null
-                                  : () =>
-                                      decrement(
-                                        memberType.name
-                                          .toLowerCase()
-                                          .replace(/'/g, "")
-                                      )
-                              }
-                              disabled={memberType.disableDecrement}
-                            >
-                              -
-                            </button>
-                            <p className="mx-2 w-[30px] text-center">
-                              {memberType.count}
-                            </p>
-                            <button
-                              className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
-                                memberType.disableIncrement &&
-                                "cursor-not-allowed bg-opacity-70"
-                              }`}
-                              onClick={
-                                memberType.disableIncrement
-                                  ? null
-                                  : () =>
-                                      increment(
-                                        memberType.name
-                                          .toLowerCase()
-                                          .replace(/'/g, "")
-                                      )
-                              }
-                              disabled={memberType.disableIncrement}
-                            >
-                              +
-                            </button>
-                          </div>
-                        ))}
-
-                        <p className="mt-4 text-[20px]">
-                          Total Members: {model.totalMembers}
-                        </p>
-                      </div>
-                    </>
-                  )
-              )}
-
-              {kids > 0 && (
+          {models.map(
+            (model) =>
+              selectedModel === model.modelName && (
                 <>
-                  <div className={`${kids > 5 && `h-[250px]`} overflow-y-auto`}>
-                    {kidAge.map((age, index) => (
-                      <div
-                        className="flex items-center mb-4 md:ml-10"
-                        key={index}
-                      >
-                        <p className="mx-2 w-[40%] B1">{`KID ${
-                          index + 1
-                        }'s age`}</p>
+                  <h2 className="text-xl font-bold font_nun my-4">MEMBERS</h2>
+                  <div className="flex flex-col">
+                    {model.memberTypes.map((memberType, index) => (
+                      <div className="flex items-center mb-4" key={index}>
+                        <p className="mx-2 w-[40%] B1">{memberType.name}</p>
                         <button
-                          className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                          onClick={() => handleKidAgeChange(index, "decrement")}
+                          className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
+                            memberType.disableDecrement &&
+                            "cursor-not-allowed bg-opacity-70"
+                          }`}
+                          onClick={
+                            memberType.disableDecrement
+                              ? null
+                              : () => decrement(memberType.type)
+                          }
+                          disabled={memberType.disableDecrement}
                         >
                           -
                         </button>
-                        <p className="mx-2 w-[30px] text-center">{age}</p>
+                        <p className="mx-2 w-[30px] text-center">
+                          {memberType.count}
+                        </p>
                         <button
-                          className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
-                          onClick={() => handleKidAgeChange(index, "increment")}
+                          className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
+                            memberType.disableIncrement &&
+                            "cursor-not-allowed bg-opacity-70"
+                          }`}
+                          onClick={
+                            memberType.disableIncrement
+                              ? null
+                              : () => increment(memberType.type)
+                          }
+                          disabled={memberType.disableIncrement}
                         >
                           +
                         </button>
                       </div>
                     ))}
+
+                    <p className="mt-4 text-[20px]">
+                      Total Members: {model.totalMembers}
+                    </p>
                   </div>
                 </>
-              )}
+              )
+          )}
+
+          {kids > 0 && (
+            <>
+              <div className={`${kids > 5 && `h-[250px]`} overflow-y-auto`}>
+                {kidAge.map((age, index) => (
+                  <div className="flex items-center mb-4 md:ml-10" key={index}>
+                    <p className="mx-2 w-[40%] B1">{`KID ${
+                      index + 1
+                    }'s age`}</p>
+                    <button
+                      className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
+                      onClick={() => handleKidAgeChange(index, "decrement")}
+                    >
+                      -
+                    </button>
+                    <p className="mx-2 w-[30px] text-center">{age}</p>
+                    <button
+                      className="mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37]"
+                      onClick={() => handleKidAgeChange(index, "increment")}
+                    >
+                      +
+                    </button>
+                  </div>
+                ))}
+              </div>
             </>
           )}
         </div>

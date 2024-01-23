@@ -47,6 +47,7 @@ const VideoComp = (props) => {
   return (
     <div className="videoContainer" ref={containerRef}>
       {/* <Image alt="" src={frame}  className="absolute h-full w-full"/> */}
+
       <ReactPlayer
         ref={playerRef}
         url={props?.url}
@@ -56,7 +57,7 @@ const VideoComp = (props) => {
         height="100%"
         // onPlay={handlePlay}
         // onPause={handlePause}
-        muted={props.autoplay ? true : false}
+        muted={props.muted}
         loop={props.loop ? true : false}
         playsinline
         controls={props.controls ? true : false}
