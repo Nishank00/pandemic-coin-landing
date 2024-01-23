@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import modelbg1 from "../../assets/ai/ai1.jpeg";
 import modelbg2 from "../../assets/ai/ai2.jpeg";

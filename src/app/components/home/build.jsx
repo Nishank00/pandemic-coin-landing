@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../../../assets/coin.svg";
-import shelter1 from "../../../assets/shelter1.jpg";
+import logo from "../../../assets/logo.png";
+import membership from "../../../assets/membership.png";
 import Tilt from "react-parallax-tilt";
 import Link from "next/link";
 
@@ -10,12 +10,6 @@ const Build = () => {
     <section className="text-gray-400 body-font">
       <div className="container md:px-10 py-10 md:py-0 px-4  mx-auto  ">
         <div className="flex flex-col text-center w-full mb-12">
-          {/* <h1 className="text-3xl md:text-5xl font-medium title-font mb-4 text-white">
-                        Building a Brighter Future:
-                        <h2 className=" text-2xl md:text-4xl my-4">
-                            Invest in Cathy&quot;s Vision for Secure Shelters and Make a Lasting Impact!
-                        </h2>
-                    </h1> */}
           <h1 className="text-center  text-[56px] not-italic  leading-[139.5%] capitalize tracking-[-3.36px] font-medium title-font mb-4 text-white">
             Purchase
           </h1>
@@ -24,49 +18,49 @@ const Build = () => {
         <div className="grid rounded-[60px] PS_sec grid-cols-1 md:grid-cols-2 gap-4 text-center ">
           <div
             data-aos="fade-in"
-            // hover:bg-[#ffffff15] transition duration-1000 ease-in-out
             className="p-4 py-8 w-full relative  rounded-[20px] overflow-hidden "
           >
-            <Tilt className="track-on-window" trackOnWindow={true}>
-              <Image
-                width={1000}
-                height={1000}
-                src={logo}
-                className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50"
-                alt=""
-              />
-            </Tilt>
-
-            {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out  "></div> */}
-            <Link
-              href="/purchase"
-              className="pri-btn mt-6 block mx-auto w-fit text-white uppercase"
-            >
-              Book shelter directly and become member
-            </Link>
+            <div>
+              <Tilt className="track-on-window" trackOnWindow={true}>
+                <Image
+                  src={membership}
+                  className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50"
+                  alt=""
+                />
+              </Tilt>
+            </div>
+            <div>
+              <Link
+                href="/purchase"
+                className="pri-btn mt-6 block mx-auto w-fit text-white uppercase"
+              >
+                Book shelter directly and become member
+              </Link>
+            </div>
           </div>
-          <div
-            data-aos="fade-in"
-            // hover:bg-[#ffffff15] transition duration-1000 ease-in-out
-            className="p-4 py-8 w-full relative   rounded-[20px] overflow-hidden"
-          >
-            <Tilt className="track-on-window" trackOnWindow={true}>
-              <Image
-                width={1000}
-                height={1000}
-                src={logo}
-                className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] mx-auto  rounded-3xl object-cover brightness-50"
-                alt=""
-              />
-            </Tilt>
-
-            {/* <div className="absolute top-0 left-0 w-full h-full group-hover:bg-[#ffffff15] transition duration-300 ease-in-out"></div> */}
-            <Link
-              href="/"
-              className="pri-btn mt-6 block mx-auto w-fit text-white"
+          <div className="flex items-end w-full">
+            <div
+              data-aos="fade-in"
+              className="p-4 py-8 w-full relative df flex-col !justify-between rounded-[20px] overflow-hidden gap-16"
             >
-              BUY TOKENS
-            </Link>
+              <div>
+                <Tilt className="track-on-window" trackOnWindow={true}>
+                  <Image
+                    src={logo}
+                    className=" w-[250px] h-[250px] md:w-[350px] md:h-[350px] mx-auto  rounded-3xl object-cover brightness-50"
+                    alt=""
+                  />
+                </Tilt>
+              </div>
+              <div>
+                <Link
+                  href="/"
+                  className="pri-btn mt-6 block mx-auto w-fit text-white"
+                >
+                  BUY TOKENS
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
