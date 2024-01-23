@@ -11,10 +11,8 @@ import Advisor from "../components/common/advisor-card";
 import DynamicTitle from "../components/utils/dynamic-title";
 
 export default function About() {
-  const advisors = [
-    { title: "AI Head / Advisor", url: "#", logo: "" },
+  const members = [
     { title: "Construction Head", url: "#", logo: "" },
-    { title: "Blockchain Security Head", url: "#", logo: "" },
     { title: "Healthcare Manager", url: "#", logo: "" },
     { title: "Supply head", url: "#", logo: "" },
     { title: "Head of Town planning", url: "#", logo: "" },
@@ -29,6 +27,11 @@ export default function About() {
     { title: "Translation Manager", url: "#", logo: "" },
     { title: "Marketing Manager", url: "#", logo: "" },
     { title: "Sales Manager", url: "#", logo: "" },
+  ];
+
+  const advisors = [
+    { title: "AI Head / Advisor", url: "#", logo: "" },
+    { title: "Blockchain Security Head", url: "#", logo: "" },
     { title: "Pandemic advisor", url: "#", logo: "" },
     { title: "War security advisor", url: "#", logo: "" },
     { title: "Atomic weapons advisor", url: "#", logo: "" },
@@ -103,6 +106,14 @@ export default function About() {
         {teamData.map((item, index) => (
           <TeamCard key={index} {...item} />
         ))}
+      </div>
+      <DynamicTitle title="Our Team members" />
+      <div className="flex flex-wrap justify-center items-center gap-4">
+        <div className="grid grid-cols-3 gap-4">
+          {members.map((member, index) => (
+            <Advisor key={index} member={member} />
+          ))}
+        </div>
       </div>
       <DynamicTitle title="Our Advisors" />
       <div className="flex flex-wrap justify-center items-center gap-4">
