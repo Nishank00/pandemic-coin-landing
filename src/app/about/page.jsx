@@ -14,6 +14,7 @@ export default function About() {
   const members = [
     { title: "Construction Head", url: "#", logo: "" },
     { title: "Healthcare Manager", url: "#", logo: "" },
+    { title: "Blockchain Security Head", url: "#", logo: "" },
     { title: "Supply head", url: "#", logo: "" },
     { title: "Head of Town planning", url: "#", logo: "" },
     { title: "License Manager", url: "#", logo: "" },
@@ -31,7 +32,6 @@ export default function About() {
 
   const advisors = [
     { title: "AI Head / Advisor", url: "#", logo: "" },
-    { title: "Blockchain Security Head", url: "#", logo: "" },
     { title: "Pandemic advisor", url: "#", logo: "" },
     { title: "War security advisor", url: "#", logo: "" },
     { title: "Atomic weapons advisor", url: "#", logo: "" },
@@ -46,8 +46,8 @@ export default function About() {
   return (
     <div className=" bg-pdc-d-gray overflow-hidden">
       <DynamicTitle
-        customClass="md:!text-[30px] text-sm !text-[#BB1A37] !font-bold"
-        title="Pandemic Coin PDC -  Your AI-based Secure, life-saving, Underground Heaven"
+        // customClass="md:!text-[30px] text-sm !text-[#BB1A37] !font-bold"
+        title="Your AI-based Secure, life-saving, Underground Heaven"
       />
       <div className="df flex-col md:flex-row gap-8 md:px-36">
         <Image alt="" className="md:w-1/2" src={AboutUS} />
@@ -107,7 +107,7 @@ export default function About() {
           <TeamCard key={index} {...item} />
         ))}
       </div>
-      <DynamicTitle title="Our Team members" />
+      <DynamicTitle title="Pandemic Coin Team" />
       <div className="flex flex-wrap justify-center items-center gap-4">
         <div className="grid grid-cols-3 gap-4">
           {members.map((member, index) => (

@@ -15,7 +15,7 @@ export default function Purchase() {
   });
 
   const { adults, kids, seniorCitizens, pets } = counts;
-  const modelNames = ["SINGLE", "COUPLES", "SMALL FAMILY", "BIG FAMILY"];
+  const modelNames = ["SINGLE", "COUPLE", "SMALL FAMILY", "BIG FAMILY"];
 
   const increment = (type) => {
     setCounts((prevCounts) => ({
@@ -101,6 +101,10 @@ export default function Purchase() {
     // Yaha link dalo
   };
 
+  const formatNumber = (n) => {
+    return n.toLocaleString();
+  };
+
   const models = [
     {
       modelName: "BIG FAMILY",
@@ -126,13 +130,12 @@ export default function Purchase() {
       totalMembers: total_SF,
     },
     {
-      modelName: "COUPLES",
+      modelName: "COUPLE",
       memberTypes: [
         {
           name: "ADULT'S",
           count: adults,
-          disableDecrement: true,
-          disableIncrement: true,
+          disableControls: true,
           type: "adults",
         },
         { name: "PET'S", count: pets, type: "pets" },
@@ -211,15 +214,11 @@ export default function Purchase() {
                         <p className="mx-2 w-[40%] B1">{memberType.name}</p>
                         <button
                           className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
-                            memberType.disableDecrement &&
+                            memberType.disableControls &&
                             "cursor-not-allowed bg-opacity-70"
                           }`}
-                          onClick={
-                            memberType.disableDecrement
-                              ? null
-                              : () => decrement(memberType.type)
-                          }
-                          disabled={memberType.disableDecrement}
+                          onClick={() => decrement(memberType.type)}
+                          disabled={memberType.disableControls}
                         >
                           -
                         </button>
@@ -228,15 +227,11 @@ export default function Purchase() {
                         </p>
                         <button
                           className={`mx-2 px-4 py-2 rounded-[10px] bg-[#BB1A37] ${
-                            memberType.disableIncrement &&
+                            memberType.disableControls &&
                             "cursor-not-allowed bg-opacity-70"
                           }`}
-                          onClick={
-                            memberType.disableIncrement
-                              ? null
-                              : () => increment(memberType.type)
-                          }
-                          disabled={memberType.disableIncrement}
+                          onClick={() => increment(memberType.type)}
+                          disabled={memberType.disableControls}
                         >
                           +
                         </button>
@@ -278,10 +273,30 @@ export default function Purchase() {
             </>
           )}
         </div>
+        <div className="text-white p-4">
+          <div className="text-lg font-bold mb-4">Price List:</div>
+          <div className="text-base">
+            <div className="text-base">
+              <div className="flex">
+                <div className="w-1/2">
+                  <p>Adult = $100,000</p>
+                  <p>Kid above 5 = $70,000</p>
+                  <p>Kid below 5 = $50,000</p>
+                </div>
+                <div className="w-1/2">
+                  <p>Senior Citizen = $100,000</p>
+                  <p>Pet = $20,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Contact Us section */}
         <div className="p-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold font_nun">$ {total}</div>
+            <div className="text-xl font-bold font_nun">
+              $ {formatNumber(total)}
+            </div>
             <div>
               <button
                 onClick={handleContactUs}
