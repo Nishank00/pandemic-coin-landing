@@ -51,8 +51,7 @@ export default function Ai() {
     },
     model4: {
       image: model4,
-      title:
-        "AI integrated Alternative Energy and Ventilation system: AIES ",
+      title: "AI integrated Alternative Energy and Ventilation system: AIES ",
       description:
         "Pandemic Coin integrates AI into alternative energy and ventilation systems for disaster-resilient living, optimizing renewable energy and ensuring air quality in underground shelters, prioritizing safety and sustainability.",
       features: [
@@ -85,27 +84,14 @@ export default function Ai() {
                     href="#_"
                     className="flex justify-center items-center w-full px-6 py-3 mb-3 group text-lg text-white bg-[#BB1A37] rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto transition-all ease duration-300"
                   >
-                    Try It Free
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 ml-1 group-hover:translate-x-[10px] transition-all ease duration-300"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
+                    Secure Shelter
                   </a>
-                  {/* <a
+                  <a
                     href="#_"
                     className="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
                   >
-                    Learn More
-                  </a> */}
+                    Buy Tokens
+                  </a>
                 </div>
               </div>
             </div>
@@ -124,7 +110,7 @@ export default function Ai() {
         </div>
       </section>
 
-      <section className="w-full bg-[#000] hidden pt-7 pb-7 md:pt-20 md:pb-24">
+      <section className="w-full  hidden pt-7 pb-7 md:pt-20 md:pb-24">
         <div className="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
           <div className="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
             <img
