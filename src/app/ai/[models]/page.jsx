@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import model1 from "../../../assets/ai/ai03.jpeg";
-import model2 from "../../../assets/ai/ai02.jpeg";
-import model3 from "../../../assets/ai/ai3.jpeg";
+import model3 from "../../../assets/ai/ai02.jpeg";
+import model2 from "../../../assets/ai/feat04.jpeg";
 import model4 from "../../../assets/ai/ai01.jpeg";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -65,8 +65,13 @@ export default function Ai() {
   const selectedModelData = modelData[modelName] || modelData.model1;
 
   return (
-    <div className=" bg-pdc-d-gray overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen ">
-      <section className="px-2 py-32 bg-[#000] md:px-0">
+    <div
+      style={{
+        backgroundImage: "url(/images/aiBg.jpg)",
+      }}
+      className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-cover bg-no-repeat bg-opacity-50"
+    >
+      <section className="px-2 py-32 md:px-0">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
           <div className="flex flex-wrap items-center sm:-mx-3">
             <div className="w-full md:w-1/2 md:px-3">
@@ -76,7 +81,7 @@ export default function Ai() {
                     {selectedModelData?.title}
                   </span>
                 </h1>
-                <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                <p className="mx-auto text-base text-yellow-200 sm:max-w-md lg:text-xl md:max-w-3xl">
                   {selectedModelData?.description}
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">

@@ -127,6 +127,7 @@ const Testimonials = () => {
             slidesPerView={1}
             spaceBetween={30}
             pagination={false}
+            loop={true}
             className="mySwiper gap-4"
             breakpoints={{
               640: {
