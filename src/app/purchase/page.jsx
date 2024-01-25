@@ -27,11 +27,19 @@ export default function Purchase() {
     }
   };
 
-  const decrement = (type) => {
-    setCounts((prevCounts) => ({
-      ...prevCounts,
-      [type]: prevCounts[type] > 0 ? prevCounts[type] - 1 : 0,
-    }));
+  const decrement = (type, modelName) => {
+    setCounts((prevCounts) => {
+      let updatedCount = prevCounts[type] > 0 ? prevCounts[type] - 1 : 0;
+
+      if (
+        modelName == "SINGLE" ||
+        (modelName == "SMALL FAMILY" && type === "adults")
+      ) {
+        updatedCount = updatedCount < 1 ? 1 : updatedCount;
+      }
+
+      return { ...prevCounts, [type]: updatedCount };
+    });
 
     if (type === "kids" && counts[type] > 0) {
       setKidAge(kidAge.slice(0, -1));
@@ -89,7 +97,7 @@ export default function Purchase() {
     setSelectedModel(model);
 
     setCounts({
-      adults: model === "COUPLES" ? 2 : 1,
+      adults: model === "COUPLE" ? 2 : 1,
       kids: 0,
       seniorCitizens: 0,
       pets: 0,
@@ -217,7 +225,9 @@ export default function Purchase() {
                             memberType.disableControls &&
                             "cursor-not-allowed bg-opacity-70"
                           }`}
-                          onClick={() => decrement(memberType.type)}
+                          onClick={() =>
+                            decrement(memberType.type, model.modelName)
+                          }
                           disabled={memberType.disableControls}
                         >
                           -

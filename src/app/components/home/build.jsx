@@ -15,10 +15,13 @@ const Build = () => {
           </h1>
         </div>
 
-        <div className="grid rounded-[60px] PS_sec grid-cols-1 md:grid-cols-2 gap-4 text-center ">
+        <div className="grid rounded-[60px] grid-cols-1 md:grid-cols-2 gap-4 text-center ">
           <div
             data-aos="fade-in"
-            className="p-4 py-8 w-full relative  rounded-[20px] overflow-hidden "
+            className="p-4 py-8 w-full relative overflow-hidden  bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: "url(/images/sheild.jpeg)",
+            }}
           >
             <div>
               <Tilt className="track-on-window" trackOnWindow={true}>
@@ -38,7 +41,12 @@ const Build = () => {
               </Link>
             </div>
           </div>
-          <div className="flex items-end w-full">
+          <div
+            style={{
+              backgroundImage: "url(/images/sheild.jpeg)",
+            }}
+            className="flex items-end w-full bg-cover bg-no-repeat"
+          >
             <div
               data-aos="fade-in"
               className="p-4 py-8 w-full relative df flex-col !justify-between rounded-[20px] overflow-hidden gap-16"
