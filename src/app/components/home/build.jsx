@@ -20,7 +20,7 @@ const Build = () => {
             data-aos="fade-in"
             className="p-4 py-8 w-full relative overflow-hidden  bg-cover bg-no-repeat"
             style={{
-              backgroundImage: "url(/images/sheild.jpeg)",
+              backgroundImage: "url(/images/shelter.jpeg)",
             }}
           >
             <div>
@@ -43,7 +43,7 @@ const Build = () => {
           </div>
           <div
             style={{
-              backgroundImage: "url(/images/sheild.jpeg)",
+              backgroundImage: "url(/images/trading.jpeg)",
             }}
             className="flex items-end w-full bg-cover bg-no-repeat"
           >

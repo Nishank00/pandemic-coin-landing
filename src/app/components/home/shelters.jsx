@@ -17,6 +17,11 @@ import shelter2 from "../../../assets/shelter02.webp";
 import shelter3 from "../../../assets/shelter03.png";
 import shelter4 from "../../../assets/shelter04.webp";
 import shelter5 from "../../../assets/shelter05.png";
+import shelter6 from "../../../assets/shelter/6.webp";
+import shelter7 from "../../../assets/shelter/7.webp";
+import shelter8 from "../../../assets/shelter/8.webp";
+import shelter9 from "../../../assets/shelter/9.jpeg";
+import shelter10 from "../../../assets/shelter/10.jpeg";
 
 const shelters = [
   {
@@ -48,6 +53,36 @@ const shelters = [
     title: "Regal Residences",
     description:
       "These exclusive abodes are designed to deliver an integrative living experience wrapped in luxury",
+  },
+  {
+    imageUrl: shelter6,
+    title: "Cosy Comforts",
+    description:
+      "Be swept into a realm of relaxation and indulgence in this thoughtfully personalized habitat.",
+  },
+  {
+    imageUrl: shelter7,
+    title: "Modern Marvel",
+    description:
+      "Step into a home where every design detail sings a song of modern, chic and comfortable living.",
+  },
+  {
+    imageUrl: shelter8,
+    title: "Opulent Oasis",
+    description:
+      "Rediscover what it means to be at peace in a home that seamlessly blends luxury with comfort.",
+  },
+  {
+    imageUrl: shelter9,
+    title: "Luxurious Loft",
+    description:
+      "Experience high-end living in this tastefully crafted loft, where every corner narrates a story of elegance and refinement.",
+  },
+  {
+    imageUrl: shelter10,
+    title: "Harmony Haven",
+    description:
+      "Embrace serenity in this harmoniously designed haven that assures a balanced and luxurious living experience.",
   },
 ];
 
@@ -117,44 +152,13 @@ const Shelters = () => {
                 spaceBetween: 50,
               },
             }}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: false,
+            }}
           >
             {shelters.map((shelter, index) => (
               <SwiperSlide key={index}>
-                {/* <div className="md:grid md:grid-cols-3 flex flex-col gap-4 w-10/12  mx-auto overflow-hidden ">
-                                    <div className="h-full w-full group">
-                                        <div className="text-sm">
-                                            {shelter?.title && <div className="mb-2 text-[#949494] font-[Catamaran] text-[20.717px] not-italic font-normal leading-[140%]">{shelter?.title}</div>}
-                                            {shelter?.description && <div className="font-[Catamaran]  text-[16.347px] not-italic font-medium leading-[140%] text-[#707070]">{shelter?.description}</div>}
-                                        </div>
-                                        <div className="pt-4">
-                                            <Image
-                                                width={400}
-                                                height={440}
-                                                src={shelter.imageUrl}
-                                                alt={shelter.description}
-                                                className="md:h-[400px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:w-[400px] h-[200px] w-[200px]"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="overflow-hidden group md:h-full md:w-full h-[200px] relative">
-                                        <Image
-
-                                            className="h-[200px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-full md:w-full w-[200px]"
-                                            src={shelter.imageUrl}
-                                            alt={shelter.description}
-                                        />
-                                    </div>
-                                    <div className="overflow-hidden group md:h-full md:w-full h-[200px] ">
-                                        <Image
-                                            width={400}
-                                            height={450}
-                                            className=" h-[200px] group-hover:scale-[1.1] transition duration-300 ease-in-out md:h-[85%] md:w-full w-[200px]"
-                                            src={shelter.imageUrl}
-                                            alt={shelter.description}
-                                        />
-                                    </div>
-                                </div> */}
-
                 <div className="relative flex flex-col h-[550px]">
                   <div className="overflow-hidden group md:h-full md:w-full h-[200px] relative">
                     <Image
