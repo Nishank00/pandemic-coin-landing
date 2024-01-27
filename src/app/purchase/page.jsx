@@ -16,6 +16,13 @@ export default function Purchase() {
 
   const { adults, kids, seniorCitizens, pets } = counts;
   const modelNames = ["SINGLE", "COUPLE", "SMALL FAMILY", "BIG FAMILY"];
+  const priceList = {
+    adults: 100000,
+    seniorCitizens: 120000,
+    pets: 25000,
+    kidsAbove5: 75000,
+    kidsBelow5: 50000,
+  };
 
   const increment = (type) => {
     setCounts((prevCounts) => ({
@@ -65,15 +72,16 @@ export default function Purchase() {
   };
 
   const calculateTotal = () => {
-    const adultTotal = adults * 100000;
-    const seniorCitizensTotal = seniorCitizens * 100000;
-    const petsTotal = pets * 20000;
+    const adultTotal = adults * priceList.adults;
+    const seniorCitizensTotal = seniorCitizens * priceList.seniorCitizens;
+    const petsTotal = pets * priceList.pets;
     let kidTotal = 0;
+
     kidAge.forEach((age) => {
       if (age >= 5) {
-        kidTotal += 70000;
+        kidTotal += priceList.kidsAbove5;
       } else if (age < 5) {
-        kidTotal += 50000;
+        kidTotal += priceList.kidsBelow5;
       }
     });
 

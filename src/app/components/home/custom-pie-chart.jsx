@@ -14,7 +14,7 @@ const CustomPieChart = ({ data, activeIndex, onPieEnter }) => {
             }}
             className=""
         >
-            <PieChart width={1140} height={523}>
+            <PieChart width={2760} height={2760}>
                 <Pie
                     activeIndex={activeIndex}
                     activeShape={<ActiveShape />}

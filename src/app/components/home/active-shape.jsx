@@ -52,7 +52,8 @@ const ActiveShape = (props) => {
         fontSize={21}
         fontWeight={500}
         textAnchor="middle"
-        fill={"#342CB2"}
+        fill={"#ffffff"}
+        className="text-xl"
       >
         Total Supply
       </motion.text>
@@ -64,6 +65,7 @@ const ActiveShape = (props) => {
         fontWeight={500}
         textAnchor="middle"
         fill={"#fff"}
+        className="text-xl"
       >
         10,00000,00 tokens
       </text>
@@ -83,7 +85,7 @@ const ActiveShape = (props) => {
         endAngle={endAngle}
         innerRadius={innerRadius - 6}
         outerRadius={outerRadius + 10}
-        fill={"#ff0000"}
+        fill={"#BB1A37"}
       />
       <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} fill="none" />
       <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
@@ -99,6 +101,7 @@ const ActiveShape = (props) => {
         // dy={18}
         textAnchor={textAnchor}
         fill="#fff"
+        className="text-xl"
       >
         {`${name} ${(percent * 100).toFixed(2)}%`}
       </text>

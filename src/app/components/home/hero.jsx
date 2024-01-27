@@ -29,7 +29,7 @@ export default function HeroSection() {
 
         <div
           className={` ${
-            isMobile ? "h-screen" : "h-[100vh]"
+            isMobile ? "h-screen" : "h-full"
           } w-[100%] object-cover`}
         >
           <VideoComp autoplay="true" loop="true" url={"/video/heroVid.mp4"} />
