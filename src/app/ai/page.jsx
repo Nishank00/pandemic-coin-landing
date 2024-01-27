@@ -29,15 +29,18 @@ export default function Ai() {
               />
             </div>
 
-            <Image
-              src={modeltext1}
-              height={600}
-              width={250}
-              alt="ai-img"
-              className="title_ai"
-              quality={100}
-            />
-
+            <div className="df flex-col font-bold text-xl ">
+              <Image
+                src={modeltext4}
+                height={600}
+                width={250}
+                alt="ai-img"
+                className="title_ai"
+                quality={100}
+              />
+              1. AI HealthScan
+            </div>
+            
             <Image
               src={model1}
               height={600}
@@ -62,15 +65,17 @@ export default function Ai() {
               />
             </div>
 
-            <Image
-              src={modeltext2}
-              height={600}
-              width={250}
-              alt="ai-img"
-              className="title_ai"
-              quality={100}
-            />
-
+            <div className="df flex-col font-bold text-xl ">
+              <Image
+                src={modeltext2}
+                height={600}
+                width={250}
+                alt="ai-img"
+                className="title_ai"
+                quality={100}
+              />
+              2. AI PEN app
+            </div>
             <Image
               src={model2}
               height={600}
@@ -96,14 +101,17 @@ export default function Ai() {
               />
             </div>
 
-            <Image
-              src={modeltext3}
-              height={600}
-              width={250}
-              alt="ai-img"
-              className="title_ai"
-              quality={100}
-            />
+            <div className="df flex-col font-bold text-xl ">
+              <Image
+                src={modeltext3}
+                height={600}
+                width={250}
+                alt="ai-img"
+                className="title_ai"
+                quality={100}
+              />
+              AI Radar
+            </div>
 
             <Image
               src={model3}
@@ -127,14 +135,17 @@ export default function Ai() {
                 quality={100}
               />
             </div>
-            <Image
-              src={modeltext4}
-              height={600}
-              width={250}
-              alt="ai-img"
-              className="title_ai"
-              quality={100}
-            />
+            <div className="df flex-col font-bold text-xl ">
+              <Image
+                src={modeltext4}
+                height={600}
+                width={250}
+                alt="ai-img"
+                className="title_ai"
+                quality={100}
+              />
+              AI AltEng
+            </div>
             <Image
               src={model4}
               height={600}
