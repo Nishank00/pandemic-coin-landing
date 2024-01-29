@@ -139,7 +139,7 @@ const Media = () => {
                 role="button"
                 className="btn m-1 bg-[#BB1A37] text-white"
               >
-              
+                Skip to...
               </div>
               <ul
                 tabIndex={0}
