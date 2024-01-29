@@ -132,6 +132,29 @@ const Media = () => {
         <div className="absolute w-[700px] h-[700px] blur-[200px] bg-pdc-blue rounded-full top-[50%] left-[-20%] z-0"></div>
         <div className="col-span-8 relative z-10">
           <VideoPlayer videoData={videoData} />
+          <div className="w-full flex justify-end">
+            <div className="dropdown dropdown-hover dropdown-left">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-[#BB1A37] text-white"
+              >
+              
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                {suggetionData.map((data, index) => {
+                  return (
+                    <li key={index}>
+                      <a href={`#${data.anchor}`}>{data.title}</a>
+                    </li>
+                  );
+                })}
+              </ul> 
+            </div>
+          </div>
           {suggetionData.map((data, index) => {
             return (
               <div className="py-4" key={index} id={data.anchor}>
