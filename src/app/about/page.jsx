@@ -6,7 +6,7 @@ import Partners from "../components/home/partners";
 import JoinUs from "../components/about/join-us";
 import { teamData } from "../../data/team-data";
 import azImage from "../../assets//founder_1.jpeg";
-import AboutUS from "../../assets//aboutUs.jpeg";
+import AboutUS from "../../assets/shelter01.png";
 import Advisor from "../components/common/advisor-card";
 import DynamicTitle from "../components/utils/dynamic-title";
 

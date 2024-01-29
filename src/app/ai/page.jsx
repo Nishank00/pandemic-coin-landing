@@ -15,7 +15,7 @@ import modeltext4 from "../../assets/ai/t4.png";
 export default function Ai() {
   return (
     <div className="flex flex-col bg-pdc-d-gray gap-[40px] md:gap-0 overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg_ai">
-      <div className="mt-[20px] flex gap-[100px] md:flex-row flex-col">
+      <div className="mt-[20px] flex lg:gap-[21rem] md:flex-row flex-col">
         <a href="/ai/model1" alt="Mythrill">
           <div className="card_ai">
             <div className="wrapper_ai">
@@ -31,7 +31,7 @@ export default function Ai() {
 
             <div className="df flex-col font-bold text-xl ">
               <Image
-                src={modeltext4}
+                src={modeltext1}
                 height={600}
                 width={250}
                 alt="ai-img"

@@ -8,7 +8,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import img from "../../../assets/bg.png";
 import DynamicTitle from "../utils/dynamic-title";
@@ -126,18 +126,12 @@ const Shelters = () => {
         <div data-aos="fade-in" className="flex flex-wrap z-0" id="shelters">
           <Swiper
             centeredSlides={true}
-            initialSlide={2}
             slidesPerView={1}
-            spaceBetween={0}
-            // pagination={pagination}
-            onInit={() => calculateBulletWidth()}
-            onSlideChange={() => calculateBulletWidth()}
-            className="mySwiper gap-4"
-            modules={[Pagination, Navigation]}
-            navigation={{
-              prevEl: ".prev",
-              nextEl: ".next",
-            }}
+            initialSlide={2}
+            loop={true}
+            spaceBetween={50}
+            pagination={false}
+            modules={[Autoplay]}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -153,9 +147,9 @@ const Shelters = () => {
               },
             }}
             autoplay={{
-              delay: 500,
-              disableOnInteraction: false,
+              delay: 1000,
             }}
+            onAutoplay={() => console.log("hello")}
           >
             {shelters.map((shelter, index) => (
               <SwiperSlide key={index}>
@@ -183,16 +177,6 @@ const Shelters = () => {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="">
-              <div className="flex items-center justify-center md:justify-end space-x-4 z-[500] relative md:absolute md:bottom-[4.5%] right-[4.5%]">
-                <div className="prev z-50">
-                  <FaChevronLeft />
-                </div>
-                <div className="next z-50">
-                  <FaChevronRight />
-                </div>
-              </div>
-            </div>
           </Swiper>
         </div>
       </div>

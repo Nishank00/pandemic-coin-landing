@@ -86,7 +86,7 @@ export default function Ai() {
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                   <a
-                    href="#_"
+                    href="/purchase"
                     className="flex justify-center items-center w-full px-6 py-3 mb-3 group text-lg text-white bg-[#BB1A37] rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto transition-all ease duration-300"
                   >
                     Secure Shelter

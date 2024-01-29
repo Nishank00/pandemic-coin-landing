@@ -33,7 +33,6 @@ const ActiveShape = (props) => {
     visible: { opacity: 1, pathLength: 1 },
   };
 
-  console.log("props", props);
 
   return (
     <motion.g
