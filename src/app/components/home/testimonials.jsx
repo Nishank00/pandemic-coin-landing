@@ -26,7 +26,7 @@ const imageTextVariants = {
 };
 
 const TestimonialCard = ({
-  imageUrl,
+  image,
   description,
   index,
   setExpandedIndex,
@@ -44,7 +44,7 @@ const TestimonialCard = ({
 
   return (
     <motion.div
-      layoutId={imageUrl} // Use image URL as layout ID for smooth transitions
+      layoutId={image} // Use image URL as layout ID for smooth transitions
       initial={slideVariants.enter}
       animate={slideVariants.update}
       exit={slideVariants.exit}
@@ -57,7 +57,7 @@ const TestimonialCard = ({
         >
           <Image
             className="rounded-[30px]  h-[400px] object-cover w-[531px] group-hover:scale-[1.1] transition duration-300 ease-in-out  mb-4"
-            src={imageUrl}
+            src={image}
             alt="testimonials"
             width={400}
             height={440}
@@ -87,34 +87,34 @@ const TestimonialCard = ({
     </motion.div>
   );
 };
+export const TestimonialData = [
+  {
+    image: people1,
+    description:
+      "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+  },
+  {
+    image: people2,
+    description:
+      "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+  },
+  {
+    image: people3,
+    description:
+      "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+  },
+  {
+    image: people2,
+    description:
+      "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
+  },
+];
 
 const Testimonials = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
   const handleSetExpandedIndex = (index) => {
     setExpandedIndex(index);
   };
-  const testimonials = [
-    {
-      imageUrl: people1,
-      description:
-        "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
-    },
-    {
-      imageUrl: people2,
-      description:
-        "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
-    },
-    {
-      imageUrl: people3,
-      description:
-        "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
-    },
-    {
-      imageUrl: people2,
-      description:
-        "Lorem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet consectetur. orem ipsum dolor sit amet cons",
-    },
-  ];
 
   return (
     <section className="text-gray-400 body-font min-h-[80vh]" id="testimonials">
@@ -144,7 +144,7 @@ const Testimonials = () => {
               },
             }}
           >
-            {testimonials.map((testimonial, index) => (
+            {TestimonialData.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <TestimonialCard
                   key={index}

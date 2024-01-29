@@ -1,9 +1,5 @@
 "use client";
 import Image from "next/image";
-import model1 from "../../../assets/ai/ai03.jpeg";
-import model3 from "../../../assets/ai/ai02.jpeg";
-import model2 from "../../../assets/ai/feat04.jpeg";
-import model4 from "../../../assets/ai/ai01.jpeg";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -16,7 +12,7 @@ export default function Ai() {
 
   const modelData = {
     model1: {
-      image: model1,
+      imgPath: "/images/ai01.jpeg",
       title: "AI for Human health scanning: HealthScan ",
       description:
         "Pandemic Coin introduces AI-driven body scanners with 70+ sensors, analyzing 50 million data points for early health detection, prioritizing preventive healthcare accessibility and affordability.",
@@ -27,7 +23,7 @@ export default function Ai() {
       ],
     },
     model2: {
-      image: model2,
+      imgPath: "/images/ai02.jpeg",
       title:
         "AI based early pandemic signal indicator for preparedness: Pandemix ",
       description:
@@ -39,7 +35,7 @@ export default function Ai() {
       ],
     },
     model3: {
-      image: model3,
+      imgPath: "/images/ai03.jpeg",
       title: "AI based security Radar system:SecuRadar ",
       description:
         "Pandemic Coin plans an AI-based security radar to monitor underground shelters, detecting unauthorized access and external threats, integrating with emergency protocols for swift safety guidance, ensuring peace of mind for community members.",
@@ -50,7 +46,7 @@ export default function Ai() {
       ],
     },
     model4: {
-      image: model4,
+      imgPath: "/images/ai04.jpeg",
       title: "AI integrated Alternative Energy and Ventilation system: AIES ",
       description:
         "Pandemic Coin integrates AI into alternative energy and ventilation systems for disaster-resilient living, optimizing renewable energy and ensuring air quality in underground shelters, prioritizing safety and sustainability.",
@@ -67,13 +63,13 @@ export default function Ai() {
   return (
     <div
       style={{
-        backgroundImage: "url(/images/aiBg.jpg)",
+        backgroundImage: `url(${selectedModelData.imgPath})`,
       }}
       className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-cover bg-no-repeat bg-opacity-50"
     >
       <section className="px-2 py-32 md:px-0">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-          <div className="flex flex-wrap items-center sm:-mx-3">
+          <div className="flex flex-wrap items-center justify-center text-center sm:-mx-3">
             <div className="w-full md:w-1/2 md:px-3">
               <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -84,7 +80,7 @@ export default function Ai() {
                 <p className="mx-auto text-base text-yellow-200 sm:max-w-md lg:text-xl md:max-w-3xl">
                   {selectedModelData?.description}
                 </p>
-                <div className="relative flex flex-col sm:flex-row sm:space-x-4">
+                <div className="relative flex flex-col justify-center sm:flex-row sm:space-x-4">
                   <a
                     href="/purchase"
                     className="flex justify-center items-center w-full px-6 py-3 mb-3 group text-lg text-white bg-[#BB1A37] rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto transition-all ease duration-300"
@@ -98,17 +94,6 @@ export default function Ai() {
                     Buy Tokens
                   </a>
                 </div>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="w-[400px] h-[50vh] overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-                <Image
-                  src={selectedModelData.image}
-                  quality={100}
-                  height={1000}
-                  width={1000}
-                  className="h-full w-full object-cover"
-                />
               </div>
             </div>
           </div>
