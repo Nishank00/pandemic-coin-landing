@@ -302,8 +302,8 @@ export default function Purchase() {
                   <p>Kid below 5 = $50,000</p>
                 </div>
                 <div className="w-1/2">
-                  <p>Senior Citizen = $100,000</p>
-                  <p>Pet = $20,000</p>
+                  <p>Senior Citizen = $120,000</p>
+                  <p>Pet = $25,000</p>
                 </div>
               </div>
             </div>

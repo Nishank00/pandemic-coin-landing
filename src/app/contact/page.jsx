@@ -3,7 +3,7 @@ import React from "react";
 // import Contact_svg from "../components/common/contact_svg";
 // import Robot_Svg from "../components/common/robot_Svg";
 import Image from "next/image";
-import img2 from "../../assets/contact_uss.png";
+import img2 from "../../assets/contactUs.png";
 
 export default function Contact() {
   return (
@@ -25,9 +25,9 @@ export default function Contact() {
               {/* <Robot_Svg/> */}
               <Image
                 src={img2}
-                height={400}
-                width={400}
-                className="mt-[-70px]"
+                height={500}
+                width={500}
+                className=""
                 alt="image-2"
               />
             </div>
