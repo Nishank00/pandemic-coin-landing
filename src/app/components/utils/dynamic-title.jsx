@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export default function DynamicTitle({ title, description, descColor,customClass }) {
+export default function DynamicTitle({ title, description, descColor,customClass,customClass1 }) {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -28,7 +28,7 @@ export default function DynamicTitle({ title, description, descColor,customClass
                 ease: "easeInOut",
             }}
         >
-            <div data-aos="fade-in" className="md:w-fit w-[90%] mx-auto py-10 md:py-16 mt-12 text-center">
+            <div data-aos="fade-in" className={`md:w-fit w-[90%] mx-auto py-10 md:py-16 mt-12 text-center ${customClass1 ? customClass1 : ""}`}>
                 <motion.h1 initial="hidden" animate="visible" variants={{
                     hidden: {
                         scale: .8,

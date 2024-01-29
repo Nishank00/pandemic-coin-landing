@@ -22,9 +22,10 @@ export default function Nav() {
     { title: "Communities", path: "/communities" },
     { title: "Contact us", path: "/contact" },
     {
-      title: "Whitepaper",
-      path: "https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing",
+      title: "Pandamic Paper",
+      path: "/paper",
     },
+    // https://docs.google.com/document/d/1Botqy8D6O_L9P0gDP7GUS3FlIerHsXvtnAgi-sVTzQ8/edit?usp=sharing
   ];
 
   return (
