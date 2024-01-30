@@ -61,11 +61,18 @@ export default function Ai() {
   const selectedModelData = modelData[modelName] || modelData.model1;
 
   return (
+    // Remove the unnecessary import statement for React
+
+    // ...
+
     <div
       style={{
         backgroundImage: `url(${selectedModelData.imgPath})`,
+        backgroundColor: selectedModelData.title.includes("SecuRadar")
+          ? "#000000"
+          : "#C0C0C0", // Correct the background color value
       }}
-      className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-contain bg-no-repeat bg-opacity-50 bg-center"
+      className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-contain bg-no-repeat bg-opacity-50 bg-center "
     >
       <section className="px-2 py-32 md:px-0">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
