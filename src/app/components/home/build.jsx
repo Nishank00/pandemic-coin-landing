@@ -22,12 +22,12 @@ const Build = () => {
             style={{
               backgroundImage: "url(/images/shelter.jpeg)",
             }}
-          >
+        >
             <div>
               <Tilt className="track-on-window" trackOnWindow={true}>
                 <Image
                   src={membership}
-                  className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50"
+                  className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover"
                   alt=""
                 />
               </Tilt>
@@ -55,7 +55,7 @@ const Build = () => {
                 <Tilt className="track-on-window" trackOnWindow={true}>
                   <Image
                     src={logo}
-                    className=" w-[250px] h-[250px] md:w-[350px] md:h-[350px] mx-auto  rounded-3xl object-cover brightness-50"
+                    className=" w-[250px] h-[250px] md:w-[350px] md:h-[350px] mx-auto  rounded-3xl object-cover"
                     alt=""
                   />
                 </Tilt>

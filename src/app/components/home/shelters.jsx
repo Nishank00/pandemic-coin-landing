@@ -134,7 +134,7 @@ const Shelters = () => {
             modules={[Autoplay]}
             breakpoints={{
               640: {
-                slidesPerView: 1,
+            slidesPerView: 1,
                 spaceBetween: 20,
               },
               768: {
@@ -147,9 +147,8 @@ const Shelters = () => {
               },
             }}
             autoplay={{
-              delay: 1000,
+              delay: 2000,
             }}
-            onAutoplay={() => console.log("hello")}
           >
             {shelters.map((shelter, index) => (
               <SwiperSlide key={index}>
