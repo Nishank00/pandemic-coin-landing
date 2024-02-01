@@ -134,7 +134,7 @@ const Shelters = () => {
             modules={[Autoplay]}
             breakpoints={{
               640: {
-            slidesPerView: 1,
+                slidesPerView: 1,
                 spaceBetween: 20,
               },
               768: {
@@ -160,19 +160,18 @@ const Shelters = () => {
                       alt={shelter.description}
                     />
                   </div>
-
-                  <div className="text-sm mt-[30px] md:rounded-[20px] md:p-[30px] bg-black bg-opacity-50 md:mt-0 md:absolute z-10 md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%]">
-                    {shelter?.title && (
-                      <div className="mb-2 text-[#FC4F5A]  font_cat text-[20.717px] not-italic font-normal leading-[140%]">
-                        {shelter?.title}
-                      </div>
-                    )}
-                    {shelter?.description && (
-                      <div className=" text-[16.347px] not-italic font-medium leading-[140%] md:text-white text-[#707070]">
-                        {shelter?.description}
-                      </div>
-                    )}
-                  </div>
+                </div>
+                <div className="text-sm mt-[30px] md:rounded-[20px] md:p-[30px] bg-black bg-opacity-50 md:mt-0 flex flex-col justify-center items-center">
+                  {shelter?.title && (
+                    <div className="mb-2 text-[#FC4F5A]  font_cat text-[20.717px] not-italic font-normal leading-[140%]">
+                      {shelter?.title}
+                    </div>
+                  )}
+                  {shelter?.description && (
+                    <div className=" text-[16.347px] not-italic font-medium leading-[140%] md:text-white text-[#707070]">
+                      {shelter?.description}
+                    </div>
+                  )}
                 </div>
               </SwiperSlide>
             ))}

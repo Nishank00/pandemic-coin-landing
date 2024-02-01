@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../../../assets/ball-2.png";
-import membership from "../../../assets/ball-3.png";
+import logo from "../../../assets/litepaper2.png";
+import membership from "../../../assets/whitepaper2.png";
 import Tilt from "react-parallax-tilt";
 import Link from "next/link";
 
@@ -24,11 +24,11 @@ const PaperHero = () => {
               backgroundImage: "url(/images/sheild.jpeg)",
             }}
           >
-            <div>
+            <div className="p-4 py-8 w-full relative df flex-col !justify-between rounded-[20px] overflow-hidden gap-16">
               <Tilt className="track-on-window" trackOnWindow={true}>
                 <Image
                   src={membership}
-                  className=" w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full mx-auto   object-cover brightness-50"
+                  className=" w-[250px] h-[250px] md:w-[250px] md:h-[250px]  mx-auto p-4 mt-[6rem] object-cover"
                   alt=""
                 />
               </Tilt>
@@ -51,13 +51,13 @@ const PaperHero = () => {
           >
             <div
               data-aos="fade-in"
-              className="p-4 py-8 w-full relative df flex-col !justify-between rounded-[20px] overflow-hidden gap-16"
+              className="p-4 py-8 w-full relative df flex-col !justify-between rounded-[20px] overflow-hidden gap-4"
             >
               <div>
                 <Tilt className="track-on-window" trackOnWindow={true}>
                   <Image
                     src={logo}
-                    className=" w-[250px] h-[250px] md:w-[500px] md:h-[350px] mx-auto  rounded-3xl object-cover brightness-50"
+                    className=" w-[250px] h-[250px] md:w-[250px] md:h-[250px]  mx-auto p-4  object-cover"
                     alt=""
                   />
                 </Tilt>

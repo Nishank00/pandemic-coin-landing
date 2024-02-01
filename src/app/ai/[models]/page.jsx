@@ -72,11 +72,11 @@ export default function Ai() {
           ? "#000000"
           : "#C0C0C0", // Correct the background color value
       }}
-      className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-contain bg-no-repeat bg-opacity-50 bg-center "
+      className="overflow-hidden pt-0 py-[30px] md:pt-[96px] h-fit md:min-h-screen bg-contain bg-no-repeat bg-opacity-50 bg-right "
     >
       <section className="px-2 py-32 md:px-0">
-        <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-          <div className="flex flex-wrap items-center justify-center text-center sm:-mx-3">
+        <div className="container items-center max-w-6xl px-8 mr-auto xl:px-5">
+          <div className="flex flex-wrap items-center justify-start text-center sm:-mx-3">
             <div className="w-full md:w-1/2 md:px-3 p-[4rem] glassMorph">
               <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
