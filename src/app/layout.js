@@ -10,6 +10,9 @@ import { useEffect } from "react"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
+import {AppContextProvider} from '../context/appContext/appContextProvider'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const arc = Archivo({ subsets: ["latin"] });
@@ -34,11 +37,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <body className={`${arc.className} flex flex-col min-h-screen`}>
+       <AppContextProvider>
         <MainNav />
-        <AnimatePresence mode="wait" initial={false}>
-          {children}
-        </AnimatePresence>
-        <Footer />
+          <AnimatePresence mode="wait" initial={false}>
+            {children}
+          </AnimatePresence>
+          <Footer />
+       </AppContextProvider>
+       <ToastContainer hideProgressBar={true} draggable stacked autoClose={5000}  />
       </body>
     </html>
   );

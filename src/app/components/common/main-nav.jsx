@@ -2,24 +2,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../assets/logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 // import { BsTelephoneFill } from "react-icons/bs";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { IoIosClose, IoLogoWhatsapp } from "react-icons/io";
+import { useAppContext } from "../../../context/appContext/appContextProvider";
 // import { FaPhone } from "react-icons/fa6";
+import ModalContainer from './ModalContainer'
+import SignupModal from './Modals/SignupModal'
+import SignInModal from './Modals/SignInModal'
+import VerficationModal from './Modals/VerficationModal'
+import { useCommonStore } from "../../../store/commonStore";
+import UserInfoPanel from './userInfoPanel'
+import ResetPassModal from './Modals/ResetPassModal'
 
 export default function Nav() {
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false)
+  const [showSignUp, setShowSignUp] = useState(false)
+  const [verificationModal, setVerificationModal] = useState(false);
+  const {isLoggedIn} = useCommonStore();
 
+  
   const links = [
     { title: "Home", path: "/" },
     { title: "About us", path: "/about" },
     { title: "AI", path: "/ai" },
     { title: "Media", path: "/media" },
-    { title: "Communities", path: "/communities" },
+    // { title: "Communities", path: "/communities" },
+    { title: "Token Sale", path: "/token-sale" },
     { title: "Contact us", path: "/contact" },
     {
       title: "Pandamic Paper",
@@ -63,10 +77,28 @@ export default function Nav() {
           })}
           <Link
             href="/purchase"
-            className="py-[0px] bg-[#BB1A37] px-[20px] rounded-[10px] text-white font_cat flex items-center"
+            className="py-[0px] bg-[#BB1A37] px-[20px] rounded-[5px] text-white font_cat flex items-center"
           >
             Purchase
           </Link>
+          {!isLoggedIn ? (
+            <>
+              <button
+                onClick={() => setShowSignIn(true)}
+                className="py-[0px] bg-[#BB1A37] px-[20px] rounded-[5px] text-white font_cat flex items-center"
+              >
+                Sign In
+              </button>
+              <button
+                onClick={() => setShowSignUp(true)}
+                className="py-[0px] bg-[#BB1A37] px-[20px] rounded-[5px] text-white font_cat flex items-center"
+              >
+                Sign Up
+              </button>
+            </>
+          ): (
+            <UserInfoPanel />
+          )}
         </div>
       </div>
 
@@ -124,6 +156,21 @@ export default function Nav() {
           <IoIosClose size={"26px"} />
         </motion.button>
       </div>
+        {showSignIn && (
+          <ModalContainer>
+          <SignInModal showModal={setShowSignIn} setVerificationModal={setVerificationModal} />
+        </ModalContainer>
+        )}
+        {showSignUp && (
+          <ModalContainer>
+          <SignupModal showModal={setShowSignUp} setVerificationModal={setVerificationModal} />
+        </ModalContainer>
+        )}
+        {verificationModal && (
+          <ModalContainer>
+          <VerficationModal showModal={setVerificationModal} setSignInModal={setShowSignIn} />
+        </ModalContainer>
+        )}
     </>
   );
 }

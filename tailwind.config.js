@@ -10,6 +10,7 @@ module.exports = {
             colors: {
                 "pdc-red": "#BB1A37",
                 "pdc-blue": "#342CB2",
+                "pdc-l-blue": "#342CB270",
                 "pdc-l-gray": "#7B7E98",
                 "pdc-d-gray": "#1C1D26",
             },
