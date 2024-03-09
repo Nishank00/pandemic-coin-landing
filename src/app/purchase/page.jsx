@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageSlider from "../components/common/ImageSlider";
+import RegisterModal from "../components/RegisterModal";
 
 export default function Purchase() {
   const [selectedType, setSelectedType] = useState("FAMILY");
@@ -111,10 +112,6 @@ export default function Purchase() {
       pets: 0,
     });
     setKidAge([]);
-  };
-
-  const handleContactUs = () => {
-    // Yaha link dalo
   };
 
   const formatNumber = (n) => {
@@ -316,12 +313,7 @@ export default function Purchase() {
               $ {formatNumber(total)}
             </div>
             <div>
-              <button
-                onClick={handleContactUs}
-                className="bg-[#BB1A37] text-white border-transparent font_cat font-bold  w-fit  rounded-[15px] px-4 py-2 "
-              >
-                Purchase
-              </button>
+              <RegisterModal />
             </div>
           </div>
         </div>
