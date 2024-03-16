@@ -116,7 +116,7 @@ const RegisterModal = () => {
             className="bg-[#BB1A37] text-white border-transparent font_cat font-bold  w-full  rounded-[15px] px-4 py-2 "
             type="submit"
           >
-            Register
+            Final Step
           </button>
         </div>
       </DialogContent>
