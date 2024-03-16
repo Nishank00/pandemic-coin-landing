@@ -19,7 +19,7 @@ export default function Nav() {
     { title: "About us", path: "/about" },
     { title: "AI", path: "/ai" },
     { title: "Media", path: "/media" },
-    { title: "Communities", path: "/communities" },
+    { title: "Communities", path: "https://pandemiccoin.forumfree.it/" },
     { title: "Contact us", path: "/contact" },
     {
       title: "Pandamic Paper",

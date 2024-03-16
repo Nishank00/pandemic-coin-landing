@@ -12,7 +12,7 @@ const RegisterModal = () => {
   return (
     <Dialog>
       <DialogTrigger className="bg-[#BB1A37] text-white border-transparent font_cat font-bold  w-fit  rounded-[15px] px-4 py-2 ">
-        Purchase
+        Final Step
       </DialogTrigger>
       <DialogContent className="glassMorph max-h-[80vh] overflow-y-auto">
         <div className="mx-auto max-w-3xl space-y-6">
@@ -116,7 +116,7 @@ const RegisterModal = () => {
             className="bg-[#BB1A37] text-white border-transparent font_cat font-bold  w-full  rounded-[15px] px-4 py-2 "
             type="submit"
           >
-            Final Step
+            Register
           </button>
         </div>
       </DialogContent>

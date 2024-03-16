@@ -23,7 +23,7 @@ export default function Footer() {
                     name: "Media",
                 },
                 {
-                    href: "#!",
+                    href: "https://pandemiccoin.forumfree.it/",
                     name: "Communities",
                 },
                 
