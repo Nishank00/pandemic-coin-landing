@@ -3,7 +3,7 @@ import React, { useLayoutEffect } from "react";
 import { ScrollTrigger as Scrolltrigger } from "gsap/dist/ScrollTrigger";
 import Tilt from "react-parallax-tilt";
 import { useMediaQuery } from "../common/UseMediaQuery/UseMediaQuery";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   FaDiscord,
   FaFacebook,
