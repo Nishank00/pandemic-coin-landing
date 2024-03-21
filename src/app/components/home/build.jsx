@@ -62,7 +62,7 @@ const Build = () => {
               </div>
               <div>
                 <Link
-                  href="/"
+                  href="/token-sale"
                   className="pri-btn mt-6 block mx-auto w-fit text-white"
                 >
                   BUY TOKENS

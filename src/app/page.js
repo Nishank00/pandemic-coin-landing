@@ -11,7 +11,7 @@ import Shelters from "./components/home/shelters";
 import Community from "./components/home/community";
 import Testimonials from "./components/home/testimonials";
 import Build from "./components/home/build";
-import Cta from "./components/home/cta";
+// import Cta from "./components/home/cta";
 import Feature from "./components/home/features";
 import CountDown from "./components/home/countdown";
 
@@ -44,7 +44,7 @@ export default function Home() {
       <div className="">
         <Build />
       </div>
-      <Cta />
+      {/* <Cta /> */}
     </main>
   );
 }

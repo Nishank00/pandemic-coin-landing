@@ -55,7 +55,7 @@ const SignInModal = ({showModal, setVerificationModal}:SignInModalProps) => {
   if(forgotPassword) return <ForgotPasswordModal showModal={showModal} userEmail={email} setVerificationModal={setVerificationModal} />
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='w-full max-w-[700px] rounded-[13px] backdrop-blur-[42px] bg-transparent p-[20px] m-[10px] flex flex-col gap-[20px] relative'>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full max-w-[700px] rounded backdrop-blur-[42px] bg-transparent p-[20px] m-[10px] flex flex-col gap-[20px] relative'>
         <button onClick={() => showModal(false)} className='absolute right-[20px] top-[30px] cursor-pointer hover:text-pdc-red'><FaTimes size={25} /></button>
         <h2 className='mb-3 font-extralight text-white text-[20px] md:text-[40px]'>Sign In</h2>
         <InputField 

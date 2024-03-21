@@ -18,6 +18,8 @@ const SignupModal = ({showModal, setVerificationModal}: SignupModalProps) => {
     const [loading, setLoading] = useState(false);
 
     const onSubmit = async (inpData:any) => {
+        console.log('inp data', inpData.password, )
+        if(inpData.password.length < 8) return toast.error("Password length must be greater than 8")
         setLoading(true);
         const data = await fetch('/api/sign-up', {
             method: 'POST',
@@ -38,7 +40,7 @@ const SignupModal = ({showModal, setVerificationModal}: SignupModalProps) => {
         }
     }
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='w-full max-w-[700px] rounded-[13px] backdrop-blur-[42px] bg-transparent p-[20px] m-[10px] flex flex-col gap-[20px] relative'>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full max-w-[700px] rounded backdrop-blur-[42px] bg-transparent p-[20px] m-[10px] flex flex-col gap-[20px] relative'>
         <button onClick={() => showModal(false)} className='absolute right-[20px] top-[20px] cursor-pointer hover:text-pdc-red'><FaTimes size={25} /></button>
         <h2 className='mb-3 font-extralight text-white text-[20px] md:text-[40px]'>Sign Up</h2>
         <div className="flex items-center gap-[10px]">

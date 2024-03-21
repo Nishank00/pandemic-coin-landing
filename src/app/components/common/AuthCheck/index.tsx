@@ -7,20 +7,28 @@ import { toast } from 'react-toastify';
 const AuthCheck = ({children}:any) => {
     let call = true;
   const router = useRouter();
-  const {isLoggedIn}:any = useCommonStore();
+  const {setUser}:any = useCommonStore();
+
+  const getUser = async () => {
+    const data = await fetch('/api/get-user')
+
+    const res = await data.json();
+    if(res.status === true){
+      setUser(res?.data?.user)
+    }else{
+      toast.error(res.message)
+      router.push("/")
+    }
+  }
 
   useEffect(() => {
-    console.log('nwt auth check ====>', isLoggedIn)
     if(call){
-      if(!isLoggedIn){
-        toast.error("You need to sign In first")
-        setTimeout(() => {
-            router.push('/token-sale');
-        }, 500);
-    }
-    call = false;
+      getUser()
+      call = false;
     }
   },[])
+
+
   return (
     <>
      {children}   

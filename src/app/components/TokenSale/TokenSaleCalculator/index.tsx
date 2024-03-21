@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Sparkle from '../../svgs/Sparkle';
 import Link from 'next/link';
 
-const TokenSaleCalculator = () => {
+const TokenSaleCalculator = ({handleSalePage}:any) => {
     const [tokens, setTokens] = useState(1)
     const [usd, setUsd] = useState(10)
     const perPdcPrice = 10/1;
@@ -15,10 +15,14 @@ const TokenSaleCalculator = () => {
     //     setShowCoins(false);
     // }
 
-    const calulateTokens = () => {
+    const calculateTokens = () => {
         const totalTokens = usd / perPdcPrice;
         setTokens(totalTokens);
     }
+
+    useEffect(() => {
+        calculateTokens()
+    },[usd])
 
 
   return (
@@ -32,8 +36,8 @@ const TokenSaleCalculator = () => {
         <div className="">
             <div className="flex flex-col gap-1 mb-5">
                 <label htmlFor="">Enter Amount</label>
-                <div className="flex items-center border border-pdc-blue p-[1px] rounded-[5px] bg-pdc-blue relative">
-                    <input value={usd} onChange={(e:any) => setUsd(Number(e.target.value))} className='rounded-l-[5px] py-[4px] px-[10px] bg-pdc-d-gray' type="number" placeholder='0' />
+                <div className="flex items-center border border-pdc-blue p-[1px] rounded-[5px] bg-pdc-blue relative w-full">
+                    <input value={usd} onChange={(e:any) => setUsd(Number(e.target.value))} className='rounded-l-[5px] py-[4px] px-[10px] bg-pdc-d-gray w-full' min={0} type="number" placeholder='0' />
                     <button className=' w-[80px] h-full cursor-pointer'>USD</button>
                     {/* <button onClick={() => setShowCoins(!showCoins)} className=' w-[80px] h-full cursor-pointer uppercase'>{coin}</button>
                     {showCoins && (
@@ -50,30 +54,30 @@ const TokenSaleCalculator = () => {
             <div className="flex flex-col gap-1 mb-5">
                 <label htmlFor="">Token</label>
                 <div className="flex items-center gap-[10px]">
-                <div className="flex items-center border border-pdc-blue p-[1px] rounded-[5px] bg-pdc-blue">
-                    <input readOnly disabled value={tokens} className='rounded-l-[5px] py-[4px] px-[10px] bg-pdc-d-gray' type="number" placeholder='0' />
+                <div className="flex items-center border border-pdc-blue p-[1px] rounded-[5px] bg-pdc-blue w-full">
+                    <input readOnly disabled value={tokens} className='rounded-l-[5px] py-[4px] px-[10px] bg-pdc-d-gray w-full' type="number" min={0} placeholder='0' />
                     <button className=' w-[80px] h-full cursor-pointer'>PDC</button>
                 </div>
                 </div>
 
                 <div className="flex my-3 items-center gap-[10px] justify-center">
-                    <button onClick={() => setUsd(100)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$100</button>
-                    <button onClick={() => setUsd(250)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$250</button>
-                    <button onClick={() => setUsd(500)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$500</button>
                     <button onClick={() => setUsd(1000)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$1000</button>
+                    <button onClick={() => setUsd(5000)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$5000</button>
+                    <button onClick={() => setUsd(20000)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$20000</button>
+                    <button onClick={() => setUsd(50000)} className='px-[10px] py-[1px] rounded text-pdc-red border border-pdc-red hover:bg-pdc-red hover:text-white transition-all'>$50000</button>
                 </div>
 
                 <div className="flex items-center justify-center bg-pdc-l-blue text-white gap-[10px] rounded-[5px] py-[5px]">
-                    <span>{usd}</span>
+                    <span>${usd}</span>
                     <span>/</span>
-                    <span>{perPdcPrice}</span>
+                    <span>${perPdcPrice}</span>
                     <span>=</span>
-                    <span>{tokens}</span>
+                    <span>{tokens} PDC</span>
                 </div>
             </div>
             <div className="flex items-center gap-[10px] justify-center">
-                <button onClick={() => calulateTokens()} className='py-[3px] border border-pdc-red text-pdc-red px-[20px] rounded-[5px] font_cat flex items-center w-fit mt-[10px] transition-all hover:text-white hover:bg-pdc-red'>Calculate</button>
-                <Link href={'/private-sale'} className='py-[3px] bg-pdc-red border border-pdc-red px-[20px] rounded-[5px] text-white font_cat flex items-center w-fit mt-[10px]'>Purchase</Link>
+                {/* <button onClick={() => calulateTokens()} className='py-[3px] border border-pdc-red text-pdc-red px-[20px] rounded-[5px] font_cat flex items-center w-fit mt-[10px] transition-all hover:text-white hover:bg-pdc-red'>Calculate</button> */}
+                <button onClick={() => handleSalePage(true)} className='py-[3px] bg-pdc-red border border-pdc-red px-[20px] rounded-[5px] text-white font_cat flex items-center w-fit mt-[10px]'>Purchase</button>
             </div>
             </div>
     </div>

@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -107,7 +108,7 @@ export default function Footer() {
     return (
         <footer className="md:pt-10 pt-0 mt-auto mb-0 bg-[#1C1D26] relative">
 
-            <Image onClick={() => { window.scrollTo(0, 0) }} data-aos="fade-in" src={Arrow_up} height={53} width={53} alt="up_arrow" className="absolute arrow-container top-[20px] md:h-[53px] md:w-[53px] h-[35px] w-[35px] right-[20px] md:top-[47px] md:right-[47px] cursor-pointer" />
+            <Image onClick={() => { window.scrollTo(0, 0) }} src={Arrow_up} height={53} width={53} alt="up_arrow" className="absolute arrow-container top-[20px] md:h-[53px] md:w-[53px] h-[35px] w-[35px] right-[20px] md:top-[47px] md:right-[47px] cursor-pointer" />
 
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 {/* <div className="justify-between items-center gap-12 md:flex">

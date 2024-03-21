@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import User from "../../../lib/models/User";
 import { comparePasswords, formatResponse, generateAccessToken } from "../../components/utils/helper";
 
@@ -18,13 +19,15 @@ export async function POST(req: Request){
     
         const userData = {
             id: user._id,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            isVerified: user.isVerified,
-            kycStatus: user.kycStatus
+            firstName: user?.firstName,
+            lastName: user?.lastName,
+            email: user?.email,
+            isVerified: user?.isVerified,
+            kycStatus: user?.kycStatus,
+            agreedTerms: user?.agreedTerms,
         }   
         const accessToken = generateAccessToken({email, userId: user._id});
+        cookies().set("access-token", accessToken)
         return new Response(formatResponse(true, {user: userData, accessToken}, 'Login Successfull'))
     }catch(err){
         return new Response(formatResponse(false, [], err.message));

@@ -1,3 +1,4 @@
+import TokenSalePage from "../components/TokenSale"
 import TokenSaleCalculator from "../components/TokenSale/TokenSaleCalculator"
 import TokenSaleHeroSection from "../components/TokenSale/TokenSaleHeroSection"
 import Container from "../components/common/Container"
@@ -12,13 +13,13 @@ const TokenSale = () => {
         backgroundPosition: "center", 
         backgroundAttachment: 'fixed',
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
     }}>
         
+      <img src="./images/texture.png" className='absolute z-0 h-[533px] w-[1054px] transform -rotate-[3px] -top-[20px] -right-[226px]' />
         <img src='./images/metal-face.png' className='absolute left-[-200px] rotate-[16deg] top-[50%] opacity-[0.5]' />
         <Container>
-            <TokenSaleHeroSection />
-            <TokenSaleCalculator />
+            <TokenSalePage />
         </Container>
     </div>
   )

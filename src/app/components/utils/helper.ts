@@ -44,8 +44,8 @@ export function generateAccessToken(data:any): string {
 
 export function verifyAccessToken(token: string): boolean {
     try {
-      jwt.verify(token, process.env.JWT_SECRET);
-      return true;
+      const data = jwt.verify(token, process.env.JWT_SECRET);
+      return data;
     } catch (error) {
       return false; 
     }

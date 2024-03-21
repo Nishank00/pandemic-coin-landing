@@ -22,12 +22,13 @@ const CountdownTimer = ({ initialTime }) => {
 
   const formatTime = (time) => {
     const duration = moment.duration(time, 'seconds');
-    const days = Math.floor(duration.asDays());
+    const days = String(Math.floor(duration.asDays())).padStart(2, '0');
     const hours = String(duration.hours()).padStart(2, '0');
     const minutes = String(duration.minutes()).padStart(2, '0');
     const seconds = String(duration.seconds()).padStart(2, '0');
+    
     return {
-      days: String(days).split(''),
+      days: days.split(''),
       hours: hours.split(''),
       minutes: minutes.split(''),
       seconds: seconds.split(''),
@@ -37,7 +38,7 @@ const CountdownTimer = ({ initialTime }) => {
   return (
     <div>
       {timeLeft > 0 ? (
-        <div className='flex items-center gap-[5px] text-[25px] md:text-[50px] font-serif'>
+        <div className='flex items-center gap-[5px] text-[25px] md:text-[50px] font-serif' suppressHydrationWarning>
         <div className="flex flex-col items-center gap-[5px] relative">
             <div className="flex gap-[5px]">
                 <div className='border border-white min-h-[50px] md:min-h-[70px] min-w-[30px] md:min-w-[45px] rounded-[10px] relative'><span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>{formatTime(timeLeft).days[0]}</span></div>

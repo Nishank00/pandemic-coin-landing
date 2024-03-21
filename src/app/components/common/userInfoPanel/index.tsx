@@ -1,15 +1,16 @@
 import React from 'react'
 import { useCommonStore } from '../../../../store/commonStore'
 import { BiLogOut } from "react-icons/bi";
+import { cookies } from 'next/headers';
 
 const UserInfoPanel = () => {
     const {user, isLoggedIn, setIsLoggedIn, setAccessToken, setUser}:any = useCommonStore();
 
-    const logout = () => {
+    const logout = async () => {
         setIsLoggedIn(false)
         setAccessToken(null)
         setUser(null)
-
+        const data = await fetch("/api/logout")
     }
   return (
     <>

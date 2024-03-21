@@ -446,3 +446,42 @@ abbr[title] {
 .agreement-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+
+.agreement-scrollbar h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.agreement-scrollbar h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+
+.agreement-scrollbar ol {
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px
+}
+
+.agreement-scrollbar ol  li  ol {
+  list-style: upper-roman;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px
+}
+
+
+.agreement-scrollbar ol  li  ol li ol {
+  list-style: lower-alpha;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px
+}

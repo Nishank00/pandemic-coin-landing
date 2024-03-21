@@ -1,7 +1,7 @@
 import User from "../../../lib/models/User";
 import { formatResponse } from "../../components/utils/helper";
 
-export default async function POST(req:Request) {
+export async function POST(req:Request) {
     const { email, event } = await req.json();
 
     try {
